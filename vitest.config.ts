@@ -1,8 +1,9 @@
 import { defineConfig } from 'vitest/config';
-import tsconfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig({
-  plugins: [tsconfigPaths()],
+  // Vite resolves the `@/*` paths from tsconfig.json natively; the
+  // vite-tsconfig-paths plugin is no longer needed.
+  resolve: { tsconfigPaths: true },
   test: {
     // Everything under test is a pure function or a JSON file; no DOM needed.
     environment: 'node',
