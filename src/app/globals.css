@@ -1,0 +1,329 @@
+@import 'tailwindcss';
+
+/* ==========================================================================
+   hackathonlar.uz — design tokens
+   Source of truth: docs/design-system.md. Do not hardcode values in JSX.
+   Concept: "The Scoreboard" — warm paper, near-black ink, one cool accent,
+   numbers as heroes.
+   ========================================================================== */
+
+@theme {
+  /* --- surfaces & ink ---------------------------------------------------- */
+  --color-paper: #f5f1e8;
+  --color-paper-2: #efeadd;
+  --color-surface: #ffffff;
+
+  --color-ink: #16130f;
+  --color-ink-2: #4a443b;
+  --color-ink-3: #7c7466;
+
+  --color-line: #e2dacd;
+  --color-line-2: #cfc5af;
+
+  /* --- accent: "Registon blue" ------------------------------------------- */
+  --color-accent: #046d82;
+  --color-accent-ink: #03505f;
+  --color-accent-soft: #e1eef2;
+
+  /* --- score scale (see docs/design-system.md §2.3) ----------------------- */
+  --color-good: #14683f;
+  --color-good-soft: #dfede4;
+  --color-mid: #8a5a05;
+  --color-mid-soft: #f6e8cc;
+  --color-bad: #a82219;
+  --color-bad-soft: #f7e0dd;
+  --color-none: #7c7466;
+  --color-none-soft: #ebe5d7;
+
+  /* --- semantic status (deliberately the same three hues) ----------------- */
+  --color-success: #14683f;
+  --color-warning: #8a5a05;
+  --color-danger: #a82219;
+
+  /* --- type scale --------------------------------------------------------- */
+  --text-display-1: clamp(2.5rem, 7.5vw, 4.25rem);
+  --text-display-1--line-height: 0.95;
+  --text-display-1--letter-spacing: -0.035em;
+  --text-display-1--font-weight: 800;
+
+  --text-display-2: clamp(1.875rem, 4.5vw, 2.75rem);
+  --text-display-2--line-height: 1.02;
+  --text-display-2--letter-spacing: -0.025em;
+  --text-display-2--font-weight: 800;
+
+  --text-h1: clamp(1.5rem, 3vw, 2rem);
+  --text-h1--line-height: 1.1;
+  --text-h1--letter-spacing: -0.02em;
+  --text-h1--font-weight: 700;
+
+  --text-h2: 1.375rem;
+  --text-h2--line-height: 1.15;
+  --text-h2--letter-spacing: -0.015em;
+  --text-h2--font-weight: 700;
+
+  --text-h3: 1.0625rem;
+  --text-h3--line-height: 1.25;
+  --text-h3--letter-spacing: -0.01em;
+  --text-h3--font-weight: 600;
+
+  --text-body-lg: 1.0625rem;
+  --text-body-lg--line-height: 1.65;
+
+  --text-body: 0.9375rem;
+  --text-body--line-height: 1.65;
+
+  --text-meta: 0.8125rem;
+  --text-meta--line-height: 1.45;
+
+  --text-micro: 0.6875rem;
+  --text-micro--line-height: 1.2;
+  --text-micro--letter-spacing: 0.09em;
+  --text-micro--font-weight: 600;
+
+  /* --- geometry ----------------------------------------------------------- */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 20px;
+
+  --shadow-lift: 0 1px 0 rgb(22 19 15 / 0.03), 0 6px 16px -10px rgb(22 19 15 / 0.18);
+  --shadow-pop: 0 20px 48px -24px rgb(22 19 15 / 0.28);
+  --shadow-print: 3px 3px 0 0 var(--color-ink);
+
+  --container-page: 75rem;
+
+  /* --- motion ------------------------------------------------------------- */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Font families come from next/font (see src/app/fonts.ts), so they must be
+   resolved at reference time rather than baked in. */
+@theme inline {
+  --font-display: var(--font-geologica), 'Geologica', system-ui, sans-serif;
+  --font-sans: var(--font-plex-sans), 'IBM Plex Sans', system-ui, sans-serif;
+}
+
+/* ==========================================================================
+   Base layer
+   ========================================================================== */
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    border-color: var(--color-line);
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink-2);
+    font-family: var(--font-sans);
+    font-size: var(--text-body);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Belt-and-braces against the horizontal-scroll requirement (§9.4). */
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    color: var(--color-ink);
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* On-brand, always-visible focus ring (§9). */
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+    border-radius: var(--radius-xs);
+  }
+
+  ::selection {
+    background-color: var(--color-accent);
+    color: #fff;
+  }
+
+  /* Numbers must align in score columns. */
+  .tnum,
+  th,
+  td {
+    font-variant-numeric: tabular-nums;
+  }
+
+  input,
+  textarea,
+  select,
+  button {
+    font-family: inherit;
+    font-size: inherit;
+  }
+
+  /* Native date inputs otherwise render in the UA font. */
+  input[type='date'] {
+    font-family: var(--font-sans);
+  }
+
+  [hidden] {
+    display: none !important;
+  }
+}
+
+/* ==========================================================================
+   Component utilities
+   ========================================================================== */
+
+@utility container-page {
+  width: 100%;
+  max-width: var(--container-page);
+  margin-inline: auto;
+  padding-inline: 1rem;
+
+  @media (width >= 48rem) {
+    padding-inline: 1.5rem;
+  }
+
+  @media (width >= 64rem) {
+    padding-inline: 2rem;
+  }
+}
+
+/* The recurring editorial device: uppercase micro label above a display head. */
+@utility eyebrow {
+  font-family: var(--font-display);
+  font-size: var(--text-micro);
+  line-height: var(--text-micro--line-height);
+  letter-spacing: var(--text-micro--letter-spacing);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+@utility card-lift {
+  transition:
+    transform 160ms ease-out,
+    box-shadow 160ms ease-out,
+    border-color 160ms ease-out;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lift);
+    border-color: var(--color-line-2);
+  }
+}
+
+/* Truncate to N lines. Used for review excerpts and descriptions. */
+@utility line-clamp-* {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: --value(integer);
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Motion — §6. Everything here has a reduced-motion escape hatch.
+   ========================================================================== */
+
+@keyframes hu-fade-rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hu-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes hu-sheet-up {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@utility animate-fade-rise {
+  animation: hu-fade-rise 200ms var(--ease-out-expo) both;
+}
+
+@utility animate-fade-in {
+  animation: hu-fade-in 200ms ease-out both;
+}
+
+@utility animate-sheet-up {
+  animation: hu-sheet-up 240ms var(--ease-out-expo) both;
+}
+
+/* Score bars animate their width from 0 on first view (IntersectionObserver
+   flips data-visible). */
+.score-bar-fill {
+  width: 0;
+  transition: width 700ms var(--ease-out-expo);
+}
+
+.score-bar-fill[data-visible='true'] {
+  width: var(--score-bar-width, 0%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .score-bar-fill {
+    width: var(--score-bar-width, 0%);
+  }
+
+  .card-lift:hover {
+    transform: none;
+  }
+}
+
+/* ==========================================================================
+   Print — this is a press product; reviews should print cleanly.
+   ========================================================================== */
+
+@media print {
+  body {
+    background: #fff;
+  }
+
+  [data-print-hide] {
+    display: none !important;
+  }
+}

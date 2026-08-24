@@ -1,0 +1,631 @@
+{
+  "_meta": {
+    "warning": "LOCAL DEVELOPMENT ONLY. These are fabricated reviews written to exercise the UI (score bands, histogram, ranking rails, moderation queue, report queue) during development, visual QA and e2e tests. They are attributed to accounts literally named 'Demo foydalanuvchi' on @example.invalid addresses so they can never be mistaken for real participants. They are NOT part of supabase/seed.sql and must never be loaded into production.",
+    "coverage": "Deliberately spans all three score bands: CBU sits in the green band, Open Data Challenge in the amber band, and Urban.Tech in the red band with a 1.3 communication average - the exact accountability story the product exists to tell."
+  },
+  "password": "DemoParol2026",
+  "users": [
+    {
+      "key": "demo-1",
+      "email": "demo1@example.invalid",
+      "display_name": "Demo foydalanuvchi 1"
+    },
+    {
+      "key": "demo-2",
+      "email": "demo2@example.invalid",
+      "display_name": "Demo foydalanuvchi 2"
+    },
+    {
+      "key": "demo-3",
+      "email": "demo3@example.invalid",
+      "display_name": "Demo foydalanuvchi 3"
+    },
+    {
+      "key": "demo-4",
+      "email": "demo4@example.invalid",
+      "display_name": "Demo foydalanuvchi 4"
+    },
+    {
+      "key": "demo-5",
+      "email": "demo5@example.invalid",
+      "display_name": "Demo foydalanuvchi 5"
+    },
+    {
+      "key": "demo-6",
+      "email": "demo6@example.invalid",
+      "display_name": "Demo foydalanuvchi 6"
+    }
+  ],
+  "reviews": [
+    {
+      "hackathon_slug": "cbu-coding-hackathon-2026",
+      "user": "demo-1",
+      "ratings": {
+        "organization": 5,
+        "communication": 4,
+        "judging": 4,
+        "prizes": 5,
+        "venue": 5
+      },
+      "participated_as": "finalist",
+      "days_ago": 150,
+      "title": "Jadval aniq, sovrin oʻz vaqtida",
+      "body": "Roʻyxatdan oʻtishdan finalgacha hamma bosqich eʼlon qilingan sanada boʻldi. Har bosqich natijasi Telegram kanalida chiqdi, kechikish boʻlmadi. Final kuni jamoalarga 7 daqiqadan pitch vaqti berildi va bu qatʼiy nazorat qilindi. Sovrin pul mablagʻi vaʼda qilinganidek, taxminan ikki hafta ichida kartaga tushdi.",
+      "pros": "Aniq jadval, natijalar oʻz vaqtida, sovrin kechikmadi, hakamlar soha vakillari edi.",
+      "cons": "Baholash varaqasi ochiq qilinmadi — faqat umumiy ball aytildi.",
+      "is_anonymous": false
+    },
+    {
+      "hackathon_slug": "cbu-coding-hackathon-2026",
+      "user": "demo-2",
+      "ratings": {
+        "organization": 4,
+        "communication": 4,
+        "judging": 3,
+        "prizes": 5,
+        "venue": 4
+      },
+      "participated_as": "participant",
+      "days_ago": 146,
+      "title": "Yaxshi tashkil etilgan, baholash biroz noaniq",
+      "body": "Umuman olganda kuchli hakaton. Mentorlar haqiqatan yordam berdi, texnik savollarga tez javob keldi. Lekin baholash mezonlari faqat final kuni ekranda koʻrsatildi, undan oldin qaysi mezon necha ball ekani aniq emas edi. Shu sabab baʼzi jamoalar demo oʻrniga slaydga koʻproq vaqt sarfladi.",
+      "pros": "Mentorlik kuchli, texnik infratuzilma barqaror.",
+      "cons": "Baholash mezonlari oldindan eʼlon qilinmadi.",
+      "is_anonymous": false
+    },
+    {
+      "hackathon_slug": "cbu-coding-hackathon-2026",
+      "user": "demo-3",
+      "ratings": {
+        "organization": 5,
+        "communication": 5,
+        "judging": 4,
+        "prizes": 4,
+        "venue": 5
+      },
+      "participated_as": "winner",
+      "days_ago": 141,
+      "title": "Har bir jamoaga javob qaytarildi",
+      "body": "Eng muhimi: finalga oʻtmagan jamoalarga ham alohida xat yozilgan. Bizning tanishlarimiz saralashdan oʻtmadi, lekin ularga qisqacha izoh bilan javob keldi. Oʻzbekistonda bu kamdan-kam uchraydi. Joy va texnik sharoit ham yaxshi edi, Wi-Fi butun tadbir davomida uzilmadi.",
+      "pros": "Finalga oʻtmaganlarga ham javob berildi. Wi-Fi barqaror.",
+      "cons": "Sovrin topshirish marosimi biroz choʻzildi.",
+      "is_anonymous": false
+    },
+    {
+      "hackathon_slug": "cbu-coding-hackathon-2026",
+      "user": "demo-4",
+      "ratings": {
+        "organization": 4,
+        "communication": 3,
+        "judging": 4,
+        "prizes": 5,
+        "venue": 4
+      },
+      "participated_as": "participant",
+      "days_ago": 138,
+      "title": "Хорошая организация, слабая обратная связь",
+      "body": "Регистрация и отборочный этап прошли без задержек, площадка удобная, еда была. Но между отбором и финалом почти три недели не было никаких новостей — пришлось писать организаторам самим, чтобы узнать статус. Призы выплатили вовремя, к этому вопросов нет.",
+      "pros": "Призовой фонд выплачен в срок, площадка удобная.",
+      "cons": "Три недели тишины между этапами.",
+      "is_anonymous": false
+    },
+    {
+      "hackathon_slug": "urban-tech-uzbekistan-2024-hackathon",
+      "user": "demo-2",
+      "ratings": {
+        "organization": 3,
+        "communication": 1,
+        "judging": 2,
+        "prizes": 2,
+        "venue": 3
+      },
+      "participated_as": "participant",
+      "days_ago": 640,
+      "title": "Finalchilar roʻyxatini Instagramdan bildik",
+      "body": "Tadbirning oʻzi yomon emas edi, lekin keyin nima boʻlgani umuman tushunarsiz. Bizga «natijalar bir hafta ichida» deyishdi. Ikki hafta oʻtib hech qanday xabar boʻlmadi, keyin tasodifan Instagram postidan finalchilar allaqachon eʼlon qilinganini koʻrdik. Qatnashmagan jamoalarga hech kim yozmadi.",
+      "pros": "Mavzu qiziqarli, mentorlar tajribali.",
+      "cons": "Natijalar haqida rasmiy xabar boʻlmadi. Finalga oʻtmaganlarga javob yoʻq.",
+      "is_anonymous": false
+    },
+    {
+      "hackathon_slug": "urban-tech-uzbekistan-2024-hackathon",
+      "user": "demo-5",
+      "ratings": {
+        "organization": 2,
+        "communication": 1,
+        "judging": 2,
+        "prizes": 1,
+        "venue": 3
+      },
+      "participated_as": "finalist",
+      "days_ago": 636,
+      "title": "Sovrin vaʼda qilindi, olti oy kutdik",
+      "body": "Finalda ikkinchi oʻrinni oldik. Sahnada sertifikat berishdi va pul mablagʻi «bir oy ichida» oʻtkaziladi deyishdi. Olti oydan keyin ham hech narsa kelmadi. Bir necha marta yozdik, javob qaytmadi. Buni yozayotganimda ham masala hal boʻlmagan. Tashkiliy tomoni ham oxirgi kuni chalkashdi: pitch tartibi ikki marta oʻzgardi.",
+      "pros": "Joy markazda edi, borish qulay.",
+      "cons": "Sovrin toʻlanmadi. Aloqaga chiqishning imkoni yoʻq.",
+      "is_anonymous": false
+    },
+    {
+      "hackathon_slug": "urban-tech-uzbekistan-2024-hackathon",
+      "user": "demo-6",
+      "ratings": {
+        "organization": 3,
+        "communication": 2,
+        "judging": 3,
+        "prizes": 2,
+        "venue": 4
+      },
+      "participated_as": "mentor",
+      "days_ago": 630,
+      "title": "Mentor sifatida: jamoalarga javob yetmadi",
+      "body": "Mentor sifatida qatnashdim. Jamoalar bilan ishlash yaxshi tashkil etilgandi, joy va texnika ham joyida edi. Ammo tadbirdan keyin jamoalar mendan natija haqida soʻrashdi — menda ham maʼlumot yoʻq edi. Tashkilotchilar mentorlar bilan ham aloqani uzib qoʻydi.",
+      "pros": "Joy va texnik taʼminot yaxshi.",
+      "cons": "Tadbirdan keyingi aloqa umuman yoʻq.",
+      "is_anonymous": false
+    },
+    {
+      "hackathon_slug": "open-data-challenge-2025",
+      "user": "demo-1",
+      "ratings": {
+        "organization": 4,
+        "communication": 3,
+        "judging": 3,
+        "prizes": 3,
+        "venue": 4
+      },
+      "participated_as": "participant",
+      "days_ago": 570,
+      "title": "Maʼlumotlar sifati kutilganidan past",
+      "body": "Ochiq maʼlumotlar bilan ishlash gʻoyasi zoʻr, lekin berilgan datasetlarning yarmi eskirgan yoki toʻliq emas edi. Buni tadbir boshlangandan keyin bildik va birinchi kunning yarmi maʼlumotni tozalashga ketdi. Tashkiliy jihatdan hammasi joyida boʻldi, jadval buzilmadi.",
+      "pros": "Jadval aniq, universitet binosi qulay.",
+      "cons": "Datasetlar oldindan tekshirilmagan.",
+      "is_anonymous": false
+    },
+    {
+      "hackathon_slug": "open-data-challenge-2025",
+      "user": "demo-3",
+      "ratings": {
+        "organization": 3,
+        "communication": 3,
+        "judging": 4,
+        "prizes": 3,
+        "venue": 3
+      },
+      "participated_as": "participant",
+      "days_ago": 566,
+      "title": "Baholash adolatli, qolgani oʻrtacha",
+      "body": "Hakamlar haqiqatan kodni koʻrishdi va savollari mazmunli edi — bu kamdan-kam boʻladi. Qolgan jihatlar oʻrtacha: ovqat kechikdi, zal sovuq edi, jadval bir necha marta ogʻzaki oʻzgartirildi. Sovrin eʼlon qilinganidek berildi, lekin bir oy kechikdi.",
+      "pros": "Hakamlar texnik jihatdan kuchli.",
+      "cons": "Zal sovuq, jadval ogʻzaki oʻzgartirildi.",
+      "is_anonymous": false
+    },
+    {
+      "hackathon_slug": "open-data-challenge-2025",
+      "user": "demo-5",
+      "ratings": {
+        "organization": 4,
+        "communication": 4,
+        "judging": 3,
+        "prizes": 2,
+        "venue": 4
+      },
+      "participated_as": "finalist",
+      "days_ago": 560,
+      "title": "Yaxshi tadbir, sovrin masalasi choʻzildi",
+      "body": "Tashkiliy jihatdan hech qanday shikoyat yoʻq — hamma narsa vaqtida, xabarlar muntazam keldi. Muammo faqat sovrinda: gʻoliblarga topshirish jarayoni juda uzoq davom etdi va hujjat toʻldirish talab qilindi, bu haqda oldindan aytilmagandi.",
+      "pros": "Xabarlar muntazam keldi.",
+      "cons": "Sovrin uchun kutilmagan hujjatlar talab qilindi.",
+      "is_anonymous": false
+    },
+    {
+      "hackathon_slug": "national-ai-hackathon-samarkand-stage-2026",
+      "user": "demo-2",
+      "ratings": {
+        "organization": 5,
+        "communication": 4,
+        "judging": 4,
+        "prizes": 4,
+        "venue": 5
+      },
+      "participated_as": "participant",
+      "days_ago": 210,
+      "title": "Viloyat bosqichi kutilganidan ancha yaxshi",
+      "body": "Samarqand bosqichida qatnashdim. Toshkentdan tashqarida oʻtkaziladigan tadbirlar odatda zaifroq boʻladi, bu esa aksincha edi: joy tayyor, texnika ishlaydi, jadval buzilmadi. Mentorlar Toshkentdan kelgan va haqiqatan yordam berishdi.",
+      "pros": "Viloyatda shunday darajadagi tashkiliy ish kamdan-kam uchraydi.",
+      "cons": "Ikkinchi kuni ovqat kechikdi.",
+      "is_anonymous": false
+    },
+    {
+      "hackathon_slug": "national-ai-hackathon-samarkand-stage-2026",
+      "user": "demo-4",
+      "ratings": {
+        "organization": 4,
+        "communication": 4,
+        "judging": 5,
+        "prizes": 4,
+        "venue": 4
+      },
+      "participated_as": "winner",
+      "days_ago": 206,
+      "title": "Baholash shaffof boʻldi",
+      "body": "Baholash mezonlari birinchi kuni ekranda koʻrsatildi va oxirigacha oʻzgarmadi. Har bir jamoa oʻz balini yoʻnalishlar boʻyicha koʻra oldi. Bu juda muhim — nima uchun yutqazganingizni bilish yutuqdan kam emas. Grand finalga yoʻllanma oldik.",
+      "pros": "Mezonlar oldindan eʼlon qilindi va oʻzgarmadi.",
+      "cons": "Roʻyxatdan oʻtish sayti bir necha soat ishlamadi.",
+      "is_anonymous": false
+    },
+    {
+      "hackathon_slug": "national-ai-hackathon-samarkand-stage-2026",
+      "user": "demo-6",
+      "ratings": {
+        "organization": 5,
+        "communication": 5,
+        "judging": 4,
+        "prizes": 3,
+        "venue": 5
+      },
+      "participated_as": "participant",
+      "days_ago": 200,
+      "title": "Отличная коммуникация на всех этапах",
+      "body": "Организаторы писали в Telegram буквально на каждом шаге: подтверждение регистрации, напоминание за день, расписание на каждый день, результаты отбора. Никого не оставили без ответа. Площадка в Самарканде оказалась удобной, интернет не падал.",
+      "pros": "Каждое сообщение приходило вовремя, никого не забыли.",
+      "cons": "Призовой фонд для регионального этапа скромный.",
+      "is_anonymous": false
+    },
+    {
+      "hackathon_slug": "ai-hackathon-samarkand-2025",
+      "user": "demo-1",
+      "ratings": {
+        "organization": 4,
+        "communication": 4,
+        "judging": 4,
+        "prizes": 3,
+        "venue": 4
+      },
+      "participated_as": "participant",
+      "days_ago": 380,
+      "title": "Ixcham va tartibli hakaton",
+      "body": "Uch kunlik format qulay boʻldi. Jamoalar soni koʻp emasdi, shuning uchun har bir jamoa mentor bilan yetarlicha vaqt ishlay oldi. Yakuniy taqdimotlar oʻz vaqtida boshlandi va tugadi.",
+      "pros": "Kichik format tufayli mentorlik sifatli.",
+      "cons": "Sovrin jamgʻarmasi eʼlon qilinganidan kichikroq boʻlib chiqdi.",
+      "is_anonymous": false
+    },
+    {
+      "hackathon_slug": "ai-hackathon-samarkand-2025",
+      "user": "demo-5",
+      "ratings": {
+        "organization": 3,
+        "communication": 3,
+        "judging": 4,
+        "prizes": 3,
+        "venue": 4
+      },
+      "participated_as": "volunteer",
+      "days_ago": 376,
+      "title": "Koʻngilli sifatida: tayyorgarlik oxirgi kunga qoldi",
+      "body": "Koʻngilli boʻlib ishladim. Ishtirokchilar uchun hammasi silliq koʻrindi, lekin ichkarida tayyorgarlik oxirgi kuni shoshilinch qilindi. Badge va roʻyxatlar tadbir kuni ertalab bosildi. Baholash jarayoni esa yaxshi tuzilgan edi.",
+      "pros": "Baholash jarayoni aniq tuzilgan.",
+      "cons": "Ichki tayyorgarlik oxirgi kunga qoldirildi.",
+      "is_anonymous": false
+    },
+    {
+      "hackathon_slug": "president-tech-award-2024-hackathon",
+      "user": "demo-3",
+      "ratings": {
+        "organization": 4,
+        "communication": 3,
+        "judging": 3,
+        "prizes": 4,
+        "venue": 4
+      },
+      "participated_as": "participant",
+      "days_ago": 700,
+      "title": "Katta tadbir, lekin oqim sekin",
+      "body": "Miqyosi katta va shunga yarasha byurokratiya ham koʻp edi. Roʻyxatdan oʻtish uchun bir nechta hujjat talab qilindi, tasdiqlash bir hafta davom etdi. Tadbirning oʻzi yaxshi oʻtdi, sovrinlar berildi. Baholash jarayoni esa yopiq edi, ball tafsilotlari aytilmadi.",
+      "pros": "Sovrinlar haqiqatan berildi.",
+      "cons": "Roʻyxatdan oʻtish choʻzildi, baholash yopiq.",
+      "is_anonymous": false
+    },
+    {
+      "hackathon_slug": "president-tech-award-2024-hackathon",
+      "user": "demo-6",
+      "ratings": {
+        "organization": 5,
+        "communication": 4,
+        "judging": 4,
+        "prizes": 5,
+        "venue": 4
+      },
+      "participated_as": "finalist",
+      "days_ago": 694,
+      "title": "Davlat darajasidagi tashkiliy ish",
+      "body": "Bunday miqyosdagi tadbir uchun tashkiliy ish kutilganidan yaxshi edi. Jadval eʼlon qilingan vaqtda bajarildi, finalchilar roʻyxati rasmiy kanalda chiqdi va bizga alohida qoʻngʻiroq qilishdi. Sovrin masalasida ham muammo boʻlmadi.",
+      "pros": "Rasmiy kanal orqali barcha xabarlar berildi.",
+      "cons": "Zalda joy yetarli emasdi, baʼzilar tik turdi.",
+      "is_anonymous": false
+    },
+    {
+      "hackathon_slug": "ecology-art-technology-hackathon-2025",
+      "user": "demo-4",
+      "ratings": {
+        "organization": 3,
+        "communication": 2,
+        "judging": 3,
+        "prizes": 2,
+        "venue": 3
+      },
+      "participated_as": "participant",
+      "days_ago": 430,
+      "title": "Gʻoya yaxshi, ijro boʻsh",
+      "body": "Ekologiya va texnologiya mavzusi juda dolzarb, lekin tadbir tayyorgarliksiz oʻtdi. Ikki kunlik format uchun mavzu juda keng qoʻyilgandi, jamoalar nima qilish kerakligini oxirigacha tushunmadi. Natijalar haqida keyin xabar berilmadi.",
+      "pros": "Mavzu dolzarb, ishtirokchilar faol.",
+      "cons": "Vazifa noaniq, natijalar eʼlon qilinmadi.",
+      "is_anonymous": true
+    },
+    {
+      "hackathon_slug": "ecology-art-technology-hackathon-2025",
+      "user": "demo-2",
+      "ratings": {
+        "organization": 4,
+        "communication": 3,
+        "judging": 3,
+        "prizes": 3,
+        "venue": 4
+      },
+      "participated_as": "participant",
+      "days_ago": 426,
+      "title": "Ijodiy format, texnik tomoni zaif",
+      "body": "Sanʼat va texnologiyani birlashtirish gʻoyasi ishladi, taqdimotlar qiziqarli boʻldi. Lekin texnik jamoalar uchun baholash mezonlari mos emasdi — dizayn va hikoya kodga qaraganda koʻproq baholandi, bu oldindan aytilmagandi.",
+      "pros": "Format nostandart, taqdimotlar qiziqarli.",
+      "cons": "Baholash mezonlari texnik jamoalarga mos emas.",
+      "is_anonymous": false
+    },
+    {
+      "hackathon_slug": "navruz-hackathon-2025",
+      "user": "demo-5",
+      "ratings": {
+        "organization": 4,
+        "communication": 4,
+        "judging": 4,
+        "prizes": 4,
+        "venue": 3
+      },
+      "participated_as": "participant",
+      "days_ago": 520,
+      "title": "Universitet hakatoni uchun yaxshi daraja",
+      "body": "Talabalar hakatoni uchun juda yaxshi tashkil etilgan. Jadval aniq, mentorlar bor, natijalar oʻsha kuni eʼlon qilindi. Yagona kamchilik — auditoriyalar kichik edi va uzoq oʻtirish noqulay boʻldi.",
+      "pros": "Natijalar oʻsha kuniyoq eʼlon qilindi.",
+      "cons": "Auditoriyalar tor, uzoq ishlash noqulay.",
+      "is_anonymous": false
+    },
+    {
+      "hackathon_slug": "cau-tech-hackathon-2026",
+      "user": "demo-1",
+      "ratings": {
+        "organization": 4,
+        "communication": 4,
+        "judging": 3,
+        "prizes": 4,
+        "venue": 4
+      },
+      "participated_as": "participant",
+      "days_ago": 150,
+      "title": "Ikki kunlik ixcham format",
+      "body": "Universitet ichidagi tadbir uchun yaxshi daraja. Roʻyxatdan oʻtish oson, jadval buzilmadi, ovqat bor edi. Hakamlar tarkibi kichik edi va baholash tez oʻtdi — baʼzi jamoalarga savol berilmadi ham.",
+      "pros": "Tashkiliy jihatdan aniq, kutish vaqti kam.",
+      "cons": "Baholash juda tez oʻtdi, feedback yoʻq.",
+      "is_anonymous": false
+    },
+    {
+      "hackathon_slug": "cau-tech-hackathon-2026",
+      "user": "demo-6",
+      "ratings": {
+        "organization": 1,
+        "communication": 1,
+        "judging": 1,
+        "prizes": 1,
+        "venue": 1
+      },
+      "participated_as": "participant",
+      "days_ago": 148,
+      "status": "hidden",
+      "title": "Bu sharh qoidabuzarlik uchun yashirilgan",
+      "body": "Bu yozuv moderatsiya oqimini sinash uchun qoʻyilgan namuna. Haqiqiy saytda bu yerda qoidalarga zid matn boʻlar edi va moderator uni yashirgan boʻlardi. Yashirilgan sharh reytingga taʼsir qilmaydi va omma uchun koʻrinmaydi.",
+      "pros": null,
+      "cons": null,
+      "is_anonymous": false
+    },
+    {
+      "hackathon_slug": "technovation-girls-yandex-hackathon-fergana-2024",
+      "user": "demo-3",
+      "ratings": {
+        "organization": 5,
+        "communication": 5,
+        "judging": 5,
+        "prizes": 4,
+        "venue": 5
+      },
+      "participated_as": "mentor",
+      "days_ago": 655,
+      "title": "Eng puxta tashkil etilgan tadbirlardan biri",
+      "body": "Mentor sifatida bir necha hakatonlarda qatnashganman, bu eng tartiblilaridan biri edi. Har bir jamoaga alohida mentor biriktirildi, jadval daqiqama-daqiqa bajarildi, ishtirokchilarga oldindan tayyorgarlik materiallari yuborildi. Natijalar oʻsha kuni eʼlon qilindi va har bir jamoa yozma izoh oldi.",
+      "pros": "Har bir jamoa yozma izoh oldi. Tayyorgarlik materiallari oldindan berildi.",
+      "cons": "Sovrin jamgʻarmasi katta emas, lekin bu oldindan aytilgandi.",
+      "is_anonymous": true
+    },
+    {
+      "hackathon_slug": "national-ai-hackathon-nukus-stage-2025",
+      "user": "demo-2",
+      "ratings": {
+        "organization": 4,
+        "communication": 3,
+        "judging": 4,
+        "prizes": 3,
+        "venue": 4
+      },
+      "participated_as": "participant",
+      "days_ago": 320,
+      "title": "Ochilish bosqichi — birinchi blin boʻlmadi",
+      "body": "Milliy dasturning birinchi bosqichi boʻlgani uchun baʼzi narsalar chalkash boʻlishini kutgandim, lekin asosiy jarayon silliq oʻtdi. Sogʻliqni saqlash yoʻnalishi boʻyicha real maʼlumotlar berildi, bu katta plyus. Xabarlar esa kech keldi — jadval bir kun oldin eʼlon qilindi.",
+      "pros": "Real maʼlumotlar bilan ishlash imkoni.",
+      "cons": "Jadval juda kech eʼlon qilindi.",
+      "is_anonymous": false
+    },
+    {
+      "hackathon_slug": "national-ai-hackathon-nukus-stage-2025",
+      "user": "demo-4",
+      "ratings": {
+        "organization": 3,
+        "communication": 2,
+        "judging": 3,
+        "prizes": 3,
+        "venue": 3
+      },
+      "participated_as": "participant",
+      "days_ago": 316,
+      "title": "Nukusda qatnashish uchun logistika ogʻir",
+      "body": "Tadbirning oʻzi oʻrtacha darajada oʻtdi. Asosiy muammo — boshqa viloyatdan kelganlar uchun hech qanday yordam koʻrsatilmadi, yashash joyi haqida maʼlumot ham berilmadi. Bu haqda oldindan soʻraganimizda javob olmadik.",
+      "pros": "Mavzu va yoʻnalishlar qiziqarli.",
+      "cons": "Boshqa viloyatdan kelganlarga logistika yordami yoʻq.",
+      "is_anonymous": false
+    }
+  ],
+  "votes": [
+    {
+      "hackathon_slug": "urban-tech-uzbekistan-2024-hackathon",
+      "review_user": "demo-5",
+      "voter": "demo-1"
+    },
+    {
+      "hackathon_slug": "urban-tech-uzbekistan-2024-hackathon",
+      "review_user": "demo-5",
+      "voter": "demo-2"
+    },
+    {
+      "hackathon_slug": "urban-tech-uzbekistan-2024-hackathon",
+      "review_user": "demo-5",
+      "voter": "demo-3"
+    },
+    {
+      "hackathon_slug": "urban-tech-uzbekistan-2024-hackathon",
+      "review_user": "demo-5",
+      "voter": "demo-4"
+    },
+    {
+      "hackathon_slug": "urban-tech-uzbekistan-2024-hackathon",
+      "review_user": "demo-2",
+      "voter": "demo-6"
+    },
+    {
+      "hackathon_slug": "urban-tech-uzbekistan-2024-hackathon",
+      "review_user": "demo-2",
+      "voter": "demo-1"
+    },
+    {
+      "hackathon_slug": "cbu-coding-hackathon-2026",
+      "review_user": "demo-3",
+      "voter": "demo-1"
+    },
+    {
+      "hackathon_slug": "cbu-coding-hackathon-2026",
+      "review_user": "demo-3",
+      "voter": "demo-2"
+    },
+    {
+      "hackathon_slug": "cbu-coding-hackathon-2026",
+      "review_user": "demo-3",
+      "voter": "demo-5"
+    },
+    {
+      "hackathon_slug": "cbu-coding-hackathon-2026",
+      "review_user": "demo-1",
+      "voter": "demo-4"
+    },
+    {
+      "hackathon_slug": "open-data-challenge-2025",
+      "review_user": "demo-1",
+      "voter": "demo-3"
+    },
+    {
+      "hackathon_slug": "national-ai-hackathon-samarkand-stage-2026",
+      "review_user": "demo-4",
+      "voter": "demo-2"
+    },
+    {
+      "hackathon_slug": "national-ai-hackathon-samarkand-stage-2026",
+      "review_user": "demo-4",
+      "voter": "demo-6"
+    },
+    {
+      "hackathon_slug": "technovation-girls-yandex-hackathon-fergana-2024",
+      "review_user": "demo-3",
+      "voter": "demo-5"
+    }
+  ],
+  "reports": [
+    {
+      "hackathon_slug": "cau-tech-hackathon-2026",
+      "review_user": "demo-6",
+      "reporter": "demo-2",
+      "reason": "Sharhda haqorat va asossiz ayblovlar bor."
+    },
+    {
+      "hackathon_slug": "ecology-art-technology-hackathon-2025",
+      "review_user": "demo-4",
+      "reporter": "demo-5",
+      "reason": "Menimcha bu odam tadbirda qatnashmagan — tafsilotlar mos kelmaydi."
+    }
+  ],
+  "official_responses": [
+    {
+      "hackathon_slug": "urban-tech-uzbekistan-2024-hackathon",
+      "review_user": "demo-5",
+      "author_label": "Urban.Tech jamoasi rasmiy javobi",
+      "body": "Sharh uchun rahmat va kechikish uchun uzr soʻraymiz. Sovrin toʻlovlari homiy tomonidan amalga oshirilishi kerak edi va bu jarayon kutilganidan uzoq davom etdi. Barcha gʻoliblar bilan bogʻlanmoqdamiz. Keyingi tadbirlarda toʻlov muddatini shartnomada qatʼiy belgilaymiz."
+    }
+  ],
+  "submissions": [
+    {
+      "slug": "demo-pending-fintech-hackathon-2026",
+      "name": "Demo: Fintech Hackathon Toshkent 2026",
+      "organizer_slug": "it-park-uzbekistan",
+      "city": "Tashkent",
+      "format": "offline",
+      "start_date": "2026-10-10",
+      "end_date": "2026-10-12",
+      "prize_pool": "50 000 000 soʻm",
+      "tracks": [
+        "Fintech",
+        "Open banking"
+      ],
+      "website": null,
+      "telegram": null,
+      "registration_url": null,
+      "status": "pending",
+      "rejection_reason": null,
+      "submitted_by": "demo-1",
+      "description_uz": "DEMO YOZUV — moderatsiya navbatini sinash uchun. Bu foydalanuvchi tomonidan yuborilgan va hali tasdiqlanmagan hakaton namunasi.",
+      "description_ru": "DEMO-ЗАПИСЬ — для проверки очереди модерации.",
+      "description_en": "DEMO RECORD — used to exercise the moderation queue."
+    },
+    {
+      "slug": "demo-rejected-hackathon-2025",
+      "name": "Demo: rad etilgan hakaton",
+      "organizer_slug": "it-park-uzbekistan",
+      "city": null,
+      "format": "online",
+      "start_date": "2025-05-01",
+      "end_date": "2025-05-02",
+      "prize_pool": null,
+      "tracks": [],
+      "website": null,
+      "telegram": null,
+      "registration_url": null,
+      "status": "rejected",
+      "rejection_reason": "Tadbir haqida ochiq manba topilmadi. Rasmiy havola qoʻshib qayta yuboring.",
+      "submitted_by": "demo-1",
+      "description_uz": "DEMO YOZUV — rad etilgan holatni koʻrsatish uchun.",
+      "description_ru": "DEMO-ЗАПИСЬ — для отображения статуса «отклонено».",
+      "description_en": "DEMO RECORD — used to show the rejected state on the profile page."
+    }
+  ]
+}
