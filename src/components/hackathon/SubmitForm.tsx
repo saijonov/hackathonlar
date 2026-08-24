@@ -588,6 +588,11 @@ export function SubmitForm({ organizers }: SubmitFormProps) {
               type="file"
               accept={UPLOAD_LIMITS.mimeTypes.join(',')}
               className="sr-only"
+              // The visible Button is the operable control and carries the
+              // accessible name; this input is only ever triggered by it, so
+              // leaving it in the a11y tree would announce an unlabelled field.
+              aria-hidden
+              tabIndex={-1}
               onChange={(event) => {
                 const file = event.target.files?.[0];
                 if (file) handleUpload(file);

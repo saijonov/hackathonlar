@@ -44,6 +44,18 @@ const nextConfig: NextConfig = {
    * already run at build time.
    */
   htmlLimitedBots: /.*/,
+  experimental: {
+    /**
+     * Inline the stylesheet instead of linking it.
+     *
+     * Lighthouse named the single render-blocking <link rel="stylesheet"> as
+     * the largest remaining cost on mobile: "Est savings of 1,050 ms" on
+     * simulated slow 4G. The stylesheet is ~10KB — small enough that inlining
+     * it is a clear win, and it removes a round trip from the critical path
+     * entirely.
+     */
+    inlineCss: true,
+  },
   // The OG routes read these WOFF files from disk at render time; without this
   // they are not traced into the serverless bundle and the route 500s in prod.
   outputFileTracingIncludes: {
