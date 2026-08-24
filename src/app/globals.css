@@ -15,10 +15,13 @@
 
   --color-ink: #16130f;
   --color-ink-2: #4a443b;
-  --color-ink-3: #7c7466;
+  --color-ink-3: #6b6357;
 
   --color-line: #e2dacd;
   --color-line-2: #cfc5af;
+  /* Large decorative numerals (step counters, ranking positions). line-2 was
+     used here and measured 1.71:1 — below the 3:1 large-text minimum. */
+  --color-numeral: #9a8c6e;
 
   /* --- accent: "Registon blue" ------------------------------------------- */
   --color-accent: #046d82;
@@ -32,7 +35,7 @@
   --color-mid-soft: #f6e8cc;
   --color-bad: #a82219;
   --color-bad-soft: #f7e0dd;
-  --color-none: #7c7466;
+  --color-none: #6b6357;
   --color-none-soft: #ebe5d7;
 
   /* --- semantic status (deliberately the same three hues) ----------------- */

@@ -18,6 +18,24 @@ type LayoutProps = {
   params: Promise<{ locale: string }>;
 };
 
+/**
+ * THIS IS THE ROOT LAYOUT.
+ *
+ * There is deliberately no `app/layout.tsx`. With one present it becomes the
+ * root, and because `<html>`/`<body>` live here instead, Next had nowhere to
+ * put generated metadata: <title>, <meta name="description">, the canonical
+ * link and every OpenGraph tag were emitted *inside <body>*. Measured before
+ * the fix — `document.querySelector('meta[name=description]').parentElement`
+ * returned BODY, and Lighthouse scored SEO 91 with "Document does not have a
+ * meta description" on every page.
+ *
+ * Dropping the passthrough root layout makes this file the root, so metadata
+ * lands in <head> where it belongs. Nothing needs a locale-less layout:
+ * robots/sitemap/opengraph-image/auth-callback are route handlers, and the
+ * middleware locale-prefixes every other path, so unmatched routes reach
+ * `[locale]/not-found.tsx`.
+ */
+
 /** Pre-renders the three locale shells at build time. */
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));

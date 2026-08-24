@@ -23,9 +23,9 @@ export function OrganizerCard({ organizer, className }: OrganizerCardProps) {
         <div className="flex min-w-0 items-center gap-3">
           <Monogram name={organizer.name} slug={organizer.slug} size={44} />
           <div className="min-w-0">
-            <h3 className="line-clamp-2 text-h3 text-ink transition-colors group-hover:text-accent">
+            <h2 className="line-clamp-2 text-h3 text-ink transition-colors group-hover:text-accent">
               {organizer.name}
-            </h3>
+            </h2>
             <p className="mt-0.5 text-meta text-ink-3">
               {t('hackathons', { count: organizer.hackathonCount })}
             </p>

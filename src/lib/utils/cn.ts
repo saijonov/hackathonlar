@@ -44,6 +44,7 @@ const COLORS = [
   'ink-3',
   'line',
   'line-2',
+  'numeral',
   'accent',
   'accent-ink',
   'accent-soft',

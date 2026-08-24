@@ -64,7 +64,11 @@ export function SiteHeader() {
       <div aria-hidden className="h-[3px] w-full bg-accent" />
 
       <div className="container-page flex h-16 items-center gap-3">
-        <Link href="/" className="shrink-0 rounded-sm" aria-label="hackathonlar.uz">
+        <Link
+          href="/"
+          className="inline-flex min-h-11 shrink-0 items-center rounded-sm"
+          aria-label="hackathonlar.uz"
+        >
           <Wordmark size="md" className="hidden sm:inline-flex" />
           <Wordmark size="md" markOnly className="sm:hidden" />
         </Link>

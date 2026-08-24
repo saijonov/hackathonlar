@@ -67,9 +67,9 @@ export function HackathonCard({ hackathon, today, priority = false, className }:
 
         <div className="flex min-w-0 flex-1 flex-col gap-3 p-4">
           <div className="min-w-0">
-            <h3 className="text-h3 text-ink transition-colors group-hover:text-accent">
+            <h2 className="text-h3 text-ink transition-colors group-hover:text-accent">
               {hackathon.name}
-            </h3>
+            </h2>
 
             {hackathon.organizer && (
               <p className="mt-2 flex min-w-0 items-center gap-1.5 text-meta text-ink-3">

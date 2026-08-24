@@ -115,7 +115,7 @@ export function StarRatingInput({
             aria-hidden
             className={cn(
               'ml-1.5 w-5 text-center font-display text-h3 font-bold tabular-nums',
-              value ? 'text-ink' : 'text-line-2',
+              value ? 'text-ink' : 'text-ink-3',
             )}
           >
             {value ?? '—'}

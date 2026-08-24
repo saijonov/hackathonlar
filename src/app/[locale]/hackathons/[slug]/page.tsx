@@ -170,7 +170,7 @@ export default async function HackathonDetailPage({ params }: PageProps) {
         <div className="container-page py-6 md:py-10">
           <Link
             href="/hackathons"
-            className="inline-flex items-center gap-1.5 text-meta font-medium text-ink-3 transition-colors hover:text-accent"
+            className="inline-flex min-h-11 items-center gap-1.5 text-meta font-medium text-ink-3 transition-colors hover:text-accent"
           >
             <ArrowLeft size={15} strokeWidth={2} aria-hidden />
             {t('backToCatalog')}
@@ -300,6 +300,9 @@ export default async function HackathonDetailPage({ params }: PageProps) {
                 coverUrl={hackathon.coverUrl}
                 priority
                 sizes="(max-width: 1024px) 100vw, 380px"
+                // The H1 is directly beside this, and the 4:3 crop would slice
+                // the generated title in half.
+                titleless
                 className="absolute inset-0"
               />
             </div>

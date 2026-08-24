@@ -21,7 +21,7 @@ export function RankingRow({ hackathon, rank }: RankingRowProps) {
     >
       <span
         aria-hidden
-        className="w-8 shrink-0 text-center font-display text-h1 font-extrabold leading-none tabular-nums text-line-2"
+        className="w-8 shrink-0 text-center font-display text-h1 font-extrabold leading-none tabular-nums text-numeral"
       >
         {rank}
       </span>

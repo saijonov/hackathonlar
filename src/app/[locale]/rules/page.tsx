@@ -52,7 +52,7 @@ export default async function RulesPage({ params }: PageProps) {
             <div className="flex gap-4">
               <span
                 aria-hidden
-                className="font-display text-h1 font-extrabold leading-none tabular-nums text-line-2"
+                className="font-display text-h1 font-extrabold leading-none tabular-nums text-numeral"
               >
                 {String(index + 1).padStart(2, '0')}
               </span>
@@ -74,7 +74,7 @@ export default async function RulesPage({ params }: PageProps) {
           href="https://t.me/hackathonlar_uz"
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-3 inline-flex items-center gap-1.5 text-body font-semibold text-accent underline underline-offset-4"
+          className="mt-3 inline-flex min-h-11 items-center gap-1.5 text-body font-semibold text-accent underline underline-offset-4"
         >
           <Send size={16} strokeWidth={1.75} aria-hidden />
           Telegram

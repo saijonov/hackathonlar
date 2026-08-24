@@ -10,7 +10,7 @@ export default function LocaleNotFound() {
     <div className="container-page flex min-h-[60vh] max-w-2xl flex-col items-center justify-center py-16 text-center">
       <p
         aria-hidden
-        className="font-display text-[clamp(5rem,18vw,10rem)] font-extrabold leading-none tracking-[-0.05em] text-line-2"
+        className="font-display text-[clamp(5rem,18vw,10rem)] font-extrabold leading-none tracking-[-0.05em] text-numeral"
       >
         {t('code')}
       </p>

@@ -66,7 +66,7 @@ export default async function AboutPage({ params }: PageProps) {
             <li key={principle} className="bg-surface p-5">
               <span
                 aria-hidden
-                className="font-display text-h1 font-extrabold leading-none tabular-nums text-line-2"
+                className="font-display text-h1 font-extrabold leading-none tabular-nums text-numeral"
               >
                 {String(index + 1).padStart(2, '0')}
               </span>

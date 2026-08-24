@@ -27,6 +27,23 @@ const nextConfig: NextConfig = {
   eslint: {
     dirs: ['src', 'tests'],
   },
+  /**
+   * Emit metadata into <head> for every user agent, not just the ones Next
+   * classifies as "HTML-limited".
+   *
+   * Next 15 streams metadata by default: <title>, the description, the
+   * canonical link and all OpenGraph tags are flushed *after* </head> and
+   * hoisted into place by React on the client. JS-capable crawlers cope, and
+   * the default bot list covers the big social scrapers — but anything else
+   * (and Lighthouse, which scored SEO 91 with "Document does not have a meta
+   * description") sees a document whose metadata sits in <body>.
+   *
+   * For a site whose entire value is being findable and shareable that is the
+   * wrong trade. Matching every UA makes metadata blocking again; the cost is
+   * nil here because every public page is prerendered, so generateMetadata has
+   * already run at build time.
+   */
+  htmlLimitedBots: /.*/,
   // The OG routes read these WOFF files from disk at render time; without this
   // they are not traced into the serverless bundle and the route 500s in prod.
   outputFileTracingIncludes: {

@@ -23,19 +23,19 @@ export function SiteFooter() {
           <p id="footer-explore" className="eyebrow mb-3 text-ink-3">
             {t('sections.explore')}
           </p>
-          <ul className="grid grid-cols-1 gap-2 text-meta">
+          <ul className="grid grid-cols-1 text-meta">
             <li>
-              <Link href="/hackathons" className="text-ink-2 hover:text-accent hover:underline">
+              <Link href="/hackathons" className="inline-flex min-h-11 items-center text-ink-2 hover:text-accent hover:underline">
                 {tNav('hackathons')}
               </Link>
             </li>
             <li>
-              <Link href="/organizers" className="text-ink-2 hover:text-accent hover:underline">
+              <Link href="/organizers" className="inline-flex min-h-11 items-center text-ink-2 hover:text-accent hover:underline">
                 {tNav('organizers')}
               </Link>
             </li>
             <li>
-              <Link href="/submit" className="text-ink-2 hover:text-accent hover:underline">
+              <Link href="/submit" className="inline-flex min-h-11 items-center text-ink-2 hover:text-accent hover:underline">
                 {tNav('submit')}
               </Link>
             </li>
@@ -46,14 +46,14 @@ export function SiteFooter() {
           <p id="footer-project" className="eyebrow mb-3 text-ink-3">
             {t('sections.project')}
           </p>
-          <ul className="grid grid-cols-1 gap-2 text-meta">
+          <ul className="grid grid-cols-1 text-meta">
             <li>
-              <Link href="/about" className="text-ink-2 hover:text-accent hover:underline">
+              <Link href="/about" className="inline-flex min-h-11 items-center text-ink-2 hover:text-accent hover:underline">
                 {tNav('about')}
               </Link>
             </li>
             <li>
-              <Link href="/rules" className="text-ink-2 hover:text-accent hover:underline">
+              <Link href="/rules" className="inline-flex min-h-11 items-center text-ink-2 hover:text-accent hover:underline">
                 {tNav('rules')}
               </Link>
             </li>
@@ -62,7 +62,7 @@ export function SiteFooter() {
                 href={TELEGRAM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-ink-2 hover:text-accent hover:underline"
+                className="inline-flex min-h-11 items-center gap-1.5 text-ink-2 hover:text-accent hover:underline"
               >
                 <Send size={14} strokeWidth={1.75} aria-hidden />
                 {t('contact')}

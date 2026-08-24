@@ -76,7 +76,7 @@ export default async function ReviewPage({ params }: PageProps) {
     <div className="container-page max-w-3xl py-8 md:py-12">
       <Link
         href={`/hackathons/${slug}`}
-        className="inline-flex items-center gap-1.5 text-meta font-medium text-ink-3 transition-colors hover:text-accent"
+        className="inline-flex min-h-11 items-center gap-1.5 text-meta font-medium text-ink-3 transition-colors hover:text-accent"
       >
         <ArrowLeft size={15} strokeWidth={2} aria-hidden />
         {hackathon.name}

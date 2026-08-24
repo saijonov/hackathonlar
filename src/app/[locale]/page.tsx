@@ -37,7 +37,12 @@ export default async function HomePage({ params }: PageProps) {
     getRecentReviews(6),
   ]);
 
-  const hasRanking = topRated.length > 0 || lowestRated.length > 0;
+  // With only a handful of hackathons above the review threshold, "highest"
+  // and "lowest" would otherwise list the same events twice — which reads as a
+  // bug and undermines the point of the split.
+  const topIds = new Set(topRated.map((item) => item.id));
+  const bottomRated = lowestRated.filter((item) => !topIds.has(item.id));
+  const hasRanking = topRated.length > 0;
 
   return (
     <>
@@ -80,7 +85,7 @@ export default async function HomePage({ params }: PageProps) {
             action={
               <Link
                 href="/hackathons?tab=upcoming"
-                className="inline-flex items-center gap-1.5 text-meta font-semibold text-accent underline underline-offset-4 hover:text-accent-ink"
+                className="inline-flex min-h-11 items-center gap-1.5 text-meta font-semibold text-accent underline underline-offset-4 hover:text-accent-ink"
               >
                 {tNav('hackathons')}
                 <ArrowRight size={15} strokeWidth={2} aria-hidden />
@@ -116,7 +121,13 @@ export default async function HomePage({ params }: PageProps) {
       {hasRanking && (
         <section className="border-b border-line bg-paper">
           <div className="container-page py-14 md:py-16">
-            <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-10">
+            <div
+              className={
+                bottomRated.length > 0
+                  ? 'grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-10'
+                  : 'grid grid-cols-1 gap-8'
+              }
+            >
               <div>
                 <div className="mb-5 flex items-center gap-2.5">
                   <Badge tone="good" icon={<Trophy size={12} strokeWidth={2} aria-hidden />} micro>
@@ -133,21 +144,23 @@ export default async function HomePage({ params }: PageProps) {
                 </ol>
               </div>
 
-              <div>
-                <div className="mb-5 flex items-center gap-2.5">
-                  <Badge tone="bad" icon={<TrendingDown size={12} strokeWidth={2} aria-hidden />} micro>
-                    {t('ranking.eyebrow')}
-                  </Badge>
-                  <h2 className="text-h1">{t('ranking.bottomTitle')}</h2>
+              {bottomRated.length > 0 && (
+                <div>
+                  <div className="mb-5 flex items-center gap-2.5">
+                    <Badge tone="bad" icon={<TrendingDown size={12} strokeWidth={2} aria-hidden />} micro>
+                      {t('ranking.eyebrow')}
+                    </Badge>
+                    <h2 className="text-h1">{t('ranking.bottomTitle')}</h2>
+                  </div>
+                  <ol className="grid grid-cols-1 gap-2.5">
+                    {bottomRated.map((hackathon, index) => (
+                      <li key={hackathon.id}>
+                        <RankingRow hackathon={hackathon} rank={index + 1} />
+                      </li>
+                    ))}
+                  </ol>
                 </div>
-                <ol className="grid grid-cols-1 gap-2.5">
-                  {lowestRated.map((hackathon, index) => (
-                    <li key={hackathon.id}>
-                      <RankingRow hackathon={hackathon} rank={index + 1} />
-                    </li>
-                  ))}
-                </ol>
-              </div>
+              )}
             </div>
 
             <p className="mt-6 text-meta text-ink-3">
@@ -195,7 +208,7 @@ export default async function HomePage({ params }: PageProps) {
               <li key={step} className="bg-surface p-6">
                 <span
                   aria-hidden
-                  className="font-display text-display-2 leading-none tabular-nums text-line-2"
+                  className="font-display text-display-2 leading-none tabular-nums text-numeral"
                 >
                   {String(index + 1).padStart(2, '0')}
                 </span>

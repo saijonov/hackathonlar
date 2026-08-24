@@ -32,9 +32,9 @@ async function signedInClient(email: string) {
 }
 
 test.describe('row level security, probed directly', () => {
-  let userA = { id: '', email: '' };
-  let userB = { id: '', email: '' };
-  let adminUser = { id: '', email: '' };
+  const userA = { id: '', email: '' };
+  const userB = { id: '', email: '' };
+  const adminUser = { id: '', email: '' };
   let pendingId = '';
   let reviewOfA = '';
 
