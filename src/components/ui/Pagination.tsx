@@ -42,7 +42,11 @@ export function Pagination({ page, pageCount, className }: PaginationProps) {
     'grid grid-cols-1 h-11 min-w-11 place-items-center rounded-md border border-line bg-surface px-3 text-meta font-semibold text-ink-2 transition-colors hover:border-ink hover:text-ink';
 
   return (
-    <nav aria-label={t('title')} className={cn('flex flex-wrap items-center gap-2', className)}>
+    <nav
+      aria-label={t('title')}
+      data-testid="pagination"
+      className={cn('flex flex-wrap items-center gap-2', className)}
+    >
       {page > 1 ? (
         <Link href={hrefFor(page - 1)} rel="prev" className={linkClass} aria-label={tCommon('back')}>
           <ChevronLeft size={17} strokeWidth={2} aria-hidden />

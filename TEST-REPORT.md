@@ -4,7 +4,7 @@ Everything in PRD section 15, run against a **production build** (`next build` �
 `next start`) and a live local Supabase stack, on macOS / Node 25.9 /
 Chromium 151 (Playwright 1.62) / Lighthouse 13.4.1.
 
-**Result: all green.** 99 unit tests, 76 end-to-end tests, zero type errors,
+**Result: all green.** 99 unit tests, 80 end-to-end tests, zero type errors,
 zero lint errors, and every Lighthouse threshold cleared on nine routes.
 
 ---
@@ -17,7 +17,7 @@ zero lint errors, and every Lighthouse threshold cleared on nine routes.
 | 15.1 | ESLint | **0 errors, 0 warnings** |
 | 15.1 | `next build` | **success** — 155 static pages |
 | 15.2 | Vitest | **99 passed** / 99, 6 files |
-| 15.3 | Playwright e2e | **76 passed** / 76, 6 files |
+| 15.3 | Playwright e2e | **80 passed** / 80, 6 files |
 | 15.4 | Responsive proof | **28 screenshots**, 4 breakpoints × 7 pages, no overflow |
 | 15.5 | RLS security probes | **13 passed** / 13 |
 | 15.6 | Lighthouse (mobile) | perf **93–99**, a11y **100**, SEO **100** — 9 routes |
@@ -95,15 +95,15 @@ never reintroduces `U+02BB`/`U+02BC`.
 
 ---
 
-## 15.3 End-to-end — 76 passed
+## 15.3 End-to-end — 80 passed
 
 ```
-$ pnpm exec playwright test        →  76 passed (1.2m)
+$ pnpm exec playwright test        →  80 passed (1.3m)
 ```
 
 | File | Tests | Covers |
 | --- | --- | --- |
-| `public-browsing.spec.ts` | 15 | PRD 15.3.1, 15.3.7, 15.3.8 |
+| `public-browsing.spec.ts` | 19 | PRD 15.3.1, 15.3.7, 15.3.8 |
 | `review-flow.spec.ts` | 7 | PRD 15.3.2, 15.3.4, 15.3.6 |
 | `anonymity.spec.ts` | 4 | PRD 15.3.3 |
 | `submission.spec.ts` | 5 | PRD 15.3.5 |
@@ -118,6 +118,15 @@ pasted fresh; debounced search narrows results; a no-match search shows the
 designed empty state with a CTA; a hackathon page shows its score panel (2.3
 overall, 1.3 communication) and all three reviews. **No auth dialog appears at
 any point** — asserted explicitly on every page.
+
+Each remaining filter is covered too: **format** (every remaining card carries
+the badge), **organiser**, and **minimum rating** (which excludes unrated events
+as well as low-scoring ones). The Upcoming/Past tabs are asserted to split on
+the effective end date — and every upcoming card shows the organiser's track
+record instead of a score, which is the product's whole point. Sorting by
+highest and lowest genuinely flips the order. **Pagination** gives page 2 its
+own URL: 21 hackathons at 12 per page, 12 cards then 9, and the URL works when
+pasted fresh.
 
 Also verified: hidden reviews never reach a public page, the organiser
 scoreboard aggregates across events, `robots.txt` and `sitemap.xml` are served,
@@ -365,6 +374,13 @@ The generated cover is drawn at 1200×630 but the detail page crops it to 4:3,
 cutting the title to "an.Tech Uzbekistan 2024 Ha". Caught by eye during the
 screenshot review. The H1 sits directly beside it, so the cover is now
 title-less there.
+
+### 15. Filter controls had ambiguous accessible names
+
+With a wrapping `<label>`, a `<select>`'s accessible name absorbs its own option
+text, so two filter dropdowns answered to the same query. They now use explicit
+`htmlFor`/`id` association, scoped so the desktop bar and the mobile sheet never
+collide on an id.
 
 ### 14. An unlabelled file input on /submit and /profile
 

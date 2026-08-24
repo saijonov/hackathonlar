@@ -66,6 +66,75 @@ test.describe('public browsing, never signed in', () => {
     await expect(page.getByText('CBU Coding Hackathon 2026').first()).toBeVisible();
   });
 
+  test('pagination gives every page its own crawlable URL', async ({ page }) => {
+    // 21 approved hackathons at 12 per page = 2 pages.
+    await page.goto('/en/hackathons');
+    const cards = page.locator('ul li article');
+    await expect(cards).toHaveCount(12);
+
+    const pagination = page.getByTestId('pagination');
+    await expect(pagination.getByRole('link', { name: '2', exact: true })).toBeVisible();
+
+    await pagination.getByRole('link', { name: '2', exact: true }).click();
+    await expect(page).toHaveURL(/[?&]page=2/);
+    await expect(cards).toHaveCount(9);
+
+    // The second page is a real URL, not client state.
+    await page.goto('/en/hackathons?page=2');
+    await expect(cards).toHaveCount(9);
+    await expect(
+      page.getByTestId('pagination').getByRole('link', { name: '2', exact: true }),
+    ).toHaveAttribute('aria-current', 'page');
+  });
+
+  test('format, organizer and minimum-rating filters each narrow the list', async ({ page }) => {
+    await page.goto('/en/hackathons');
+    const cards = page.locator('ul li article');
+
+    const filters = page.getByTestId('catalog-filters');
+    await filters.getByLabel('Format').selectOption('hybrid');
+    await expect(page).toHaveURL(/format=hybrid/);
+    const hybridCount = await cards.count();
+    expect(hybridCount).toBeGreaterThan(0);
+    await expect(cards.getByText('Hybrid', { exact: true })).toHaveCount(hybridCount);
+
+    await page.goto('/en/hackathons?organizer=it-park-uzbekistan');
+    await expect(filters.getByLabel('Organizer')).toHaveValue('it-park-uzbekistan');
+    const organizerCount = await cards.count();
+    expect(organizerCount).toBeGreaterThan(0);
+    await expect(cards.getByText('IT Park Uzbekistan')).toHaveCount(organizerCount);
+
+    // Minimum rating excludes unrated events as well as low-scoring ones.
+    await page.goto('/en/hackathons?min=4');
+    const rated = await cards.count();
+    expect(rated).toBeGreaterThan(0);
+    expect(rated).toBeLessThan(12);
+    await expect(page.getByText('Urban.Tech Uzbekistan 2024 Hackathon')).toHaveCount(0);
+  });
+
+  test('the Upcoming and Past tabs split the catalog on the effective end date', async ({ page }) => {
+    await page.goto('/en/hackathons?tab=upcoming');
+    const cards = page.locator('ul li article');
+    const upcoming = await cards.count();
+    expect(upcoming).toBeGreaterThan(0);
+    // Every upcoming card offers the organizer's track record instead of a score.
+    await expect(cards.getByText('Organizer rating')).toHaveCount(upcoming);
+
+    await page.goto('/en/hackathons?tab=past');
+    const past = await cards.count();
+    expect(past).toBeGreaterThan(0);
+    await expect(cards.getByText('Organizer rating')).toHaveCount(0);
+  });
+
+  test('sorting by highest and lowest rating flips the order', async ({ page }) => {
+    await page.goto('/en/hackathons?sort=highest');
+    const first = page.locator('ul li article').first();
+    await expect(first).toContainText(/Technovation Girls|National AI Hackathon/);
+
+    await page.goto('/en/hackathons?sort=lowest');
+    await expect(page.locator('ul li article').first()).toContainText('Urban.Tech');
+  });
+
   test('a search with no matches shows a designed empty state, not a blank page', async ({ page }) => {
     await page.goto('/en/hackathons?q=zzzzznotarealhackathon');
     await expect(page.getByText('Nothing found')).toBeVisible();

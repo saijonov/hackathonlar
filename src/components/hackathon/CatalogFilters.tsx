@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useMemo, useRef, useState, useTransition } from 'react';
+import { useCallback, useEffect, useId, useMemo, useRef, useState, useTransition } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { Search, SlidersHorizontal, X } from 'lucide-react';
@@ -47,6 +47,7 @@ export function CatalogFilters({ state, cities, organizers, resultCount }: Catal
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
+  const fieldId = useId();
   const [isPending, startTransition] = useTransition();
   const [sheetOpen, setSheetOpen] = useState(false);
   const [searchValue, setSearchValue] = useState(state.search ?? '');
@@ -117,12 +118,25 @@ export function CatalogFilters({ state, cities, organizers, resultCount }: Catal
     return query ? `${pathname}?${query}` : pathname;
   };
 
-  /** The four dropdowns, reused verbatim in the desktop bar and the sheet. */
-  const controls = (
+  /**
+   * The four dropdowns, reused verbatim in the desktop bar and the sheet.
+   *
+   * Explicit `htmlFor`/`id` association rather than a wrapping <label>: with an
+   * implicit label the accessible name of a <select> absorbs its own option
+   * text, which makes the controls ambiguous to query and muddier to announce.
+   *
+   * `scope` keeps the two copies' ids distinct — the sheet is only mounted
+   * while open, but during that moment the (display:none) desktop row is still
+   * in the DOM, and duplicate ids are invalid HTML.
+   */
+  const renderControls = (scope: string) => (
     <>
-      <label className="grid grid-cols-1 gap-1.5">
-        <span className="eyebrow text-ink-3">{t('filter.city')}</span>
+      <div className="grid grid-cols-1 gap-1.5">
+        <label htmlFor={`${fieldId}-${scope}-city`} className="eyebrow text-ink-3">
+          {t('filter.city')}
+        </label>
         <Select
+          id={`${fieldId}-${scope}-city`}
           value={state.city ?? ''}
           onChange={(event) => setParam('city', event.target.value || undefined)}
         >
@@ -133,11 +147,14 @@ export function CatalogFilters({ state, cities, organizers, resultCount }: Catal
             </option>
           ))}
         </Select>
-      </label>
+      </div>
 
-      <label className="grid grid-cols-1 gap-1.5">
-        <span className="eyebrow text-ink-3">{t('filter.format')}</span>
+      <div className="grid grid-cols-1 gap-1.5">
+        <label htmlFor={`${fieldId}-${scope}-format`} className="eyebrow text-ink-3">
+          {t('filter.format')}
+        </label>
         <Select
+          id={`${fieldId}-${scope}-format`}
           value={state.format ?? ''}
           onChange={(event) => setParam('format', event.target.value || undefined)}
         >
@@ -148,11 +165,14 @@ export function CatalogFilters({ state, cities, organizers, resultCount }: Catal
             </option>
           ))}
         </Select>
-      </label>
+      </div>
 
-      <label className="grid grid-cols-1 gap-1.5">
-        <span className="eyebrow text-ink-3">{t('filter.organizer')}</span>
+      <div className="grid grid-cols-1 gap-1.5">
+        <label htmlFor={`${fieldId}-${scope}-organizer`} className="eyebrow text-ink-3">
+          {t('filter.organizer')}
+        </label>
         <Select
+          id={`${fieldId}-${scope}-organizer`}
           value={state.organizer ?? ''}
           onChange={(event) => setParam('organizer', event.target.value || undefined)}
         >
@@ -163,11 +183,14 @@ export function CatalogFilters({ state, cities, organizers, resultCount }: Catal
             </option>
           ))}
         </Select>
-      </label>
+      </div>
 
-      <label className="grid grid-cols-1 gap-1.5">
-        <span className="eyebrow text-ink-3">{t('filter.minRating')}</span>
+      <div className="grid grid-cols-1 gap-1.5">
+        <label htmlFor={`${fieldId}-${scope}-min`} className="eyebrow text-ink-3">
+          {t('filter.minRating')}
+        </label>
         <Select
+          id={`${fieldId}-${scope}-min`}
           value={state.minRating ? String(state.minRating) : ''}
           onChange={(event) => setParam('min', event.target.value || undefined)}
         >
@@ -178,7 +201,7 @@ export function CatalogFilters({ state, cities, organizers, resultCount }: Catal
             </option>
           ))}
         </Select>
-      </label>
+      </div>
     </>
   );
 
@@ -261,7 +284,9 @@ export function CatalogFilters({ state, cities, organizers, resultCount }: Catal
       </div>
 
       {/* Desktop filter row */}
-      <div className="hidden gap-3 md:grid md:grid-cols-4">{controls}</div>
+      <div data-testid="catalog-filters" className="hidden gap-3 md:grid md:grid-cols-4">
+        {renderControls('bar')}
+      </div>
 
       <div className="flex flex-wrap items-center justify-between gap-2 border-t border-line pt-3">
         <p aria-live="polite" className="text-meta text-ink-3">
@@ -298,7 +323,11 @@ export function CatalogFilters({ state, cities, organizers, resultCount }: Catal
       >
         {/* Only mounted while the sheet is open: keeping a second copy of every
             labelled control in the DOM would duplicate the accessible names. */}
-        {sheetOpen && <div className="grid grid-cols-1 gap-4">{controls}</div>}
+        {sheetOpen && (
+          <div data-testid="catalog-filters-sheet" className="grid grid-cols-1 gap-4">
+            {renderControls('sheet')}
+          </div>
+        )}
       </Modal>
     </div>
   );
