@@ -39,6 +39,7 @@ export function ScorePanel({ score, className }: ScorePanelProps) {
   return (
     <section
       aria-label={t('title')}
+      data-testid="score-panel"
       className={cn('overflow-hidden rounded-lg border border-line bg-surface', className)}
     >
       <div className="grid grid-cols-1 gap-px bg-line lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">

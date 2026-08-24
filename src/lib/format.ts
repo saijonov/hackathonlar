@@ -66,8 +66,9 @@ const UZ_MONTHS_SHORT = [
 
 /** Decimal separator per locale. Uzbek and Russian use a comma. */
 const DECIMAL_SEPARATOR: Record<AppLocale, string> = { uz: ',', ru: ',', en: '.' };
-/** Thousands separator. Uzbek and Russian use a narrow space, English a comma. */
-const GROUP_SEPARATOR: Record<AppLocale, string> = { uz: ' ', ru: ' ', en: ',' };
+/** Thousands separator. CLDR uses U+00A0 NO-BREAK SPACE for uz and ru — written
+ *  as an escape so it is visible in source and cannot be mangled by an editor. */
+const GROUP_SEPARATOR: Record<AppLocale, string> = { uz: '\u00A0', ru: '\u00A0', en: ',' };
 
 function intlLocale(locale: AppLocale): string {
   return LOCALE_HTML_LANG[locale] ?? locale;

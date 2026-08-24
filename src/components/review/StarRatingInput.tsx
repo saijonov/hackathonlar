@@ -20,9 +20,14 @@ interface StarRatingInputProps {
  * One category row of the review form (PRD 7.4): a label, a one-line explainer
  * of what the category actually measures, and five tappable stars.
  *
- * Built on real radio inputs inside a fieldset/legend rather than divs with
- * click handlers, so arrow keys, screen readers and native form semantics all
- * work for free. Each star is a 44px tap target (PRD 9.4).
+ * Built on real radio inputs so arrow keys, screen readers and native form
+ * semantics work for free, and each star is a 44px tap target (PRD 9.4).
+ *
+ * Grouping is done with `role="radiogroup"` + `aria-labelledby` rather than
+ * `<fieldset><legend>`: a `<legend>` only names its fieldset when it is the
+ * *first child* of the fieldset, which this layout (label and stars side by
+ * side) cannot satisfy. A nested legend silently names nothing, leaving the
+ * group anonymous to a screen reader.
  */
 export function StarRatingInput({
   name,
@@ -34,35 +39,42 @@ export function StarRatingInput({
   disabled = false,
 }: StarRatingInputProps) {
   const t = useTranslations('score');
-  const groupId = useId();
+  const id = useId();
+  const labelId = `${id}-label`;
+  const hintId = `${id}-hint`;
+  const errorId = `${id}-error`;
   const [hovered, setHovered] = useState<number | null>(null);
 
   const shown = hovered ?? value ?? 0;
 
   return (
-    <fieldset
+    <div
       className={cn(
         'rounded-lg border bg-surface p-3.5 transition-colors sm:p-4',
         error ? 'border-bad' : 'border-line',
       )}
-      disabled={disabled}
     >
       <div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-2">
         <div className="min-w-0 flex-1">
-          <legend className="float-left text-h3 text-ink">{label}</legend>
-          {hint && <p className="clear-left pt-1 text-meta leading-relaxed text-ink-3">{hint}</p>}
+          <p id={labelId} className="text-h3 font-semibold text-ink">
+            {label}
+          </p>
+          {hint && (
+            <p id={hintId} className="mt-1 text-meta leading-relaxed text-ink-3">
+              {hint}
+            </p>
+          )}
         </div>
 
         <div
+          role="radiogroup"
+          aria-labelledby={labelId}
+          aria-describedby={cn(hint && hintId, error && errorId) || undefined}
+          aria-required="true"
+          aria-invalid={error ? true : undefined}
           className="flex shrink-0 items-center"
           onMouseLeave={() => setHovered(null)}
-          role="radiogroup"
-          aria-labelledby={groupId}
         >
-          <span id={groupId} className="sr-only">
-            {label}
-          </span>
-
           {Array.from({ length: MAX_RATING }, (_, index) => {
             const starValue = index + 1;
             const active = starValue <= shown;
@@ -70,7 +82,10 @@ export function StarRatingInput({
             return (
               <label
                 key={starValue}
-                className="grid size-11 cursor-pointer place-items-center rounded-md transition-colors hover:bg-paper-2"
+                className={cn(
+                  'grid size-11 place-items-center rounded-md transition-colors',
+                  disabled ? 'cursor-not-allowed' : 'cursor-pointer hover:bg-paper-2',
+                )}
                 onMouseEnter={() => setHovered(starValue)}
               >
                 <input
@@ -79,6 +94,7 @@ export function StarRatingInput({
                   value={starValue}
                   checked={value === starValue}
                   onChange={() => onChange(starValue)}
+                  disabled={disabled}
                   className="peer sr-only"
                   aria-label={t('outOf', { score: String(starValue) })}
                 />
@@ -108,10 +124,10 @@ export function StarRatingInput({
       </div>
 
       {error && (
-        <p role="alert" className="mt-2 text-meta font-medium text-bad">
+        <p id={errorId} role="alert" className="mt-2 text-meta font-medium text-bad">
           {error}
         </p>
       )}
-    </fieldset>
+    </div>
   );
 }

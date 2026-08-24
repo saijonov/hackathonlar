@@ -1,11 +1,34 @@
 import createIntlMiddleware from 'next-intl/middleware';
-import { type NextRequest } from 'next/server';
-import { routing } from '@/i18n/routing';
+import { NextResponse, type NextRequest } from 'next/server';
+import { isAppLocale, routing } from '@/i18n/routing';
 import { updateSession } from '@/lib/supabase/middleware';
 
 const handleI18nRouting = createIntlMiddleware(routing);
 
+const LOCALE_COOKIE = 'NEXT_LOCALE';
+
+function hasLocalePrefix(pathname: string): boolean {
+  return routing.locales.some(
+    (locale) => pathname === `/${locale}` || pathname.startsWith(`/${locale}/`),
+  );
+}
+
 export async function middleware(request: NextRequest) {
+  const { pathname } = request.nextUrl;
+
+  // Locale detection is off in the routing config so that "/" always resolves
+  // to Uzbek rather than to whatever Accept-Language says. The one thing we do
+  // still honour is an *explicit* choice the visitor made with the switcher,
+  // which next-intl persisted in NEXT_LOCALE.
+  if (!hasLocalePrefix(pathname)) {
+    const preferred = request.cookies.get(LOCALE_COOKIE)?.value;
+    if (preferred && isAppLocale(preferred) && preferred !== routing.defaultLocale) {
+      const url = request.nextUrl.clone();
+      url.pathname = `/${preferred}${pathname === '/' ? '' : pathname}`;
+      return NextResponse.redirect(url);
+    }
+  }
+
   // next-intl first: it owns redirects (`/` -> `/uz`), locale detection and the
   // NEXT_LOCALE cookie. Whatever response it produces (rewrite or redirect) is
   // then handed to Supabase so refreshed auth cookies ride along with it.

@@ -296,7 +296,9 @@ export function CatalogFilters({ state, cities, organizers, resultCount }: Catal
           </div>
         }
       >
-        <div className="grid grid-cols-1 gap-4">{controls}</div>
+        {/* Only mounted while the sheet is open: keeping a second copy of every
+            labelled control in the DOM would duplicate the accessible names. */}
+        {sheetOpen && <div className="grid grid-cols-1 gap-4">{controls}</div>}
       </Modal>
     </div>
   );

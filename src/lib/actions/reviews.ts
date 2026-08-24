@@ -146,13 +146,18 @@ export async function toggleHelpful(
     }
   }
 
-  const { count } = await supabase
-    .from('review_votes')
-    .select('id', { count: 'exact', head: true })
-    .eq('review_id', reviewId);
+  // Read the total back from public_reviews, NOT by counting review_votes:
+  // RLS restricts that table to the caller's own votes, so counting it would
+  // return 1 instead of the real total and the button would show a wrong
+  // number until the next full render.
+  const { data: updated } = await supabase
+    .from('public_reviews')
+    .select('helpful_count')
+    .eq('id', reviewId)
+    .maybeSingle();
 
   revalidateTag(CACHE_TAGS.reviews);
-  return ok({ voted: !existing, count: count ?? 0 });
+  return ok({ voted: !existing, count: updated?.helpful_count ?? 0 });
 }
 
 export async function reportReview(input: unknown): Promise<ActionResult<undefined>> {

@@ -16,7 +16,11 @@ export const routing = defineRouting({
   },
   // Emits <Link rel="alternate" hreflang> response headers for search engines.
   alternateLinks: true,
-  localeDetection: true,
+  // PRD 7 is explicit: "/ redirects to /uz". With detection on, next-intl would
+  // honour Accept-Language and send an English browser to /en instead, which
+  // is wrong for an Uzbek-first product. A returning visitor's explicit choice
+  // is still respected — src/middleware.ts reads the NEXT_LOCALE cookie itself.
+  localeDetection: false,
 });
 
 export type AppLocale = (typeof routing.locales)[number];
