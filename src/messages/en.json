@@ -1,0 +1,701 @@
+{
+  "common": {
+    "appName": "hackathonlar.uz",
+    "tagline": "Honest reviews of hackathons in Uzbekistan",
+    "loading": "Loading…",
+    "error": "Something went wrong",
+    "retry": "Try again",
+    "cancel": "Cancel",
+    "save": "Save",
+    "saving": "Saving…",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close",
+    "back": "Back",
+    "search": "Search",
+    "filters": "Filters",
+    "clearAll": "Clear all",
+    "apply": "Apply",
+    "showMore": "Show more",
+    "seeAll": "See all",
+    "optional": "optional",
+    "yes": "Yes",
+    "no": "No",
+    "notSpecified": "Not specified",
+    "skipToContent": "Skip to content",
+    "externalLink": "External link",
+    "characters": "{count} characters",
+    "charactersLeft": "{count} characters left",
+    "minCharacters": "at least {count} characters"
+  },
+
+  "nav": {
+    "home": "Home",
+    "hackathons": "Hackathons",
+    "organizers": "Organizers",
+    "submit": "Add a hackathon",
+    "about": "About",
+    "rules": "Rules",
+    "profile": "My profile",
+    "admin": "Admin",
+    "signIn": "Sign in",
+    "signOut": "Sign out",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "language": "Language",
+    "changeLanguage": "Change language"
+  },
+
+  "format": {
+    "offline": "Offline",
+    "online": "Online",
+    "hybrid": "Hybrid",
+    "label": "Format"
+  },
+
+  "participation": {
+    "label": "How did you take part?",
+    "participant": "Participant",
+    "finalist": "Finalist",
+    "winner": "Winner",
+    "mentor": "Mentor",
+    "volunteer": "Volunteer"
+  },
+
+  "score": {
+    "outOf": "{score} / 5",
+    "overall": "Overall score",
+    "noScore": "No score",
+    "noReviews": "No reviews yet",
+    "reviewCount": "{count, plural, one {# review} other {# reviews}}",
+    "basedOn": "based on {count, plural, one {# review} other {# reviews}}",
+    "distribution": "Score distribution",
+    "best": "Strongest",
+    "weakest": "Weakest",
+    "categoriesTitle": "Scores by category",
+    "category": {
+      "organization": "Organization",
+      "communication": "Communication",
+      "judging": "Judging",
+      "prizes": "Prizes",
+      "venue": "Venue & comfort"
+    },
+    "categoryHint": {
+      "organization": "Plan, schedule, logistics — did everything run on time?",
+      "communication": "Were you kept informed before, during and after? Did the teams that missed the final hear back?",
+      "judging": "Were the judging criteria clear and fair?",
+      "prizes": "Were the prizes delivered as promised and on time?",
+      "venue": "Venue, food, Wi-Fi, comfort. For online events — how usable the platform was."
+    },
+    "band": {
+      "good": "Good",
+      "mid": "Average",
+      "bad": "Poor",
+      "none": "Not rated"
+    }
+  },
+
+  "home": {
+    "hero": {
+      "eyebrow": "The first hackathon rating platform in Uzbekistan",
+      "title": "Honest reviews of hackathons in Uzbekistan",
+      "subtitle": "Before you spend a weekend on one, find out whether the organizer keeps to the schedule, whether judging is transparent, and whether the prizes actually arrive. Only people who took part can score.",
+      "ctaPrimary": "Browse hackathons",
+      "ctaSecondary": "Add a hackathon"
+    },
+    "stats": {
+      "hackathons": "hackathons",
+      "reviews": "reviews",
+      "organizers": "organizers",
+      "average": "average score",
+      "averageEmpty": "no scores yet"
+    },
+    "upcoming": {
+      "eyebrow": "Coming up",
+      "title": "Upcoming hackathons",
+      "subtitle": "Every card shows the organizer's rating from the hackathons they have already run.",
+      "organizerRating": "Organizer rating",
+      "organizerRatingBasis": "across {count, plural, one {# previous hackathon} other {# previous hackathons}}",
+      "organizerNoRating": "This organizer has no rated hackathons yet",
+      "empty": "No upcoming hackathons announced yet. Know of one?"
+    },
+    "recent": {
+      "eyebrow": "New reviews",
+      "title": "What participants say",
+      "empty": "No one has written a review yet. Be first."
+    },
+    "ranking": {
+      "eyebrow": "Ranking",
+      "topTitle": "Highest rated",
+      "bottomTitle": "Lowest rated",
+      "note": "The ranking includes hackathons with at least {count} reviews.",
+      "empty": "Not enough reviews yet to build a ranking."
+    },
+    "how": {
+      "eyebrow": "How it works",
+      "title": "Three steps",
+      "step1": {
+        "title": "Find a hackathon",
+        "body": "Filter the catalog by city, format or organizer. Every hackathon is scored in five categories."
+      },
+      "step2": {
+        "title": "Read the reviews",
+        "body": "Organization, communication, judging, prizes and venue are scored separately. Not vague impressions — numbers."
+      },
+      "step3": {
+        "title": "Write your own",
+        "body": "If you took part, a review takes two minutes. Anonymously, if you prefer."
+      }
+    },
+    "cta": {
+      "title": "Missing a hackathon you took part in?",
+      "body": "Add it. After moderation it goes live and other people can review it.",
+      "button": "Add a hackathon"
+    }
+  },
+
+  "catalog": {
+    "eyebrow": "Catalog",
+    "title": "Hackathons",
+    "subtitle": "Past and planned hackathons in Uzbekistan, with scores from the people who were there.",
+    "searchPlaceholder": "Hackathon or organizer name",
+    "searchLabel": "Search hackathons",
+    "tabs": {
+      "upcoming": "Upcoming",
+      "past": "Past",
+      "all": "All"
+    },
+    "sort": {
+      "label": "Sort",
+      "newest": "Newest",
+      "highest": "Highest score",
+      "lowest": "Lowest score",
+      "mostReviewed": "Most reviewed"
+    },
+    "filter": {
+      "city": "City",
+      "anyCity": "All cities",
+      "format": "Format",
+      "anyFormat": "All formats",
+      "organizer": "Organizer",
+      "anyOrganizer": "All organizers",
+      "minRating": "Minimum score",
+      "anyRating": "Any score",
+      "ratingFrom": "{score} and up",
+      "openFilters": "Open filters",
+      "activeCount": "{count, plural, one {# filter} other {# filters}}"
+    },
+    "resultCount": "{count, plural, one {# hackathon found} other {# hackathons found}}",
+    "loadMore": "Load more",
+    "page": "Page {current} of {total}",
+    "empty": {
+      "title": "Nothing found",
+      "body": "Change the filters or clear the search. Or add a hackathon you know about.",
+      "cta": "Add a hackathon",
+      "clear": "Clear filters"
+    }
+  },
+
+  "hackathon": {
+    "backToCatalog": "Back to catalog",
+    "about": "About the hackathon",
+    "tracks": "Tracks",
+    "prizePool": "Prize pool",
+    "dates": "Dates",
+    "city": "City",
+    "onlineEvent": "Online",
+    "organizer": "Organizer",
+    "links": {
+      "website": "Official site",
+      "telegram": "Telegram",
+      "register": "Register"
+    },
+    "descriptionFallback": "This text is in {language}",
+    "scorePanel": {
+      "title": "Score",
+      "empty": "No one has scored this hackathon yet",
+      "emptyBody": "If you took part, write the first review."
+    },
+    "reviews": {
+      "title": "Reviews",
+      "sortHelpful": "Most helpful",
+      "sortNewest": "Newest",
+      "empty": "No reviews yet",
+      "emptyBody": "Were you at this hackathon? Write the first review — it helps the next participants."
+    },
+    "writeReview": "Write a review",
+    "editReview": "Edit my review",
+    "upcoming": {
+      "notice": "This hackathon has not happened yet, so there are no reviews.",
+      "organizerRecord": "This organizer's past hackathons",
+      "organizerRecordEmpty": "This is the organizer's first hackathon on the platform."
+    },
+    "otherByOrganizer": "Other hackathons by this organizer",
+    "dateTbd": "Date not announced"
+  },
+
+  "review": {
+    "anonymous": "Anonymous participant",
+    "yourReview": "Your review",
+    "edited": "Edited",
+    "helpful": "Helpful",
+    "helpfulCount": "{count, plural, one {# person found this helpful} other {# people found this helpful}}",
+    "report": "Report",
+    "reported": "Report sent",
+    "showCategories": "Scores by category",
+    "hideCategories": "Hide",
+    "pros": "Pros",
+    "cons": "Cons",
+    "officialResponse": "Official response",
+    "hidden": "This review has been hidden by a moderator",
+    "form": {
+      "eyebrow": "Write a review",
+      "title": "Review of {name}",
+      "editTitle": "Edit review",
+      "subtitle": "Score five categories. Be specific: what worked and what did not.",
+      "ratingsTitle": "Scores",
+      "ratingsHint": "All five categories are required.",
+      "detailsTitle": "Details",
+      "titleLabel": "Headline",
+      "titlePlaceholder": "Your main point in one sentence",
+      "bodyLabel": "Review",
+      "bodyPlaceholder": "How did it go? Did the schedule hold, how did the organizers communicate, did the prizes arrive?",
+      "bodyHint": "At least {min} characters. Concrete facts are worth more than general impressions.",
+      "prosLabel": "Pros",
+      "prosPlaceholder": "What went well?",
+      "consLabel": "Cons",
+      "consPlaceholder": "What should be better?",
+      "anonymousLabel": "Post anonymously",
+      "anonymousHint": "Your name is not shown on the site. A moderator can still see who wrote the review, in order to prevent abuse.",
+      "submit": "Publish review",
+      "update": "Save changes",
+      "submitting": "Submitting…",
+      "deleteConfirm": "Delete your review? This cannot be undone.",
+      "successTitle": "Thanks",
+      "successBody": "Your review is live.",
+      "updatedBody": "Your review has been updated.",
+      "signInRequired": "Sign in to write a review",
+      "signInRequiredBody": "It takes a minute. What you have written is kept."
+    },
+    "reportDialog": {
+      "title": "Report a review",
+      "body": "Why does this review break the rules? A moderator will look at it.",
+      "reasonLabel": "Reason",
+      "reasonPlaceholder": "For example: insults, false information, advertising",
+      "submit": "Send",
+      "success": "Report sent. Thanks."
+    },
+    "errors": {
+      "duplicate": "You have already reviewed this hackathon. You can edit that review.",
+      "notParticipated": "This hackathon has not started yet, so it cannot be reviewed.",
+      "rateLimited": "You have posted too many reviews today. Try again tomorrow.",
+      "notFound": "Hackathon not found",
+      "ownVote": "You cannot vote on your own review",
+      "alreadyReported": "You have already reported this review",
+      "generic": "The review could not be saved. Try again."
+    }
+  },
+
+  "submit": {
+    "eyebrow": "Contribute",
+    "title": "Add a hackathon",
+    "subtitle": "Add a hackathon you know about. After moderation it appears in the catalog and other people can review it.",
+    "sections": {
+      "basics": "Basics",
+      "organizer": "Organizer",
+      "details": "Details",
+      "description": "Description",
+      "links": "Links",
+      "cover": "Cover image"
+    },
+    "fields": {
+      "name": "Hackathon name",
+      "namePlaceholder": "For example: CBU Coding Hackathon 2026",
+      "city": "City",
+      "cityPlaceholder": "Tashkent",
+      "cityOnlineHint": "City is not shown for online events.",
+      "format": "Format",
+      "startDate": "Start date",
+      "endDate": "End date",
+      "prizePool": "Prize pool",
+      "prizePoolPlaceholder": "For example: 100,000,000 UZS",
+      "tracks": "Tracks",
+      "tracksPlaceholder": "Separate with commas: Fintech, AI, EdTech",
+      "website": "Official site",
+      "telegram": "Telegram channel",
+      "registrationUrl": "Registration link",
+      "descriptionLanguage": "Description language",
+      "description": "Description",
+      "descriptionPlaceholder": "What was the hackathon about, who was it for, what stages did it have?",
+      "descriptionHint": "Fill in at least one language. The others can be added later."
+    },
+    "organizer": {
+      "search": "Find the organizer",
+      "searchPlaceholder": "Type a name",
+      "notFound": "Not there?",
+      "createNew": "Add a new organizer",
+      "createTitle": "New organizer",
+      "name": "Name",
+      "website": "Website",
+      "telegram": "Telegram",
+      "useExisting": "Pick from the list",
+      "selected": "Selected"
+    },
+    "cover": {
+      "choose": "Choose an image",
+      "replace": "Replace image",
+      "remove": "Remove",
+      "hint": "JPG, PNG or WebP. Up to 2 MB. Leave it empty and a cover is generated for you.",
+      "tooLarge": "The image is larger than 2 MB",
+      "wrongType": "Only JPG, PNG, WebP or AVIF",
+      "uploading": "Uploading…",
+      "generated": "Generated cover"
+    },
+    "submitButton": "Send for moderation",
+    "success": {
+      "title": "Thanks",
+      "body": "It goes live once moderation is done. You can follow the status in your profile.",
+      "toProfile": "Go to profile",
+      "addAnother": "Add another"
+    },
+    "errors": {
+      "rateLimited": "You have added too many hackathons today. Try again tomorrow.",
+      "duplicateSlug": "A hackathon with this name already exists.",
+      "organizerRequired": "Pick an organizer or add a new one.",
+      "descriptionRequired": "Write a description in at least one language.",
+      "generic": "It could not be submitted. Try again."
+    }
+  },
+
+  "organizer": {
+    "eyebrow": "Organizer",
+    "listTitle": "Organizers",
+    "listSubtitle": "Every organizer's overall rating across all of their hackathons.",
+    "hackathons": "{count, plural, one {# hackathon} other {# hackathons}}",
+    "reviews": "{count, plural, one {# review} other {# reviews}}",
+    "trackRecord": "Track record",
+    "trackRecordEmpty": "Not rated yet",
+    "categoriesTitle": "Average across all hackathons",
+    "hackathonsTitle": "Hackathons",
+    "upcomingTitle": "Upcoming hackathons",
+    "pastTitle": "Past hackathons",
+    "empty": "This organizer has no hackathons in the catalog.",
+    "listEmpty": "No organizers added yet.",
+    "about": "About the organizer"
+  },
+
+  "profile": {
+    "eyebrow": "Profile",
+    "title": "My profile",
+    "displayName": "Your name",
+    "displayNameHint": "This name appears on your non-anonymous reviews.",
+    "avatar": "Avatar",
+    "avatarHint": "JPG, PNG or WebP. Up to 1 MB.",
+    "email": "Email",
+    "saved": "Saved",
+    "myReviews": "My reviews",
+    "mySubmissions": "Hackathons I added",
+    "reviewsEmpty": "You have not written any reviews yet.",
+    "reviewsEmptyCta": "Browse hackathons",
+    "submissionsEmpty": "You have not added any hackathons yet.",
+    "submissionsEmptyCta": "Add a hackathon",
+    "anonymousBadge": "Anonymous",
+    "anonymousNote": "This review appears anonymously on the site",
+    "status": {
+      "pending": "In moderation",
+      "approved": "Published",
+      "rejected": "Rejected"
+    },
+    "rejectionReason": "Reason",
+    "signOut": "Sign out",
+    "deleteReview": "Delete review"
+  },
+
+  "auth": {
+    "signIn": "Sign in",
+    "signUp": "Sign up",
+    "modalTitle": "Sign in to hackathonlar.uz",
+    "modalSubtitle": "You need an account to write reviews, vote and add hackathons. Never to read them.",
+    "google": "Continue with Google",
+    "googleUnavailable": "Google sign-in is not set up yet",
+    "divider": "or",
+    "email": "Email",
+    "emailPlaceholder": "you@example.com",
+    "password": "Password",
+    "passwordHint": "At least 8 characters, letters and numbers.",
+    "displayName": "Your name",
+    "displayNamePlaceholder": "The name shown on the site",
+    "noAccount": "No account?",
+    "haveAccount": "Already have an account?",
+    "forgotPassword": "Forgot your password?",
+    "continue": "Continue",
+    "otp": {
+      "title": "Confirm your email",
+      "body": "We sent a 6-digit code to {email}. Enter it below.",
+      "label": "Confirmation code",
+      "verify": "Confirm",
+      "resend": "Send the code again",
+      "resent": "Code sent again",
+      "resendIn": "You can resend in {seconds} s",
+      "wrongEmail": "Use a different email"
+    },
+    "reset": {
+      "title": "Reset your password",
+      "body": "Enter your email address and we will send a 6-digit code.",
+      "send": "Send the code",
+      "codeSent": "Code sent to {email}",
+      "newPassword": "New password",
+      "confirm": "Update password",
+      "success": "Password updated. You can sign in now."
+    },
+    "signedInAs": "Signed in as:",
+    "errors": {
+      "invalidCredentials": "Wrong email or password",
+      "emailTaken": "An account with this email already exists",
+      "weakPassword": "That password is too simple. At least 8 characters, letters and numbers.",
+      "invalidEmail": "That email address is not valid",
+      "otpInvalid": "The code is wrong or has expired",
+      "rateLimited": "Too many attempts. Wait a moment.",
+      "emailNotConfirmed": "Confirm your email first",
+      "generic": "Something went wrong. Try again."
+    }
+  },
+
+  "admin": {
+    "title": "Admin panel",
+    "nav": {
+      "queue": "Moderation",
+      "reviews": "Reviews",
+      "hackathons": "Hackathons",
+      "organizers": "Organizers",
+      "reports": "Reports"
+    },
+    "overview": {
+      "pending": "Pending",
+      "reports": "Open reports",
+      "reviews": "Reviews total",
+      "hackathons": "Hackathons total"
+    },
+    "queue": {
+      "title": "Moderation queue",
+      "empty": "The queue is empty.",
+      "submittedBy": "Submitted by",
+      "approve": "Approve",
+      "approveAndEdit": "Edit and approve",
+      "reject": "Reject",
+      "rejectReason": "Reason for rejection",
+      "rejectReasonPlaceholder": "Optional, visible to the user",
+      "approved": "Approved",
+      "rejected": "Rejected"
+    },
+    "reviews": {
+      "title": "Reviews",
+      "author": "Author",
+      "realAuthor": "Real author",
+      "anonymousPublic": "Anonymous on the site",
+      "hide": "Hide",
+      "unhide": "Unhide",
+      "hidden": "Hidden",
+      "published": "Published",
+      "reports": "Reports",
+      "filterAll": "All",
+      "filterReported": "Reported",
+      "filterHidden": "Hidden",
+      "empty": "No reviews.",
+      "response": {
+        "title": "Official response",
+        "add": "Add an official response",
+        "edit": "Edit response",
+        "remove": "Remove response",
+        "authorLabel": "Author label",
+        "authorLabelPlaceholder": "For example: official response from the CBU team",
+        "body": "Response text",
+        "save": "Save"
+      }
+    },
+    "hackathons": {
+      "title": "Hackathons",
+      "create": "New hackathon",
+      "createHint": "A hackathon added by an admin goes live immediately, with no moderation.",
+      "edit": "Edit",
+      "status": "Status",
+      "reviews": "Reviews",
+      "delete": "Delete",
+      "deleteConfirm": "Delete this hackathon and all of its reviews?",
+      "empty": "No hackathons."
+    },
+    "organizers": {
+      "title": "Organizers",
+      "create": "New organizer",
+      "edit": "Edit",
+      "delete": "Delete",
+      "deleteConfirm": "Delete this organizer? Their hackathons will be left without one.",
+      "empty": "No organizers.",
+      "slug": "Slug",
+      "logoUrl": "Logo URL"
+    },
+    "reports": {
+      "title": "Reports",
+      "empty": "No open reports.",
+      "reason": "Reason",
+      "reporter": "Reported by",
+      "resolve": "Resolved",
+      "dismiss": "Dismiss",
+      "viewReview": "View review"
+    },
+    "notAuthorized": "You do not have access to this page.",
+    "saved": "Saved"
+  },
+
+  "rules": {
+    "eyebrow": "Rules",
+    "title": "Review rules",
+    "intro": "This platform runs on what participants actually experienced. A few simple rules keep the reviews useful.",
+    "sections": {
+      "honest": {
+        "title": "Be honest",
+        "body": "Write only about hackathons you took part in yourself. Do not pass on what you heard from others as fact."
+      },
+      "specific": {
+        "title": "Be specific",
+        "body": "A review that says “it was bad” helps no one. Say what happened: how many hours the schedule slipped, how many days the reply took, when the prize arrived."
+      },
+      "noInsults": {
+        "title": "No insults",
+        "body": "Criticize the organizers all you want. Personal insults, threats and harassment are not allowed."
+      },
+      "noFabrication": {
+        "title": "Do not make things up",
+        "body": "False information, advertising and coordinated reviews against competitors are removed."
+      },
+      "anonymity": {
+        "title": "How anonymity works",
+        "body": "In an anonymous review your name is not shown on the site. But a moderator can see who wrote it, in order to prevent abuse. That access is not there to protect anonymity — it is there to stop rule-breaking."
+      },
+      "moderation": {
+        "title": "Moderation",
+        "body": "Reviews that break the rules are hidden and excluded from the rating. One review per hackathon per user. You can edit your review at any time."
+      },
+      "legal": {
+        "title": "Legal note",
+        "body": "Reviews on this site are the personal opinions of their authors, not a verdict from the platform. Scores follow a structured set of criteria. If you see an error or a violation, use the report button."
+      }
+    },
+    "contactTitle": "Have a question?",
+    "contactBody": "Write to us on Telegram."
+  },
+
+  "about": {
+    "eyebrow": "About",
+    "title": "Why this platform exists",
+    "lead": "Uzbekistan runs more hackathons every year. The quality varies wildly. This platform makes that difference visible.",
+    "problem": {
+      "title": "The problem",
+      "body": "The organizer says “finalists will be announced very soon” and then goes quiet. Judging criteria are vague. Prizes are promised, then delivered months late. All of it stays inside closed Telegram chats, and the next participant walks in knowing none of it."
+    },
+    "solution": {
+      "title": "The fix",
+      "body": "An open, structured rating. Every hackathon is scored in five clear categories: organization, communication, judging, prizes and venue. Only people who took part can score. The organizer's overall record across all of their hackathons is visible too."
+    },
+    "principles": {
+      "title": "Principles",
+      "one": {
+        "title": "Reading is always open",
+        "body": "Reading reviews will never require an account."
+      },
+      "two": {
+        "title": "No fake reviews",
+        "body": "The platform never writes reviews itself and never posts made-up scores."
+      },
+      "three": {
+        "title": "Organizers get a right of reply",
+        "body": "An organizer can post an official response, and it appears under the review."
+      }
+    },
+    "contactTitle": "Contact",
+    "contactBody": "Suggestions, bugs, partnerships — write to us on Telegram.",
+    "telegram": "Telegram"
+  },
+
+  "footer": {
+    "tagline": "An open rating of Uzbekistan's hackathon scene.",
+    "sections": {
+      "explore": "Explore",
+      "project": "Project",
+      "language": "Language"
+    },
+    "contact": "Contact",
+    "madeIn": "Made in Uzbekistan 🇺🇿",
+    "rights": "Reviews belong to their authors."
+  },
+
+  "errors": {
+    "notFound": {
+      "code": "404",
+      "title": "Page not found",
+      "body": "This page does not exist or has moved. Try looking in the catalog.",
+      "cta": "Go to hackathons",
+      "home": "Home"
+    },
+    "generic": {
+      "code": "Error",
+      "title": "Something went wrong",
+      "body": "The page could not load. Try again.",
+      "cta": "Try again"
+    },
+    "unauthorized": {
+      "title": "Access denied",
+      "body": "You do not have permission to view this page."
+    }
+  },
+
+  "meta": {
+    "home": {
+      "title": "hackathonlar.uz — hackathon ratings in Uzbekistan",
+      "description": "A catalog of hackathons in Uzbekistan and honest reviews from the people who took part. Open scores for organization, communication, judging, prizes and venue."
+    },
+    "catalog": {
+      "title": "Hackathon catalog",
+      "description": "Past and planned hackathons in Uzbekistan. Filter by city, format and organizer, and see how participants scored them."
+    },
+    "organizers": {
+      "title": "Organizers",
+      "description": "Hackathon organizers in Uzbekistan and their overall ratings."
+    },
+    "submit": {
+      "title": "Add a hackathon",
+      "description": "Add a hackathon you know about to the catalog."
+    },
+    "profile": {
+      "title": "My profile",
+      "description": "Your reviews and the hackathons you added."
+    },
+    "rules": {
+      "title": "Review rules",
+      "description": "The rules for writing reviews on hackathonlar.uz."
+    },
+    "about": {
+      "title": "About",
+      "description": "hackathonlar.uz is the first hackathon rating platform in Uzbekistan."
+    },
+    "hackathon": {
+      "title": "{name} — reviews and rating",
+      "descriptionWithScore": "{name}: {score} / 5 from {count} reviews. Organizer: {organizer}. Honest reviews from participants.",
+      "descriptionNoScore": "{name} is a hackathon run by {organizer}. Read what participants wrote, or write your own review."
+    },
+    "organizer": {
+      "title": "{name} — hackathons and rating",
+      "description": "Hackathons organized by {name} and how participants scored them."
+    }
+  },
+
+  "time": {
+    "justNow": "just now",
+    "minutesAgo": "{count, plural, one {# minute ago} other {# minutes ago}}",
+    "hoursAgo": "{count, plural, one {# hour ago} other {# hours ago}}",
+    "daysAgo": "{count, plural, one {# day ago} other {# days ago}}",
+    "monthsAgo": "{count, plural, one {# month ago} other {# months ago}}",
+    "yearsAgo": "{count, plural, one {# year ago} other {# years ago}}",
+    "dateRange": "{start} — {end}"
+  }
+}

@@ -1,3 +1,6 @@
+import { type AppLocale } from '@/i18n/routing';
+import { formatDecimal } from './format';
+
 /**
  * The score language of the whole site.
  *
@@ -112,20 +115,21 @@ export function roundScore(value: number, decimals = 2): number {
 }
 
 /**
- * Locale-aware score string, always with one decimal so scores line up in a
- * column: "4.2" in en/uz, "4,2" in ru.
+ * A score string with exactly one decimal so scores line up in a column:
+ * "4.2" in English, "4,2" in Uzbek and Russian.
+ *
+ * Uses the deterministic formatter in lib/format.ts rather than `Intl`,
+ * because Chromium has no Uzbek locale data and would disagree with the
+ * server — see the comment at the top of that file.
  */
 export function formatScore(
   value: number | string | null | undefined,
-  locale: string,
+  locale: AppLocale,
   fallback = '—',
 ): string {
   const score = toScore(value);
   if (score === null) return fallback;
-  return new Intl.NumberFormat(locale, {
-    minimumFractionDigits: 1,
-    maximumFractionDigits: 1,
-  }).format(score);
+  return formatDecimal(score, locale);
 }
 
 /**

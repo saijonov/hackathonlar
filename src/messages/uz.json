@@ -1,28 +1,28 @@
 {
   "common": {
     "appName": "hackathonlar.uz",
-    "tagline": "Oʻzbekiston hakatonlari haqida haqiqiy fikrlar",
+    "tagline": "O‘zbekiston hakatonlari haqida haqiqiy fikrlar",
     "loading": "Yuklanmoqda…",
     "error": "Xatolik yuz berdi",
     "retry": "Qayta urinish",
     "cancel": "Bekor qilish",
     "save": "Saqlash",
     "saving": "Saqlanmoqda…",
-    "delete": "Oʻchirish",
+    "delete": "O‘chirish",
     "edit": "Tahrirlash",
     "close": "Yopish",
     "back": "Orqaga",
     "search": "Qidirish",
     "filters": "Filtrlar",
     "clearAll": "Tozalash",
-    "apply": "Qoʻllash",
-    "showMore": "Yana koʻrsatish",
-    "seeAll": "Hammasini koʻrish",
+    "apply": "Qo‘llash",
+    "showMore": "Yana ko‘rsatish",
+    "seeAll": "Hammasini ko‘rish",
     "optional": "ixtiyoriy",
     "yes": "Ha",
-    "no": "Yoʻq",
-    "notSpecified": "Koʻrsatilmagan",
-    "skipToContent": "Asosiy qismga oʻtish",
+    "no": "Yo‘q",
+    "notSpecified": "Ko‘rsatilmagan",
+    "skipToContent": "Asosiy qismga o‘tish",
     "externalLink": "Tashqi havola",
     "characters": "{count} ta belgi",
     "charactersLeft": "{count} ta belgi qoldi",
@@ -33,7 +33,7 @@
     "home": "Bosh sahifa",
     "hackathons": "Hakatonlar",
     "organizers": "Tashkilotchilar",
-    "submit": "Hakaton qoʻshish",
+    "submit": "Hakaton qo‘shish",
     "about": "Loyiha haqida",
     "rules": "Qoidalar",
     "profile": "Profilim",
@@ -43,7 +43,7 @@
     "openMenu": "Menyuni ochish",
     "closeMenu": "Menyuni yopish",
     "language": "Til",
-    "changeLanguage": "Tilni oʻzgartirish"
+    "changeLanguage": "Tilni o‘zgartirish"
   },
 
   "format": {
@@ -57,22 +57,22 @@
     "label": "Qanday qatnashgansiz?",
     "participant": "Ishtirokchi",
     "finalist": "Finalchi",
-    "winner": "Gʻolib",
+    "winner": "G‘olib",
     "mentor": "Mentor",
-    "volunteer": "Koʻngilli"
+    "volunteer": "Ko‘ngilli"
   },
 
   "score": {
     "outOf": "{score} / 5",
     "overall": "Umumiy baho",
-    "noScore": "Baho yoʻq",
-    "noReviews": "Hali sharh yoʻq",
+    "noScore": "Baho yo‘q",
+    "noReviews": "Hali sharh yo‘q",
     "reviewCount": "{count, plural, other {# sharh}}",
     "basedOn": "{count, plural, other {# ta sharh asosida}}",
     "distribution": "Baholar taqsimoti",
     "best": "Eng kuchli",
     "weakest": "Eng zaif",
-    "categoriesTitle": "Yoʻnalishlar boʻyicha baho",
+    "categoriesTitle": "Yo‘nalishlar bo‘yicha baho",
     "category": {
       "organization": "Tashkiliy jihat",
       "communication": "Muloqot",
@@ -81,15 +81,15 @@
       "venue": "Joy va sharoit"
     },
     "categoryHint": {
-      "organization": "Reja, jadval, logistika — hammasi oʻz vaqtida boʻldimi?",
-      "communication": "Tadbirdan oldin, davomida va keyin xabar berildimi? Finalga oʻtmaganlarga javob qaytarildimi?",
-      "judging": "Baholash mezonlari aniq va adolatli boʻldimi?",
-      "prizes": "Sovrinlar vaʼda qilinganidek va oʻz vaqtida berildimi?",
+      "organization": "Reja, jadval, logistika — hammasi o‘z vaqtida bo‘ldimi?",
+      "communication": "Tadbirdan oldin, davomida va keyin xabar berildimi? Finalga o‘tmaganlarga javob qaytarildimi?",
+      "judging": "Baholash mezonlari aniq va adolatli bo‘ldimi?",
+      "prizes": "Sovrinlar va’da qilinganidek va o‘z vaqtida berildimi?",
       "venue": "Joy, ovqat, Wi-Fi, qulaylik. Onlayn tadbirlarda — platforma qulayligi."
     },
     "band": {
       "good": "Yaxshi",
-      "mid": "Oʻrtacha",
+      "mid": "O‘rtacha",
       "bad": "Yomon",
       "none": "Baholanmagan"
     }
@@ -97,32 +97,32 @@
 
   "home": {
     "hero": {
-      "eyebrow": "Oʻzbekistondagi birinchi hakaton reyting platformasi",
-      "title": "Oʻzbekistondagi hakatonlar haqida haqiqiy fikrlar",
+      "eyebrow": "O‘zbekistondagi birinchi hakaton reyting platformasi",
+      "title": "O‘zbekistondagi hakatonlar haqida haqiqiy fikrlar",
       "subtitle": "Dam olish kuningizni sarflashdan oldin biling: tashkilotchi jadvalga amal qiladimi, baholash shaffofmi, sovrinlar haqiqatan beriladimi. Baholar faqat qatnashganlardan.",
-      "ctaPrimary": "Hakatonlarni koʻrish",
-      "ctaSecondary": "Hakaton qoʻshish"
+      "ctaPrimary": "Hakatonlarni ko‘rish",
+      "ctaSecondary": "Hakaton qo‘shish"
     },
     "stats": {
       "hackathons": "hakaton",
       "reviews": "sharh",
       "organizers": "tashkilotchi",
-      "average": "oʻrtacha baho",
-      "averageEmpty": "hali baho yoʻq"
+      "average": "o‘rtacha baho",
+      "averageEmpty": "hali baho yo‘q"
     },
     "upcoming": {
       "eyebrow": "Yaqinlashib kelayotgan",
-      "title": "Boʻlajak hakatonlar",
-      "subtitle": "Har bir kartada tashkilotchining oldingi hakatonlar boʻyicha reytingi koʻrsatilgan.",
+      "title": "Bo‘lajak hakatonlar",
+      "subtitle": "Har bir kartada tashkilotchining oldingi hakatonlar bo‘yicha reytingi ko‘rsatilgan.",
       "organizerRating": "Tashkilotchi reytingi",
-      "organizerRatingBasis": "{count, plural, other {oldingi # ta hakaton boʻyicha}}",
-      "organizerNoRating": "Tashkilotchining hali baholangan hakatoni yoʻq",
-      "empty": "Hozircha eʼlon qilingan boʻlajak hakaton yoʻq. Bittasini bilasizmi?"
+      "organizerRatingBasis": "{count, plural, other {oldingi # ta hakaton bo‘yicha}}",
+      "organizerNoRating": "Tashkilotchining hali baholangan hakatoni yo‘q",
+      "empty": "Hozircha e’lon qilingan bo‘lajak hakaton yo‘q. Bittasini bilasizmi?"
     },
     "recent": {
       "eyebrow": "Yangi sharhlar",
-      "title": "Soʻnggi fikrlar",
-      "empty": "Hali birinchi sharh yozilmagan. Birinchi boʻling."
+      "title": "So‘nggi fikrlar",
+      "empty": "Hali birinchi sharh yozilmagan. Birinchi bo‘ling."
     },
     "ranking": {
       "eyebrow": "Reyting",
@@ -136,33 +136,33 @@
       "title": "Uch qadam",
       "step1": {
         "title": "Hakatonni toping",
-        "body": "Katalogdan shahar, format yoki tashkilotchi boʻyicha filtrlang. Har bir hakatonning beshta yoʻnalish boʻyicha bahosi bor."
+        "body": "Katalogdan shahar, format yoki tashkilotchi bo‘yicha filtrlang. Har bir hakatonning beshta yo‘nalish bo‘yicha bahosi bor."
       },
       "step2": {
-        "title": "Sharhlarni oʻqing",
-        "body": "Tashkiliy jihat, muloqot, baholash, sovrinlar va sharoit — har biri alohida baholanadi. Umumiy soʻz emas, aniq raqam."
+        "title": "Sharhlarni o‘qing",
+        "body": "Tashkiliy jihat, muloqot, baholash, sovrinlar va sharoit — har biri alohida baholanadi. Umumiy so‘z emas, aniq raqam."
       },
       "step3": {
-        "title": "Oʻz fikringizni yozing",
-        "body": "Qatnashgan boʻlsangiz, ikki daqiqada sharh qoldiring. Xohlasangiz — anonim tarzda."
+        "title": "O‘z fikringizni yozing",
+        "body": "Qatnashgan bo‘lsangiz, ikki daqiqada sharh qoldiring. Xohlasangiz — anonim tarzda."
       }
     },
     "cta": {
-      "title": "Siz qatnashgan hakaton bu yerda yoʻqmi?",
-      "body": "Qoʻshing — moderatsiyadan soʻng eʼlon qilinadi va boshqalar sharh yoza oladi.",
-      "button": "Hakaton qoʻshish"
+      "title": "Siz qatnashgan hakaton bu yerda yo‘qmi?",
+      "body": "Qo‘shing — moderatsiyadan so‘ng e’lon qilinadi va boshqalar sharh yoza oladi.",
+      "button": "Hakaton qo‘shish"
     }
   },
 
   "catalog": {
     "eyebrow": "Katalog",
     "title": "Hakatonlar",
-    "subtitle": "Oʻzbekistonda oʻtkazilgan va rejalashtirilgan hakatonlar, ishtirokchilar bahosi bilan.",
+    "subtitle": "O‘zbekistonda o‘tkazilgan va rejalashtirilgan hakatonlar, ishtirokchilar bahosi bilan.",
     "searchPlaceholder": "Hakaton yoki tashkilotchi nomi",
     "searchLabel": "Hakatonlarni qidirish",
     "tabs": {
-      "upcoming": "Boʻlajak",
-      "past": "Oʻtgan",
+      "upcoming": "Bo‘lajak",
+      "past": "O‘tgan",
       "all": "Hammasi"
     },
     "sort": {
@@ -170,7 +170,7 @@
       "newest": "Eng yangi",
       "highest": "Eng yuqori baho",
       "lowest": "Eng past baho",
-      "mostReviewed": "Eng koʻp sharh"
+      "mostReviewed": "Eng ko‘p sharh"
     },
     "filter": {
       "city": "Shahar",
@@ -190,8 +190,8 @@
     "page": "{current} / {total}-sahifa",
     "empty": {
       "title": "Hech narsa topilmadi",
-      "body": "Filtrlarni oʻzgartirib koʻring yoki qidiruvni tozalang. Oʻzingiz bilgan hakatonni qoʻshsangiz ham boʻladi.",
-      "cta": "Hakaton qoʻshish",
+      "body": "Filtrlarni o‘zgartirib ko‘ring yoki qidiruvni tozalang. O‘zingiz bilgan hakatonni qo‘shsangiz ham bo‘ladi.",
+      "cta": "Hakaton qo‘shish",
       "clear": "Filtrlarni tozalash"
     }
   },
@@ -199,8 +199,8 @@
   "hackathon": {
     "backToCatalog": "Katalogga qaytish",
     "about": "Hakaton haqida",
-    "tracks": "Yoʻnalishlar",
-    "prizePool": "Sovrin jamgʻarmasi",
+    "tracks": "Yo‘nalishlar",
+    "prizePool": "Sovrin jamg‘armasi",
     "dates": "Sanalar",
     "city": "Shahar",
     "onlineEvent": "Onlayn",
@@ -208,30 +208,30 @@
     "links": {
       "website": "Rasmiy sayt",
       "telegram": "Telegram",
-      "register": "Roʻyxatdan oʻtish"
+      "register": "Ro‘yxatdan o‘tish"
     },
     "descriptionFallback": "Bu matn {language} tilida",
     "scorePanel": {
       "title": "Baho",
       "empty": "Bu hakaton hali baholanmagan",
-      "emptyBody": "Agar qatnashgan boʻlsangiz, birinchi sharhni siz yozing."
+      "emptyBody": "Agar qatnashgan bo‘lsangiz, birinchi sharhni siz yozing."
     },
     "reviews": {
       "title": "Sharhlar",
-      "sortHelpful": "Foydali boʻyicha",
-      "sortNewest": "Yangi boʻyicha",
-      "empty": "Hali sharhlar yoʻq",
+      "sortHelpful": "Foydali bo‘yicha",
+      "sortNewest": "Yangi bo‘yicha",
+      "empty": "Hali sharhlar yo‘q",
       "emptyBody": "Bu hakatonda qatnashganmisiz? Birinchi sharhni yozing — keyingi ishtirokchilarga yordam beradi."
     },
     "writeReview": "Sharh yozish",
     "editReview": "Sharhimni tahrirlash",
     "upcoming": {
-      "notice": "Bu hakaton hali boʻlib oʻtmagan, shuning uchun sharhlar yoʻq.",
+      "notice": "Bu hakaton hali bo‘lib o‘tmagan, shuning uchun sharhlar yo‘q.",
       "organizerRecord": "Bu tashkilotchining oldingi hakatonlari",
       "organizerRecordEmpty": "Bu tashkilotchining platformadagi birinchi hakatoni."
     },
     "otherByOrganizer": "Shu tashkilotchining boshqa hakatonlari",
-    "dateTbd": "Sana eʼlon qilinmagan"
+    "dateTbd": "Sana e’lon qilinmagan"
   },
 
   "review": {
@@ -242,7 +242,7 @@
     "helpfulCount": "{count, plural, other {# ta foydali}}",
     "report": "Shikoyat qilish",
     "reported": "Shikoyat yuborildi",
-    "showCategories": "Yoʻnalishlar boʻyicha baho",
+    "showCategories": "Yo‘nalishlar bo‘yicha baho",
     "hideCategories": "Yashirish",
     "pros": "Yaxshi tomonlari",
     "cons": "Yomon tomonlari",
@@ -252,56 +252,56 @@
       "eyebrow": "Sharh yozish",
       "title": "{name} haqida sharh",
       "editTitle": "Sharhni tahrirlash",
-      "subtitle": "Beshta yoʻnalish boʻyicha baho bering. Aniq boʻling — nima yaxshi, nima yomon boʻlganini yozing.",
+      "subtitle": "Beshta yo‘nalish bo‘yicha baho bering. Aniq bo‘ling — nima yaxshi, nima yomon bo‘lganini yozing.",
       "ratingsTitle": "Baholar",
-      "ratingsHint": "Beshta yoʻnalishning barchasi majburiy.",
+      "ratingsHint": "Beshta yo‘nalishning barchasi majburiy.",
       "detailsTitle": "Tafsilotlar",
       "titleLabel": "Sarlavha",
       "titlePlaceholder": "Bir jumlada asosiy fikringiz",
       "bodyLabel": "Sharh matni",
-      "bodyPlaceholder": "Nima boʻldi? Jadval qanday ketdi, tashkilotchilar bilan aloqa qanday boʻldi, sovrinlar berildimi?",
-      "bodyHint": "Kamida {min} ta belgi. Aniq faktlar umumiy soʻzdan koʻra foydaliroq.",
+      "bodyPlaceholder": "Nima bo‘ldi? Jadval qanday ketdi, tashkilotchilar bilan aloqa qanday bo‘ldi, sovrinlar berildimi?",
+      "bodyHint": "Kamida {min} ta belgi. Aniq faktlar umumiy so‘zdan ko‘ra foydaliroq.",
       "prosLabel": "Yaxshi tomonlari",
-      "prosPlaceholder": "Nima yaxshi boʻldi?",
+      "prosPlaceholder": "Nima yaxshi bo‘ldi?",
       "consLabel": "Yomon tomonlari",
       "consPlaceholder": "Nimani yaxshilash kerak?",
       "anonymousLabel": "Anonim tarzda joylash",
-      "anonymousHint": "Ismingiz saytda koʻrinmaydi. Moderator suiisteʼmollikning oldini olish uchun muallifni koʻra oladi.",
+      "anonymousHint": "Ismingiz saytda ko‘rinmaydi. Moderator suiiste’mollikning oldini olish uchun muallifni ko‘ra oladi.",
       "submit": "Sharhni joylash",
-      "update": "Oʻzgarishlarni saqlash",
+      "update": "O‘zgarishlarni saqlash",
       "submitting": "Yuborilmoqda…",
-      "deleteConfirm": "Sharhingizni oʻchirasizmi? Buni qaytarib boʻlmaydi.",
+      "deleteConfirm": "Sharhingizni o‘chirasizmi? Buni qaytarib bo‘lmaydi.",
       "successTitle": "Rahmat!",
-      "successBody": "Sharhingiz eʼlon qilindi.",
+      "successBody": "Sharhingiz e’lon qilindi.",
       "updatedBody": "Sharhingiz yangilandi.",
       "signInRequired": "Sharh yozish uchun tizimga kiring",
       "signInRequiredBody": "Bu bir daqiqa vaqt oladi. Yozgan matningiz saqlanib qoladi."
     },
     "reportDialog": {
       "title": "Sharh haqida shikoyat",
-      "body": "Nima uchun bu sharh qoidalarga zid deb hisoblaysiz? Moderator koʻrib chiqadi.",
+      "body": "Nima uchun bu sharh qoidalarga zid deb hisoblaysiz? Moderator ko‘rib chiqadi.",
       "reasonLabel": "Sabab",
-      "reasonPlaceholder": "Masalan: haqorat, yolgʻon maʼlumot, reklama",
+      "reasonPlaceholder": "Masalan: haqorat, yolg‘on ma’lumot, reklama",
       "submit": "Yuborish",
       "success": "Shikoyatingiz yuborildi. Rahmat."
     },
     "errors": {
       "duplicate": "Siz bu hakatonga allaqachon sharh yozgansiz. Uni tahrirlashingiz mumkin.",
-      "notParticipated": "Bu hakaton hali boshlanmagan, shuning uchun sharh yozib boʻlmaydi.",
-      "rateLimited": "Bugun juda koʻp sharh yozdingiz. Ertaga urinib koʻring.",
+      "notParticipated": "Bu hakaton hali boshlanmagan, shuning uchun sharh yozib bo‘lmaydi.",
+      "rateLimited": "Bugun juda ko‘p sharh yozdingiz. Ertaga urinib ko‘ring.",
       "notFound": "Hakaton topilmadi",
-      "ownVote": "Oʻz sharhingizga ovoz bera olmaysiz",
+      "ownVote": "O‘z sharhingizga ovoz bera olmaysiz",
       "alreadyReported": "Siz bu sharhga allaqachon shikoyat qilgansiz",
-      "generic": "Sharhni saqlab boʻlmadi. Qayta urinib koʻring."
+      "generic": "Sharhni saqlab bo‘lmadi. Qayta urinib ko‘ring."
     }
   },
 
   "submit": {
-    "eyebrow": "Hissa qoʻshish",
-    "title": "Hakaton qoʻshish",
-    "subtitle": "Oʻzingiz bilgan hakatonni qoʻshing. Moderatsiyadan soʻng katalogda paydo boʻladi va boshqalar sharh yoza oladi.",
+    "eyebrow": "Hissa qo‘shish",
+    "title": "Hakaton qo‘shish",
+    "subtitle": "O‘zingiz bilgan hakatonni qo‘shing. Moderatsiyadan so‘ng katalogda paydo bo‘ladi va boshqalar sharh yoza oladi.",
     "sections": {
-      "basics": "Asosiy maʼlumot",
+      "basics": "Asosiy ma’lumot",
       "organizer": "Tashkilotchi",
       "details": "Tafsilotlar",
       "description": "Tavsif",
@@ -313,39 +313,39 @@
       "namePlaceholder": "Masalan: CBU Coding Hackathon 2026",
       "city": "Shahar",
       "cityPlaceholder": "Toshkent",
-      "cityOnlineHint": "Onlayn tadbirlar uchun shahar koʻrsatilmaydi.",
+      "cityOnlineHint": "Onlayn tadbirlar uchun shahar ko‘rsatilmaydi.",
       "format": "Format",
       "startDate": "Boshlanish sanasi",
       "endDate": "Tugash sanasi",
-      "prizePool": "Sovrin jamgʻarmasi",
-      "prizePoolPlaceholder": "Masalan: 100 000 000 soʻm",
-      "tracks": "Yoʻnalishlar",
+      "prizePool": "Sovrin jamg‘armasi",
+      "prizePoolPlaceholder": "Masalan: 100 000 000 so‘m",
+      "tracks": "Yo‘nalishlar",
       "tracksPlaceholder": "Vergul bilan ajrating: Fintech, AI, EdTech",
       "website": "Rasmiy sayt",
       "telegram": "Telegram kanal",
-      "registrationUrl": "Roʻyxatdan oʻtish havolasi",
+      "registrationUrl": "Ro‘yxatdan o‘tish havolasi",
       "descriptionLanguage": "Tavsif tili",
       "description": "Tavsif",
-      "descriptionPlaceholder": "Hakaton nima haqida edi, kim uchun, qanday bosqichlardan iborat boʻlgan?",
-      "descriptionHint": "Kamida bitta tilda toʻldiring. Boshqa tillar keyin qoʻshilishi mumkin."
+      "descriptionPlaceholder": "Hakaton nima haqida edi, kim uchun, qanday bosqichlardan iborat bo‘lgan?",
+      "descriptionHint": "Kamida bitta tilda to‘ldiring. Boshqa tillar keyin qo‘shilishi mumkin."
     },
     "organizer": {
       "search": "Tashkilotchini qidiring",
       "searchPlaceholder": "Nomini yozing",
       "notFound": "Topilmadimi?",
-      "createNew": "Yangi tashkilotchi qoʻshish",
+      "createNew": "Yangi tashkilotchi qo‘shish",
       "createTitle": "Yangi tashkilotchi",
       "name": "Nomi",
       "website": "Sayti",
       "telegram": "Telegram",
-      "useExisting": "Roʻyxatdan tanlash",
+      "useExisting": "Ro‘yxatdan tanlash",
       "selected": "Tanlandi"
     },
     "cover": {
       "choose": "Rasm tanlash",
       "replace": "Rasmni almashtirish",
-      "remove": "Oʻchirish",
-      "hint": "JPG, PNG yoki WebP. 2 MB gacha. Boʻsh qoldirsangiz, avtomatik muqova yaratiladi.",
+      "remove": "O‘chirish",
+      "hint": "JPG, PNG yoki WebP. 2 MB gacha. Bo‘sh qoldirsangiz, avtomatik muqova yaratiladi.",
       "tooLarge": "Rasm hajmi 2 MB dan katta",
       "wrongType": "Faqat JPG, PNG, WebP yoki AVIF",
       "uploading": "Yuklanmoqda…",
@@ -354,33 +354,33 @@
     "submitButton": "Moderatsiyaga yuborish",
     "success": {
       "title": "Rahmat!",
-      "body": "Moderatsiyadan soʻng eʼlon qilinadi. Holatini profilingizda kuzatib borishingiz mumkin.",
-      "toProfile": "Profilga oʻtish",
-      "addAnother": "Yana bittasini qoʻshish"
+      "body": "Moderatsiyadan so‘ng e’lon qilinadi. Holatini profilingizda kuzatib borishingiz mumkin.",
+      "toProfile": "Profilga o‘tish",
+      "addAnother": "Yana bittasini qo‘shish"
     },
     "errors": {
-      "rateLimited": "Bugun juda koʻp hakaton qoʻshdingiz. Ertaga urinib koʻring.",
+      "rateLimited": "Bugun juda ko‘p hakaton qo‘shdingiz. Ertaga urinib ko‘ring.",
       "duplicateSlug": "Shunday nomli hakaton allaqachon mavjud.",
-      "organizerRequired": "Tashkilotchini tanlang yoki yangisini qoʻshing.",
+      "organizerRequired": "Tashkilotchini tanlang yoki yangisini qo‘shing.",
       "descriptionRequired": "Kamida bitta tilda tavsif yozing.",
-      "generic": "Yuborib boʻlmadi. Qayta urinib koʻring."
+      "generic": "Yuborib bo‘lmadi. Qayta urinib ko‘ring."
     }
   },
 
   "organizer": {
     "eyebrow": "Tashkilotchi",
     "listTitle": "Tashkilotchilar",
-    "listSubtitle": "Har bir tashkilotchining barcha hakatonlari boʻyicha umumiy reytingi.",
+    "listSubtitle": "Har bir tashkilotchining barcha hakatonlari bo‘yicha umumiy reytingi.",
     "hackathons": "{count, plural, other {# ta hakaton}}",
     "reviews": "{count, plural, other {# ta sharh}}",
     "trackRecord": "Umumiy reyting",
     "trackRecordEmpty": "Hali baholanmagan",
-    "categoriesTitle": "Barcha hakatonlar boʻyicha oʻrtacha",
+    "categoriesTitle": "Barcha hakatonlar bo‘yicha o‘rtacha",
     "hackathonsTitle": "Hakatonlari",
-    "upcomingTitle": "Boʻlajak hakatonlari",
-    "pastTitle": "Oʻtgan hakatonlari",
-    "empty": "Bu tashkilotchining katalogda hakatoni yoʻq.",
-    "listEmpty": "Hali tashkilotchilar qoʻshilmagan.",
+    "upcomingTitle": "Bo‘lajak hakatonlari",
+    "pastTitle": "O‘tgan hakatonlari",
+    "empty": "Bu tashkilotchining katalogda hakatoni yo‘q.",
+    "listEmpty": "Hali tashkilotchilar qo‘shilmagan.",
     "about": "Tashkilotchi haqida"
   },
 
@@ -388,34 +388,34 @@
     "eyebrow": "Profil",
     "title": "Profilim",
     "displayName": "Ismingiz",
-    "displayNameHint": "Anonim boʻlmagan sharhlaringizda shu ism koʻrinadi.",
+    "displayNameHint": "Anonim bo‘lmagan sharhlaringizda shu ism ko‘rinadi.",
     "avatar": "Avatar",
     "avatarHint": "JPG, PNG yoki WebP. 1 MB gacha.",
     "email": "Email",
     "saved": "Saqlandi",
     "myReviews": "Sharhlarim",
-    "mySubmissions": "Qoʻshgan hakatonlarim",
+    "mySubmissions": "Qo‘shgan hakatonlarim",
     "reviewsEmpty": "Siz hali sharh yozmagansiz.",
-    "reviewsEmptyCta": "Hakatonlarni koʻrish",
-    "submissionsEmpty": "Siz hali hakaton qoʻshmagansiz.",
-    "submissionsEmptyCta": "Hakaton qoʻshish",
+    "reviewsEmptyCta": "Hakatonlarni ko‘rish",
+    "submissionsEmpty": "Siz hali hakaton qo‘shmagansiz.",
+    "submissionsEmptyCta": "Hakaton qo‘shish",
     "anonymousBadge": "Anonim",
-    "anonymousNote": "Bu sharh saytda anonim koʻrinadi",
+    "anonymousNote": "Bu sharh saytda anonim ko‘rinadi",
     "status": {
       "pending": "Moderatsiyada",
-      "approved": "Eʼlon qilingan",
+      "approved": "E’lon qilingan",
       "rejected": "Rad etilgan"
     },
     "rejectionReason": "Sabab",
     "signOut": "Chiqish",
-    "deleteReview": "Sharhni oʻchirish"
+    "deleteReview": "Sharhni o‘chirish"
   },
 
   "auth": {
     "signIn": "Kirish",
-    "signUp": "Roʻyxatdan oʻtish",
+    "signUp": "Ro‘yxatdan o‘tish",
     "modalTitle": "hackathonlar.uz ga kirish",
-    "modalSubtitle": "Sharh yozish, ovoz berish va hakaton qoʻshish uchun hisob kerak. Oʻqish uchun — hech qachon.",
+    "modalSubtitle": "Sharh yozish, ovoz berish va hakaton qo‘shish uchun hisob kerak. O‘qish uchun — hech qachon.",
     "google": "Google orqali davom etish",
     "googleUnavailable": "Google orqali kirish hozircha sozlanmagan",
     "divider": "yoki",
@@ -424,8 +424,8 @@
     "password": "Parol",
     "passwordHint": "Kamida 8 ta belgi, harf va raqam.",
     "displayName": "Ismingiz",
-    "displayNamePlaceholder": "Saytda koʻrinadigan ism",
-    "noAccount": "Hisobingiz yoʻqmi?",
+    "displayNamePlaceholder": "Saytda ko‘rinadigan ism",
+    "noAccount": "Hisobingiz yo‘qmi?",
     "haveAccount": "Hisobingiz bormi?",
     "forgotPassword": "Parolni unutdingizmi?",
     "continue": "Davom etish",
@@ -450,14 +450,14 @@
     },
     "signedInAs": "Kirdingiz:",
     "errors": {
-      "invalidCredentials": "Email yoki parol notoʻgʻri",
+      "invalidCredentials": "Email yoki parol noto‘g‘ri",
       "emailTaken": "Bu email bilan hisob allaqachon mavjud",
       "weakPassword": "Parol juda oddiy. Kamida 8 ta belgi, harf va raqam.",
-      "invalidEmail": "Email manzili notoʻgʻri",
-      "otpInvalid": "Kod notoʻgʻri yoki muddati oʻtgan",
-      "rateLimited": "Juda koʻp urinish. Bir oz kuting.",
+      "invalidEmail": "Email manzili noto‘g‘ri",
+      "otpInvalid": "Kod noto‘g‘ri yoki muddati o‘tgan",
+      "rateLimited": "Juda ko‘p urinish. Bir oz kuting.",
       "emailNotConfirmed": "Avval emailingizni tasdiqlang",
-      "generic": "Nimadir notoʻgʻri ketdi. Qayta urinib koʻring."
+      "generic": "Nimadir noto‘g‘ri ketdi. Qayta urinib ko‘ring."
     }
   },
 
@@ -478,13 +478,13 @@
     },
     "queue": {
       "title": "Moderatsiya navbati",
-      "empty": "Navbat boʻsh.",
+      "empty": "Navbat bo‘sh.",
       "submittedBy": "Yuborgan",
       "approve": "Tasdiqlash",
       "approveAndEdit": "Tahrirlab tasdiqlash",
       "reject": "Rad etish",
       "rejectReason": "Rad etish sababi",
-      "rejectReasonPlaceholder": "Ixtiyoriy, foydalanuvchiga koʻrinadi",
+      "rejectReasonPlaceholder": "Ixtiyoriy, foydalanuvchiga ko‘rinadi",
       "approved": "Tasdiqlandi",
       "rejected": "Rad etildi"
     },
@@ -494,19 +494,19 @@
       "realAuthor": "Haqiqiy muallif",
       "anonymousPublic": "Saytda anonim",
       "hide": "Yashirish",
-      "unhide": "Koʻrsatish",
+      "unhide": "Ko‘rsatish",
       "hidden": "Yashirilgan",
-      "published": "Eʼlon qilingan",
+      "published": "E’lon qilingan",
       "reports": "Shikoyatlar",
       "filterAll": "Hammasi",
       "filterReported": "Shikoyat qilingan",
       "filterHidden": "Yashirilgan",
-      "empty": "Sharhlar yoʻq.",
+      "empty": "Sharhlar yo‘q.",
       "response": {
         "title": "Rasmiy javob",
-        "add": "Rasmiy javob qoʻshish",
+        "add": "Rasmiy javob qo‘shish",
         "edit": "Javobni tahrirlash",
-        "remove": "Javobni oʻchirish",
+        "remove": "Javobni o‘chirish",
         "authorLabel": "Muallif nomi",
         "authorLabelPlaceholder": "Masalan: CBU jamoasi rasmiy javobi",
         "body": "Javob matni",
@@ -516,61 +516,61 @@
     "hackathons": {
       "title": "Hakatonlar",
       "create": "Yangi hakaton",
-      "createHint": "Admin qoʻshgan hakaton moderatsiyasiz darhol eʼlon qilinadi.",
+      "createHint": "Admin qo‘shgan hakaton moderatsiyasiz darhol e’lon qilinadi.",
       "edit": "Tahrirlash",
       "status": "Holat",
       "reviews": "Sharhlar",
-      "delete": "Oʻchirish",
-      "deleteConfirm": "Hakatonni va uning barcha sharhlarini oʻchirasizmi?",
-      "empty": "Hakatonlar yoʻq."
+      "delete": "O‘chirish",
+      "deleteConfirm": "Hakatonni va uning barcha sharhlarini o‘chirasizmi?",
+      "empty": "Hakatonlar yo‘q."
     },
     "organizers": {
       "title": "Tashkilotchilar",
       "create": "Yangi tashkilotchi",
       "edit": "Tahrirlash",
-      "delete": "Oʻchirish",
-      "deleteConfirm": "Tashkilotchini oʻchirasizmi? Hakatonlari tashkilotchisiz qoladi.",
-      "empty": "Tashkilotchilar yoʻq.",
+      "delete": "O‘chirish",
+      "deleteConfirm": "Tashkilotchini o‘chirasizmi? Hakatonlari tashkilotchisiz qoladi.",
+      "empty": "Tashkilotchilar yo‘q.",
       "slug": "Slug",
       "logoUrl": "Logotip URL"
     },
     "reports": {
       "title": "Shikoyatlar",
-      "empty": "Ochiq shikoyat yoʻq.",
+      "empty": "Ochiq shikoyat yo‘q.",
       "reason": "Sabab",
       "reporter": "Shikoyatchi",
       "resolve": "Hal qilindi",
       "dismiss": "Rad etish",
-      "viewReview": "Sharhni koʻrish"
+      "viewReview": "Sharhni ko‘rish"
     },
-    "notAuthorized": "Bu sahifaga kirish huquqingiz yoʻq.",
+    "notAuthorized": "Bu sahifaga kirish huquqingiz yo‘q.",
     "saved": "Saqlandi"
   },
 
   "rules": {
     "eyebrow": "Qoidalar",
     "title": "Sharh qoidalari",
-    "intro": "Bu platforma ishtirokchilarning haqiqiy tajribasiga tayanadi. Sharhlaringiz foydali boʻlishi uchun bir nechta oddiy qoida bor.",
+    "intro": "Bu platforma ishtirokchilarning haqiqiy tajribasiga tayanadi. Sharhlaringiz foydali bo‘lishi uchun bir nechta oddiy qoida bor.",
     "sections": {
       "honest": {
-        "title": "Halol boʻling",
-        "body": "Faqat oʻzingiz qatnashgan hakaton haqida yozing. Boshqalardan eshitgan gaplarni fakt sifatida keltirmang."
+        "title": "Halol bo‘ling",
+        "body": "Faqat o‘zingiz qatnashgan hakaton haqida yozing. Boshqalardan eshitgan gaplarni fakt sifatida keltirmang."
       },
       "specific": {
-        "title": "Aniq boʻling",
-        "body": "«Yomon edi» degan sharh hech kimga yordam bermaydi. Nima boʻlganini yozing: jadval necha soatga kechikdi, javob necha kunda keldi, sovrin qachon berildi."
+        "title": "Aniq bo‘ling",
+        "body": "«Yomon edi» degan sharh hech kimga yordam bermaydi. Nima bo‘lganini yozing: jadval necha soatga kechikdi, javob necha kunda keldi, sovrin qachon berildi."
       },
       "noInsults": {
-        "title": "Haqorat yoʻq",
-        "body": "Tashkilotchilarni tanqid qiling, lekin shaxsiy haqorat, tahdid va kamsitishga yoʻl qoʻyilmaydi."
+        "title": "Haqorat yo‘q",
+        "body": "Tashkilotchilarni tanqid qiling, lekin shaxsiy haqorat, tahdid va kamsitishga yo‘l qo‘yilmaydi."
       },
       "noFabrication": {
-        "title": "Toʻqib chiqarmang",
-        "body": "Yolgʻon maʼlumot, reklama va raqobatchilarga qarshi uyushtirilgan sharhlar oʻchiriladi."
+        "title": "To‘qib chiqarmang",
+        "body": "Yolg‘on ma’lumot, reklama va raqobatchilarga qarshi uyushtirilgan sharhlar o‘chiriladi."
       },
       "anonymity": {
         "title": "Anonimlik qanday ishlaydi",
-        "body": "Anonim sharhda ismingiz saytda koʻrinmaydi. Lekin moderator suiisteʼmollikning oldini olish uchun muallifni koʻra oladi. Bu anonimlikni himoya qilish uchun emas, balki qoidabuzarlikni toʻxtatish uchun kerak."
+        "body": "Anonim sharhda ismingiz saytda ko‘rinmaydi. Lekin moderator suiiste’mollikning oldini olish uchun muallifni ko‘ra oladi. Bu anonimlikni himoya qilish uchun emas, balki qoidabuzarlikni to‘xtatish uchun kerak."
       },
       "moderation": {
         "title": "Moderatsiya",
@@ -578,7 +578,7 @@
       },
       "legal": {
         "title": "Huquqiy eslatma",
-        "body": "Saytdagi sharhlar — foydalanuvchilarning shaxsiy fikri, platformaning bahosi emas. Baholar tuzilmali mezonlar boʻyicha beriladi. Xato yoki qoidabuzar maʼlumotni koʻrsangiz, shikoyat tugmasidan foydalaning."
+        "body": "Saytdagi sharhlar — foydalanuvchilarning shaxsiy fikri, platformaning bahosi emas. Baholar tuzilmali mezonlar bo‘yicha beriladi. Xato yoki qoidabuzar ma’lumotni ko‘rsangiz, shikoyat tugmasidan foydalaning."
       }
     },
     "contactTitle": "Savol bormi?",
@@ -588,43 +588,43 @@
   "about": {
     "eyebrow": "Loyiha haqida",
     "title": "Nega bu platforma kerak",
-    "lead": "Oʻzbekistonda hakatonlar soni tez oʻsmoqda. Sifat esa — turlicha. Bu platforma shu farqni koʻrinadigan qiladi.",
+    "lead": "O‘zbekistonda hakatonlar soni tez o‘smoqda. Sifat esa — turlicha. Bu platforma shu farqni ko‘rinadigan qiladi.",
     "problem": {
       "title": "Muammo",
-      "body": "Tashkilotchi «finalchilar tez orada eʼlon qilinadi» deydi va boshqa xabar bermaydi. Baholash mezonlari noaniq. Sovrin vaʼda qilinadi, lekin oylab kechikadi. Bularning hammasi yopiq Telegram chatlarida qoladi va yangi ishtirokchi hech narsani bilmaydi."
+      "body": "Tashkilotchi «finalchilar tez orada e’lon qilinadi» deydi va boshqa xabar bermaydi. Baholash mezonlari noaniq. Sovrin va’da qilinadi, lekin oylab kechikadi. Bularning hammasi yopiq Telegram chatlarida qoladi va yangi ishtirokchi hech narsani bilmaydi."
     },
     "solution": {
       "title": "Yechim",
-      "body": "Ochiq, tuzilmali reyting. Har bir hakaton beshta aniq yoʻnalish boʻyicha baholanadi: tashkiliy jihat, muloqot, baholash, sovrinlar va sharoit. Baholarni faqat qatnashganlar qoʻyadi. Tashkilotchining barcha hakatonlari boʻyicha umumiy reytingi ham koʻrinadi."
+      "body": "Ochiq, tuzilmali reyting. Har bir hakaton beshta aniq yo‘nalish bo‘yicha baholanadi: tashkiliy jihat, muloqot, baholash, sovrinlar va sharoit. Baholarni faqat qatnashganlar qo‘yadi. Tashkilotchining barcha hakatonlari bo‘yicha umumiy reytingi ham ko‘rinadi."
     },
     "principles": {
       "title": "Tamoyillar",
       "one": {
-        "title": "Oʻqish har doim ochiq",
-        "body": "Sharhlarni oʻqish uchun hech qachon roʻyxatdan oʻtish talab qilinmaydi."
+        "title": "O‘qish har doim ochiq",
+        "body": "Sharhlarni o‘qish uchun hech qachon ro‘yxatdan o‘tish talab qilinmaydi."
       },
       "two": {
-        "title": "Soxta sharh yoʻq",
-        "body": "Platforma hech qachon oʻzi sharh yozmaydi va soxta baho qoʻymaydi."
+        "title": "Soxta sharh yo‘q",
+        "body": "Platforma hech qachon o‘zi sharh yozmaydi va soxta baho qo‘ymaydi."
       },
       "three": {
         "title": "Tashkilotchiga javob berish huquqi",
-        "body": "Tashkilotchi rasmiy javob berishi mumkin — u sharh ostida koʻrinadi."
+        "body": "Tashkilotchi rasmiy javob berishi mumkin — u sharh ostida ko‘rinadi."
       }
     },
-    "contactTitle": "Bogʻlanish",
-    "contactBody": "Taklif, xato yoki hamkorlik boʻyicha Telegram orqali yozing.",
+    "contactTitle": "Bog‘lanish",
+    "contactBody": "Taklif, xato yoki hamkorlik bo‘yicha Telegram orqali yozing.",
     "telegram": "Telegram"
   },
 
   "footer": {
-    "tagline": "Oʻzbekiston hakaton sahnasining ochiq reytingi.",
+    "tagline": "O‘zbekiston hakaton sahnasining ochiq reytingi.",
     "sections": {
-      "explore": "Koʻrish",
+      "explore": "Ko‘rish",
       "project": "Loyiha",
       "language": "Til"
     },
-    "contact": "Bogʻlanish",
+    "contact": "Bog‘lanish",
     "madeIn": "Made in Uzbekistan 🇺🇿",
     "rights": "Sharhlar mualliflariga tegishli."
   },
@@ -633,42 +633,42 @@
     "notFound": {
       "code": "404",
       "title": "Sahifa topilmadi",
-      "body": "Bunday sahifa yoʻq yoki koʻchirilgan. Katalogdan qidirib koʻring.",
-      "cta": "Hakatonlarga oʻtish",
+      "body": "Bunday sahifa yo‘q yoki ko‘chirilgan. Katalogdan qidirib ko‘ring.",
+      "cta": "Hakatonlarga o‘tish",
       "home": "Bosh sahifa"
     },
     "generic": {
       "code": "Xatolik",
-      "title": "Nimadir notoʻgʻri ketdi",
-      "body": "Sahifani yuklab boʻlmadi. Qayta urinib koʻring.",
+      "title": "Nimadir noto‘g‘ri ketdi",
+      "body": "Sahifani yuklab bo‘lmadi. Qayta urinib ko‘ring.",
       "cta": "Qayta urinish"
     },
     "unauthorized": {
       "title": "Kirish taqiqlangan",
-      "body": "Bu sahifani koʻrish huquqingiz yoʻq."
+      "body": "Bu sahifani ko‘rish huquqingiz yo‘q."
     }
   },
 
   "meta": {
     "home": {
-      "title": "hackathonlar.uz — Oʻzbekiston hakatonlari reytingi",
-      "description": "Oʻzbekistondagi hakatonlar katalogi va ishtirokchilarning haqiqiy sharhlari. Tashkiliy jihat, muloqot, baholash, sovrinlar va sharoit boʻyicha ochiq reyting."
+      "title": "hackathonlar.uz — O‘zbekiston hakatonlari reytingi",
+      "description": "O‘zbekistondagi hakatonlar katalogi va ishtirokchilarning haqiqiy sharhlari. Tashkiliy jihat, muloqot, baholash, sovrinlar va sharoit bo‘yicha ochiq reyting."
     },
     "catalog": {
       "title": "Hakatonlar katalogi",
-      "description": "Oʻzbekistonda oʻtkazilgan va rejalashtirilgan hakatonlar. Shahar, format va tashkilotchi boʻyicha filtrlang, ishtirokchilar bahosini koʻring."
+      "description": "O‘zbekistonda o‘tkazilgan va rejalashtirilgan hakatonlar. Shahar, format va tashkilotchi bo‘yicha filtrlang, ishtirokchilar bahosini ko‘ring."
     },
     "organizers": {
       "title": "Tashkilotchilar",
-      "description": "Oʻzbekistondagi hakaton tashkilotchilari va ularning umumiy reytingi."
+      "description": "O‘zbekistondagi hakaton tashkilotchilari va ularning umumiy reytingi."
     },
     "submit": {
-      "title": "Hakaton qoʻshish",
-      "description": "Oʻzingiz bilgan hakatonni katalogga qoʻshing."
+      "title": "Hakaton qo‘shish",
+      "description": "O‘zingiz bilgan hakatonni katalogga qo‘shing."
     },
     "profile": {
       "title": "Profilim",
-      "description": "Sharhlaringiz va qoʻshgan hakatonlaringiz."
+      "description": "Sharhlaringiz va qo‘shgan hakatonlaringiz."
     },
     "rules": {
       "title": "Sharh qoidalari",
@@ -676,12 +676,12 @@
     },
     "about": {
       "title": "Loyiha haqida",
-      "description": "hackathonlar.uz — Oʻzbekistondagi birinchi hakaton reyting platformasi."
+      "description": "hackathonlar.uz — O‘zbekistondagi birinchi hakaton reyting platformasi."
     },
     "hackathon": {
       "title": "{name} — sharhlar va reyting",
       "descriptionWithScore": "{name}: {score} / 5 ball, {count} ta sharh. Tashkilotchi: {organizer}. Ishtirokchilarning haqiqiy fikrlari.",
-      "descriptionNoScore": "{name} — {organizer} tomonidan oʻtkaziladigan hakaton. Ishtirokchilar sharhlarini oʻqing yoki oʻzingiznikini yozing."
+      "descriptionNoScore": "{name} — {organizer} tomonidan o‘tkaziladigan hakaton. Ishtirokchilar sharhlarini o‘qing yoki o‘zingiznikini yozing."
     },
     "organizer": {
       "title": "{name} — hakatonlar va reyting",

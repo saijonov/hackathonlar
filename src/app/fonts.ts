@@ -28,7 +28,8 @@ export const plexSans = IBM_Plex_Sans({
   variable: '--font-plex-sans',
   display: 'swap',
   weight: ['400', '500', '600', '700'],
-  style: ['normal', 'italic'],
+  // Italics are never used in the design system, so they are not downloaded.
+  style: ['normal'],
   fallback: ['system-ui', 'sans-serif'],
   adjustFontFallback: true,
 });

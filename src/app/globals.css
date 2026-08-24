@@ -99,9 +99,24 @@
 }
 
 /* Font families come from next/font (see src/app/fonts.ts), so they must be
-   resolved at reference time rather than baked in. */
+   resolved at reference time rather than baked in.
+
+   IBM Plex Sans sits in the DISPLAY stack as a glyph fallback. Verified by
+   reading the cmap of the actual self-hosted woff2 files:
+
+       codepoint            Geologica latin   IBM Plex Sans latin
+       U+02BB turned comma        absent            present
+       U+02BC apostrophe          present           present
+       U+2018 / U+2019            present           present
+
+   Uzbek copy therefore uses U+2018 for the tutuq belgisi in oʼ/gʼ and U+2019
+   for the standalone mark: rendered side by side (.qa/glyph-compare.png) those
+   are the only marks that sit tight and keep the correct turned-comma shape in
+   BOTH faces at every weight, whereas U+02BB and U+02BC leave a visible gap in
+   Plex. Keeping Plex in this stack still costs zero extra bytes — it is already
+   downloaded for body copy — and covers any other glyph Geologica lacks. */
 @theme inline {
-  --font-display: var(--font-geologica), 'Geologica', system-ui, sans-serif;
+  --font-display: var(--font-geologica), var(--font-plex-sans), system-ui, sans-serif;
   --font-sans: var(--font-plex-sans), 'IBM Plex Sans', system-ui, sans-serif;
 }
 

@@ -176,9 +176,9 @@ insert into public.reviews (
 select '82198f1f-cd40-5400-8e1e-881a4d589a46', h.id, 'd698aaf5-6bc9-56ee-8a44-7cac591c90ae',
   5, 4, 4,
   5, 5,
-  'Jadval aniq, sovrin oʻz vaqtida',
-  'Roʻyxatdan oʻtishdan finalgacha hamma bosqich eʼlon qilingan sanada boʻldi. Har bosqich natijasi Telegram kanalida chiqdi, kechikish boʻlmadi. Final kuni jamoalarga 7 daqiqadan pitch vaqti berildi va bu qatʼiy nazorat qilindi. Sovrin pul mablagʻi vaʼda qilinganidek, taxminan ikki hafta ichida kartaga tushdi.',
-  'Aniq jadval, natijalar oʻz vaqtida, sovrin kechikmadi, hakamlar soha vakillari edi.', 'Baholash varaqasi ochiq qilinmadi — faqat umumiy ball aytildi.',
+  'Jadval aniq, sovrin o‘z vaqtida',
+  'Ro‘yxatdan o‘tishdan finalgacha hamma bosqich e’lon qilingan sanada bo‘ldi. Har bosqich natijasi Telegram kanalida chiqdi, kechikish bo‘lmadi. Final kuni jamoalarga 7 daqiqadan pitch vaqti berildi va bu qat’iy nazorat qilindi. Sovrin pul mablag‘i va’da qilinganidek, taxminan ikki hafta ichida kartaga tushdi.',
+  'Aniq jadval, natijalar o‘z vaqtida, sovrin kechikmadi, hakamlar soha vakillari edi.', 'Baholash varaqasi ochiq qilinmadi — faqat umumiy ball aytildi.',
   false, 'finalist', 'published',
   now() - interval '150 days', now() - interval '150 days'
 from public.hackathons h
@@ -194,8 +194,8 @@ select '1a1d5b1f-09af-5652-878f-f0eead752a60', h.id, 'd0b0e6e6-5a26-536d-892a-3f
   4, 4, 3,
   5, 4,
   'Yaxshi tashkil etilgan, baholash biroz noaniq',
-  'Umuman olganda kuchli hakaton. Mentorlar haqiqatan yordam berdi, texnik savollarga tez javob keldi. Lekin baholash mezonlari faqat final kuni ekranda koʻrsatildi, undan oldin qaysi mezon necha ball ekani aniq emas edi. Shu sabab baʼzi jamoalar demo oʻrniga slaydga koʻproq vaqt sarfladi.',
-  'Mentorlik kuchli, texnik infratuzilma barqaror.', 'Baholash mezonlari oldindan eʼlon qilinmadi.',
+  'Umuman olganda kuchli hakaton. Mentorlar haqiqatan yordam berdi, texnik savollarga tez javob keldi. Lekin baholash mezonlari faqat final kuni ekranda ko‘rsatildi, undan oldin qaysi mezon necha ball ekani aniq emas edi. Shu sabab ba’zi jamoalar demo o‘rniga slaydga ko‘proq vaqt sarfladi.',
+  'Mentorlik kuchli, texnik infratuzilma barqaror.', 'Baholash mezonlari oldindan e’lon qilinmadi.',
   false, 'participant', 'published',
   now() - interval '146 days', now() - interval '146 days'
 from public.hackathons h
@@ -211,8 +211,8 @@ select '2196335d-7b43-5405-8a56-7c5d4a469533', h.id, 'be7656cf-7649-5a24-8a28-b3
   5, 5, 4,
   4, 5,
   'Har bir jamoaga javob qaytarildi',
-  'Eng muhimi: finalga oʻtmagan jamoalarga ham alohida xat yozilgan. Bizning tanishlarimiz saralashdan oʻtmadi, lekin ularga qisqacha izoh bilan javob keldi. Oʻzbekistonda bu kamdan-kam uchraydi. Joy va texnik sharoit ham yaxshi edi, Wi-Fi butun tadbir davomida uzilmadi.',
-  'Finalga oʻtmaganlarga ham javob berildi. Wi-Fi barqaror.', 'Sovrin topshirish marosimi biroz choʻzildi.',
+  'Eng muhimi: finalga o‘tmagan jamoalarga ham alohida xat yozilgan. Bizning tanishlarimiz saralashdan o‘tmadi, lekin ularga qisqacha izoh bilan javob keldi. O‘zbekistonda bu kamdan-kam uchraydi. Joy va texnik sharoit ham yaxshi edi, Wi-Fi butun tadbir davomida uzilmadi.',
+  'Finalga o‘tmaganlarga ham javob berildi. Wi-Fi barqaror.', 'Sovrin topshirish marosimi biroz cho‘zildi.',
   false, 'winner', 'published',
   now() - interval '141 days', now() - interval '141 days'
 from public.hackathons h
@@ -244,9 +244,9 @@ insert into public.reviews (
 select '07054137-7336-522c-8786-adbb994f9d98', h.id, 'd0b0e6e6-5a26-536d-892a-3f6c26dd898b',
   3, 1, 2,
   2, 3,
-  'Finalchilar roʻyxatini Instagramdan bildik',
-  'Tadbirning oʻzi yomon emas edi, lekin keyin nima boʻlgani umuman tushunarsiz. Bizga «natijalar bir hafta ichida» deyishdi. Ikki hafta oʻtib hech qanday xabar boʻlmadi, keyin tasodifan Instagram postidan finalchilar allaqachon eʼlon qilinganini koʻrdik. Qatnashmagan jamoalarga hech kim yozmadi.',
-  'Mavzu qiziqarli, mentorlar tajribali.', 'Natijalar haqida rasmiy xabar boʻlmadi. Finalga oʻtmaganlarga javob yoʻq.',
+  'Finalchilar ro‘yxatini Instagramdan bildik',
+  'Tadbirning o‘zi yomon emas edi, lekin keyin nima bo‘lgani umuman tushunarsiz. Bizga «natijalar bir hafta ichida» deyishdi. Ikki hafta o‘tib hech qanday xabar bo‘lmadi, keyin tasodifan Instagram postidan finalchilar allaqachon e’lon qilinganini ko‘rdik. Qatnashmagan jamoalarga hech kim yozmadi.',
+  'Mavzu qiziqarli, mentorlar tajribali.', 'Natijalar haqida rasmiy xabar bo‘lmadi. Finalga o‘tmaganlarga javob yo‘q.',
   false, 'participant', 'published',
   now() - interval '640 days', now() - interval '640 days'
 from public.hackathons h
@@ -261,9 +261,9 @@ insert into public.reviews (
 select '1fbdae32-0dba-5793-8d39-b4616fc73be7', h.id, '7793fe86-ddd9-5cec-8d64-19a317966ebc',
   2, 1, 2,
   1, 3,
-  'Sovrin vaʼda qilindi, olti oy kutdik',
-  'Finalda ikkinchi oʻrinni oldik. Sahnada sertifikat berishdi va pul mablagʻi «bir oy ichida» oʻtkaziladi deyishdi. Olti oydan keyin ham hech narsa kelmadi. Bir necha marta yozdik, javob qaytmadi. Buni yozayotganimda ham masala hal boʻlmagan. Tashkiliy tomoni ham oxirgi kuni chalkashdi: pitch tartibi ikki marta oʻzgardi.',
-  'Joy markazda edi, borish qulay.', 'Sovrin toʻlanmadi. Aloqaga chiqishning imkoni yoʻq.',
+  'Sovrin va’da qilindi, olti oy kutdik',
+  'Finalda ikkinchi o‘rinni oldik. Sahnada sertifikat berishdi va pul mablag‘i «bir oy ichida» o‘tkaziladi deyishdi. Olti oydan keyin ham hech narsa kelmadi. Bir necha marta yozdik, javob qaytmadi. Buni yozayotganimda ham masala hal bo‘lmagan. Tashkiliy tomoni ham oxirgi kuni chalkashdi: pitch tartibi ikki marta o‘zgardi.',
+  'Joy markazda edi, borish qulay.', 'Sovrin to‘lanmadi. Aloqaga chiqishning imkoni yo‘q.',
   false, 'finalist', 'published',
   now() - interval '636 days', now() - interval '636 days'
 from public.hackathons h
@@ -279,8 +279,8 @@ select '603de41b-e6e0-54a1-86bd-ffb59c98dee7', h.id, '32fa1a32-0f51-5924-8254-1d
   3, 2, 3,
   2, 4,
   'Mentor sifatida: jamoalarga javob yetmadi',
-  'Mentor sifatida qatnashdim. Jamoalar bilan ishlash yaxshi tashkil etilgandi, joy va texnika ham joyida edi. Ammo tadbirdan keyin jamoalar mendan natija haqida soʻrashdi — menda ham maʼlumot yoʻq edi. Tashkilotchilar mentorlar bilan ham aloqani uzib qoʻydi.',
-  'Joy va texnik taʼminot yaxshi.', 'Tadbirdan keyingi aloqa umuman yoʻq.',
+  'Mentor sifatida qatnashdim. Jamoalar bilan ishlash yaxshi tashkil etilgandi, joy va texnika ham joyida edi. Ammo tadbirdan keyin jamoalar mendan natija haqida so‘rashdi — menda ham ma’lumot yo‘q edi. Tashkilotchilar mentorlar bilan ham aloqani uzib qo‘ydi.',
+  'Joy va texnik ta’minot yaxshi.', 'Tadbirdan keyingi aloqa umuman yo‘q.',
   false, 'mentor', 'published',
   now() - interval '630 days', now() - interval '630 days'
 from public.hackathons h
@@ -295,8 +295,8 @@ insert into public.reviews (
 select '58ef8c23-6996-5d81-8f1e-b6808a0143eb', h.id, 'd698aaf5-6bc9-56ee-8a44-7cac591c90ae',
   4, 3, 3,
   3, 4,
-  'Maʼlumotlar sifati kutilganidan past',
-  'Ochiq maʼlumotlar bilan ishlash gʻoyasi zoʻr, lekin berilgan datasetlarning yarmi eskirgan yoki toʻliq emas edi. Buni tadbir boshlangandan keyin bildik va birinchi kunning yarmi maʼlumotni tozalashga ketdi. Tashkiliy jihatdan hammasi joyida boʻldi, jadval buzilmadi.',
+  'Ma’lumotlar sifati kutilganidan past',
+  'Ochiq ma’lumotlar bilan ishlash g‘oyasi zo‘r, lekin berilgan datasetlarning yarmi eskirgan yoki to‘liq emas edi. Buni tadbir boshlangandan keyin bildik va birinchi kunning yarmi ma’lumotni tozalashga ketdi. Tashkiliy jihatdan hammasi joyida bo‘ldi, jadval buzilmadi.',
   'Jadval aniq, universitet binosi qulay.', 'Datasetlar oldindan tekshirilmagan.',
   false, 'participant', 'published',
   now() - interval '570 days', now() - interval '570 days'
@@ -312,9 +312,9 @@ insert into public.reviews (
 select '4bb152cf-d85d-5826-84f7-b0a39013649b', h.id, 'be7656cf-7649-5a24-8a28-b3997050e89c',
   3, 3, 4,
   3, 3,
-  'Baholash adolatli, qolgani oʻrtacha',
-  'Hakamlar haqiqatan kodni koʻrishdi va savollari mazmunli edi — bu kamdan-kam boʻladi. Qolgan jihatlar oʻrtacha: ovqat kechikdi, zal sovuq edi, jadval bir necha marta ogʻzaki oʻzgartirildi. Sovrin eʼlon qilinganidek berildi, lekin bir oy kechikdi.',
-  'Hakamlar texnik jihatdan kuchli.', 'Zal sovuq, jadval ogʻzaki oʻzgartirildi.',
+  'Baholash adolatli, qolgani o‘rtacha',
+  'Hakamlar haqiqatan kodni ko‘rishdi va savollari mazmunli edi — bu kamdan-kam bo‘ladi. Qolgan jihatlar o‘rtacha: ovqat kechikdi, zal sovuq edi, jadval bir necha marta og‘zaki o‘zgartirildi. Sovrin e’lon qilinganidek berildi, lekin bir oy kechikdi.',
+  'Hakamlar texnik jihatdan kuchli.', 'Zal sovuq, jadval og‘zaki o‘zgartirildi.',
   false, 'participant', 'published',
   now() - interval '566 days', now() - interval '566 days'
 from public.hackathons h
@@ -329,8 +329,8 @@ insert into public.reviews (
 select '0c916c14-4deb-5019-8e55-3b05a6720172', h.id, '7793fe86-ddd9-5cec-8d64-19a317966ebc',
   4, 4, 3,
   2, 4,
-  'Yaxshi tadbir, sovrin masalasi choʻzildi',
-  'Tashkiliy jihatdan hech qanday shikoyat yoʻq — hamma narsa vaqtida, xabarlar muntazam keldi. Muammo faqat sovrinda: gʻoliblarga topshirish jarayoni juda uzoq davom etdi va hujjat toʻldirish talab qilindi, bu haqda oldindan aytilmagandi.',
+  'Yaxshi tadbir, sovrin masalasi cho‘zildi',
+  'Tashkiliy jihatdan hech qanday shikoyat yo‘q — hamma narsa vaqtida, xabarlar muntazam keldi. Muammo faqat sovrinda: g‘oliblarga topshirish jarayoni juda uzoq davom etdi va hujjat to‘ldirish talab qilindi, bu haqda oldindan aytilmagandi.',
   'Xabarlar muntazam keldi.', 'Sovrin uchun kutilmagan hujjatlar talab qilindi.',
   false, 'finalist', 'published',
   now() - interval '560 days', now() - interval '560 days'
@@ -347,7 +347,7 @@ select 'e8689576-fc13-5b6a-8560-867491246cac', h.id, 'd0b0e6e6-5a26-536d-892a-3f
   5, 4, 4,
   4, 5,
   'Viloyat bosqichi kutilganidan ancha yaxshi',
-  'Samarqand bosqichida qatnashdim. Toshkentdan tashqarida oʻtkaziladigan tadbirlar odatda zaifroq boʻladi, bu esa aksincha edi: joy tayyor, texnika ishlaydi, jadval buzilmadi. Mentorlar Toshkentdan kelgan va haqiqatan yordam berishdi.',
+  'Samarqand bosqichida qatnashdim. Toshkentdan tashqarida o‘tkaziladigan tadbirlar odatda zaifroq bo‘ladi, bu esa aksincha edi: joy tayyor, texnika ishlaydi, jadval buzilmadi. Mentorlar Toshkentdan kelgan va haqiqatan yordam berishdi.',
   'Viloyatda shunday darajadagi tashkiliy ish kamdan-kam uchraydi.', 'Ikkinchi kuni ovqat kechikdi.',
   false, 'participant', 'published',
   now() - interval '210 days', now() - interval '210 days'
@@ -363,9 +363,9 @@ insert into public.reviews (
 select '707c1e6f-c535-5775-8574-a66e624f7f01', h.id, '397ab719-6fc6-54f0-80c2-3392d8cab7ff',
   4, 4, 5,
   4, 4,
-  'Baholash shaffof boʻldi',
-  'Baholash mezonlari birinchi kuni ekranda koʻrsatildi va oxirigacha oʻzgarmadi. Har bir jamoa oʻz balini yoʻnalishlar boʻyicha koʻra oldi. Bu juda muhim — nima uchun yutqazganingizni bilish yutuqdan kam emas. Grand finalga yoʻllanma oldik.',
-  'Mezonlar oldindan eʼlon qilindi va oʻzgarmadi.', 'Roʻyxatdan oʻtish sayti bir necha soat ishlamadi.',
+  'Baholash shaffof bo‘ldi',
+  'Baholash mezonlari birinchi kuni ekranda ko‘rsatildi va oxirigacha o‘zgarmadi. Har bir jamoa o‘z balini yo‘nalishlar bo‘yicha ko‘ra oldi. Bu juda muhim — nima uchun yutqazganingizni bilish yutuqdan kam emas. Grand finalga yo‘llanma oldik.',
+  'Mezonlar oldindan e’lon qilindi va o‘zgarmadi.', 'Ro‘yxatdan o‘tish sayti bir necha soat ishlamadi.',
   false, 'winner', 'published',
   now() - interval '206 days', now() - interval '206 days'
 from public.hackathons h
@@ -398,8 +398,8 @@ select '39807ea0-06d4-5891-8556-29706f8a61e3', h.id, 'd698aaf5-6bc9-56ee-8a44-7c
   4, 4, 4,
   3, 4,
   'Ixcham va tartibli hakaton',
-  'Uch kunlik format qulay boʻldi. Jamoalar soni koʻp emasdi, shuning uchun har bir jamoa mentor bilan yetarlicha vaqt ishlay oldi. Yakuniy taqdimotlar oʻz vaqtida boshlandi va tugadi.',
-  'Kichik format tufayli mentorlik sifatli.', 'Sovrin jamgʻarmasi eʼlon qilinganidan kichikroq boʻlib chiqdi.',
+  'Uch kunlik format qulay bo‘ldi. Jamoalar soni ko‘p emasdi, shuning uchun har bir jamoa mentor bilan yetarlicha vaqt ishlay oldi. Yakuniy taqdimotlar o‘z vaqtida boshlandi va tugadi.',
+  'Kichik format tufayli mentorlik sifatli.', 'Sovrin jamg‘armasi e’lon qilinganidan kichikroq bo‘lib chiqdi.',
   false, 'participant', 'published',
   now() - interval '380 days', now() - interval '380 days'
 from public.hackathons h
@@ -414,8 +414,8 @@ insert into public.reviews (
 select '7b8e9865-7c89-5ddd-89a1-7672ac20013c', h.id, '7793fe86-ddd9-5cec-8d64-19a317966ebc',
   3, 3, 4,
   3, 4,
-  'Koʻngilli sifatida: tayyorgarlik oxirgi kunga qoldi',
-  'Koʻngilli boʻlib ishladim. Ishtirokchilar uchun hammasi silliq koʻrindi, lekin ichkarida tayyorgarlik oxirgi kuni shoshilinch qilindi. Badge va roʻyxatlar tadbir kuni ertalab bosildi. Baholash jarayoni esa yaxshi tuzilgan edi.',
+  'Ko‘ngilli sifatida: tayyorgarlik oxirgi kunga qoldi',
+  'Ko‘ngilli bo‘lib ishladim. Ishtirokchilar uchun hammasi silliq ko‘rindi, lekin ichkarida tayyorgarlik oxirgi kuni shoshilinch qilindi. Badge va ro‘yxatlar tadbir kuni ertalab bosildi. Baholash jarayoni esa yaxshi tuzilgan edi.',
   'Baholash jarayoni aniq tuzilgan.', 'Ichki tayyorgarlik oxirgi kunga qoldirildi.',
   false, 'volunteer', 'published',
   now() - interval '376 days', now() - interval '376 days'
@@ -432,8 +432,8 @@ select '081a4f93-9ea4-53c4-8f36-3eb39410f540', h.id, 'be7656cf-7649-5a24-8a28-b3
   4, 3, 3,
   4, 4,
   'Katta tadbir, lekin oqim sekin',
-  'Miqyosi katta va shunga yarasha byurokratiya ham koʻp edi. Roʻyxatdan oʻtish uchun bir nechta hujjat talab qilindi, tasdiqlash bir hafta davom etdi. Tadbirning oʻzi yaxshi oʻtdi, sovrinlar berildi. Baholash jarayoni esa yopiq edi, ball tafsilotlari aytilmadi.',
-  'Sovrinlar haqiqatan berildi.', 'Roʻyxatdan oʻtish choʻzildi, baholash yopiq.',
+  'Miqyosi katta va shunga yarasha byurokratiya ham ko‘p edi. Ro‘yxatdan o‘tish uchun bir nechta hujjat talab qilindi, tasdiqlash bir hafta davom etdi. Tadbirning o‘zi yaxshi o‘tdi, sovrinlar berildi. Baholash jarayoni esa yopiq edi, ball tafsilotlari aytilmadi.',
+  'Sovrinlar haqiqatan berildi.', 'Ro‘yxatdan o‘tish cho‘zildi, baholash yopiq.',
   false, 'participant', 'published',
   now() - interval '700 days', now() - interval '700 days'
 from public.hackathons h
@@ -449,8 +449,8 @@ select '7bd7420a-da3a-5f37-8729-7d736c77a979', h.id, '32fa1a32-0f51-5924-8254-1d
   5, 4, 4,
   5, 4,
   'Davlat darajasidagi tashkiliy ish',
-  'Bunday miqyosdagi tadbir uchun tashkiliy ish kutilganidan yaxshi edi. Jadval eʼlon qilingan vaqtda bajarildi, finalchilar roʻyxati rasmiy kanalda chiqdi va bizga alohida qoʻngʻiroq qilishdi. Sovrin masalasida ham muammo boʻlmadi.',
-  'Rasmiy kanal orqali barcha xabarlar berildi.', 'Zalda joy yetarli emasdi, baʼzilar tik turdi.',
+  'Bunday miqyosdagi tadbir uchun tashkiliy ish kutilganidan yaxshi edi. Jadval e’lon qilingan vaqtda bajarildi, finalchilar ro‘yxati rasmiy kanalda chiqdi va bizga alohida qo‘ng‘iroq qilishdi. Sovrin masalasida ham muammo bo‘lmadi.',
+  'Rasmiy kanal orqali barcha xabarlar berildi.', 'Zalda joy yetarli emasdi, ba’zilar tik turdi.',
   false, 'finalist', 'published',
   now() - interval '694 days', now() - interval '694 days'
 from public.hackathons h
@@ -465,9 +465,9 @@ insert into public.reviews (
 select 'e0b41ece-edb9-5ca3-8ec7-40a87e1b19a3', h.id, '397ab719-6fc6-54f0-80c2-3392d8cab7ff',
   3, 2, 3,
   2, 3,
-  'Gʻoya yaxshi, ijro boʻsh',
-  'Ekologiya va texnologiya mavzusi juda dolzarb, lekin tadbir tayyorgarliksiz oʻtdi. Ikki kunlik format uchun mavzu juda keng qoʻyilgandi, jamoalar nima qilish kerakligini oxirigacha tushunmadi. Natijalar haqida keyin xabar berilmadi.',
-  'Mavzu dolzarb, ishtirokchilar faol.', 'Vazifa noaniq, natijalar eʼlon qilinmadi.',
+  'G‘oya yaxshi, ijro bo‘sh',
+  'Ekologiya va texnologiya mavzusi juda dolzarb, lekin tadbir tayyorgarliksiz o‘tdi. Ikki kunlik format uchun mavzu juda keng qo‘yilgandi, jamoalar nima qilish kerakligini oxirigacha tushunmadi. Natijalar haqida keyin xabar berilmadi.',
+  'Mavzu dolzarb, ishtirokchilar faol.', 'Vazifa noaniq, natijalar e’lon qilinmadi.',
   true, 'participant', 'published',
   now() - interval '430 days', now() - interval '430 days'
 from public.hackathons h
@@ -483,7 +483,7 @@ select '502f4bb8-c904-5b02-815b-1adb0d7af960', h.id, 'd0b0e6e6-5a26-536d-892a-3f
   4, 3, 3,
   3, 4,
   'Ijodiy format, texnik tomoni zaif',
-  'Sanʼat va texnologiyani birlashtirish gʻoyasi ishladi, taqdimotlar qiziqarli boʻldi. Lekin texnik jamoalar uchun baholash mezonlari mos emasdi — dizayn va hikoya kodga qaraganda koʻproq baholandi, bu oldindan aytilmagandi.',
+  'San’at va texnologiyani birlashtirish g‘oyasi ishladi, taqdimotlar qiziqarli bo‘ldi. Lekin texnik jamoalar uchun baholash mezonlari mos emasdi — dizayn va hikoya kodga qaraganda ko‘proq baholandi, bu oldindan aytilmagandi.',
   'Format nostandart, taqdimotlar qiziqarli.', 'Baholash mezonlari texnik jamoalarga mos emas.',
   false, 'participant', 'published',
   now() - interval '426 days', now() - interval '426 days'
@@ -500,8 +500,8 @@ select '269bf44b-17ee-5567-8549-429721486977', h.id, '7793fe86-ddd9-5cec-8d64-19
   4, 4, 4,
   4, 3,
   'Universitet hakatoni uchun yaxshi daraja',
-  'Talabalar hakatoni uchun juda yaxshi tashkil etilgan. Jadval aniq, mentorlar bor, natijalar oʻsha kuni eʼlon qilindi. Yagona kamchilik — auditoriyalar kichik edi va uzoq oʻtirish noqulay boʻldi.',
-  'Natijalar oʻsha kuniyoq eʼlon qilindi.', 'Auditoriyalar tor, uzoq ishlash noqulay.',
+  'Talabalar hakatoni uchun juda yaxshi tashkil etilgan. Jadval aniq, mentorlar bor, natijalar o‘sha kuni e’lon qilindi. Yagona kamchilik — auditoriyalar kichik edi va uzoq o‘tirish noqulay bo‘ldi.',
+  'Natijalar o‘sha kuniyoq e’lon qilindi.', 'Auditoriyalar tor, uzoq ishlash noqulay.',
   false, 'participant', 'published',
   now() - interval '520 days', now() - interval '520 days'
 from public.hackathons h
@@ -517,8 +517,8 @@ select '1892b899-2303-567a-870f-477b2c366fd4', h.id, 'd698aaf5-6bc9-56ee-8a44-7c
   4, 4, 3,
   4, 4,
   'Ikki kunlik ixcham format',
-  'Universitet ichidagi tadbir uchun yaxshi daraja. Roʻyxatdan oʻtish oson, jadval buzilmadi, ovqat bor edi. Hakamlar tarkibi kichik edi va baholash tez oʻtdi — baʼzi jamoalarga savol berilmadi ham.',
-  'Tashkiliy jihatdan aniq, kutish vaqti kam.', 'Baholash juda tez oʻtdi, feedback yoʻq.',
+  'Universitet ichidagi tadbir uchun yaxshi daraja. Ro‘yxatdan o‘tish oson, jadval buzilmadi, ovqat bor edi. Hakamlar tarkibi kichik edi va baholash tez o‘tdi — ba’zi jamoalarga savol berilmadi ham.',
+  'Tashkiliy jihatdan aniq, kutish vaqti kam.', 'Baholash juda tez o‘tdi, feedback yo‘q.',
   false, 'participant', 'published',
   now() - interval '150 days', now() - interval '150 days'
 from public.hackathons h
@@ -534,7 +534,7 @@ select 'ba776992-0e3b-55c7-8c65-db45297b3e0c', h.id, '32fa1a32-0f51-5924-8254-1d
   1, 1, 1,
   1, 1,
   'Bu sharh qoidabuzarlik uchun yashirilgan',
-  'Bu yozuv moderatsiya oqimini sinash uchun qoʻyilgan namuna. Haqiqiy saytda bu yerda qoidalarga zid matn boʻlar edi va moderator uni yashirgan boʻlardi. Yashirilgan sharh reytingga taʼsir qilmaydi va omma uchun koʻrinmaydi.',
+  'Bu yozuv moderatsiya oqimini sinash uchun qo‘yilgan namuna. Haqiqiy saytda bu yerda qoidalarga zid matn bo‘lar edi va moderator uni yashirgan bo‘lardi. Yashirilgan sharh reytingga ta’sir qilmaydi va omma uchun ko‘rinmaydi.',
   null, null,
   false, 'participant', 'hidden',
   now() - interval '148 days', now() - interval '148 days'
@@ -551,8 +551,8 @@ select 'cf236b17-ed63-5f41-8ff2-21f15d72ac36', h.id, 'be7656cf-7649-5a24-8a28-b3
   5, 5, 5,
   4, 5,
   'Eng puxta tashkil etilgan tadbirlardan biri',
-  'Mentor sifatida bir necha hakatonlarda qatnashganman, bu eng tartiblilaridan biri edi. Har bir jamoaga alohida mentor biriktirildi, jadval daqiqama-daqiqa bajarildi, ishtirokchilarga oldindan tayyorgarlik materiallari yuborildi. Natijalar oʻsha kuni eʼlon qilindi va har bir jamoa yozma izoh oldi.',
-  'Har bir jamoa yozma izoh oldi. Tayyorgarlik materiallari oldindan berildi.', 'Sovrin jamgʻarmasi katta emas, lekin bu oldindan aytilgandi.',
+  'Mentor sifatida bir necha hakatonlarda qatnashganman, bu eng tartiblilaridan biri edi. Har bir jamoaga alohida mentor biriktirildi, jadval daqiqama-daqiqa bajarildi, ishtirokchilarga oldindan tayyorgarlik materiallari yuborildi. Natijalar o‘sha kuni e’lon qilindi va har bir jamoa yozma izoh oldi.',
+  'Har bir jamoa yozma izoh oldi. Tayyorgarlik materiallari oldindan berildi.', 'Sovrin jamg‘armasi katta emas, lekin bu oldindan aytilgandi.',
   true, 'mentor', 'published',
   now() - interval '655 days', now() - interval '655 days'
 from public.hackathons h
@@ -567,9 +567,9 @@ insert into public.reviews (
 select '11a8baee-128a-5edb-875f-ade70046b5b4', h.id, 'd0b0e6e6-5a26-536d-892a-3f6c26dd898b',
   4, 3, 4,
   3, 4,
-  'Ochilish bosqichi — birinchi blin boʻlmadi',
-  'Milliy dasturning birinchi bosqichi boʻlgani uchun baʼzi narsalar chalkash boʻlishini kutgandim, lekin asosiy jarayon silliq oʻtdi. Sogʻliqni saqlash yoʻnalishi boʻyicha real maʼlumotlar berildi, bu katta plyus. Xabarlar esa kech keldi — jadval bir kun oldin eʼlon qilindi.',
-  'Real maʼlumotlar bilan ishlash imkoni.', 'Jadval juda kech eʼlon qilindi.',
+  'Ochilish bosqichi — birinchi blin bo‘lmadi',
+  'Milliy dasturning birinchi bosqichi bo‘lgani uchun ba’zi narsalar chalkash bo‘lishini kutgandim, lekin asosiy jarayon silliq o‘tdi. Sog‘liqni saqlash yo‘nalishi bo‘yicha real ma’lumotlar berildi, bu katta plyus. Xabarlar esa kech keldi — jadval bir kun oldin e’lon qilindi.',
+  'Real ma’lumotlar bilan ishlash imkoni.', 'Jadval juda kech e’lon qilindi.',
   false, 'participant', 'published',
   now() - interval '320 days', now() - interval '320 days'
 from public.hackathons h
@@ -584,9 +584,9 @@ insert into public.reviews (
 select '34fc4324-f9db-5507-853b-4c1107074f9f', h.id, '397ab719-6fc6-54f0-80c2-3392d8cab7ff',
   3, 2, 3,
   3, 3,
-  'Nukusda qatnashish uchun logistika ogʻir',
-  'Tadbirning oʻzi oʻrtacha darajada oʻtdi. Asosiy muammo — boshqa viloyatdan kelganlar uchun hech qanday yordam koʻrsatilmadi, yashash joyi haqida maʼlumot ham berilmadi. Bu haqda oldindan soʻraganimizda javob olmadik.',
-  'Mavzu va yoʻnalishlar qiziqarli.', 'Boshqa viloyatdan kelganlarga logistika yordami yoʻq.',
+  'Nukusda qatnashish uchun logistika og‘ir',
+  'Tadbirning o‘zi o‘rtacha darajada o‘tdi. Asosiy muammo — boshqa viloyatdan kelganlar uchun hech qanday yordam ko‘rsatilmadi, yashash joyi haqida ma’lumot ham berilmadi. Bu haqda oldindan so‘raganimizda javob olmadik.',
+  'Mavzu va yo‘nalishlar qiziqarli.', 'Boshqa viloyatdan kelganlarga logistika yordami yo‘q.',
   false, 'participant', 'published',
   now() - interval '316 days', now() - interval '316 days'
 from public.hackathons h
@@ -655,7 +655,7 @@ on conflict (review_id, user_id) do nothing;
 insert into public.official_responses (review_id, body, author_label)
 values (
   '1fbdae32-0dba-5793-8d39-b4616fc73be7',
-  'Sharh uchun rahmat va kechikish uchun uzr soʻraymiz. Sovrin toʻlovlari homiy tomonidan amalga oshirilishi kerak edi va bu jarayon kutilganidan uzoq davom etdi. Barcha gʻoliblar bilan bogʻlanmoqdamiz. Keyingi tadbirlarda toʻlov muddatini shartnomada qatʼiy belgilaymiz.',
+  'Sharh uchun rahmat va kechikish uchun uzr so‘raymiz. Sovrin to‘lovlari homiy tomonidan amalga oshirilishi kerak edi va bu jarayon kutilganidan uzoq davom etdi. Barcha g‘oliblar bilan bog‘lanmoqdamiz. Keyingi tadbirlarda to‘lov muddatini shartnomada qat’iy belgilaymiz.',
   'Urban.Tech jamoasi rasmiy javobi'
 )
 on conflict (review_id) do update set body = excluded.body, author_label = excluded.author_label;
@@ -672,7 +672,7 @@ insert into public.hackathons (
 select '5ded6ddd-1dc8-5526-8ff0-f568f27242ad', 'demo-pending-fintech-hackathon-2026', 'Demo: Fintech Hackathon Toshkent 2026', o.id,
   'DEMO YOZUV — moderatsiya navbatini sinash uchun. Bu foydalanuvchi tomonidan yuborilgan va hali tasdiqlanmagan hakaton namunasi.', 'DEMO-ЗАПИСЬ — для проверки очереди модерации.', 'DEMO RECORD — used to exercise the moderation queue.',
   'Tashkent', 'offline', '2026-10-10'::date, '2026-10-12'::date,
-  '50 000 000 soʻm', array['Fintech', 'Open banking']::text[], null, null,
+  '50 000 000 so‘m', array['Fintech', 'Open banking']::text[], null, null,
   null, 'pending', null, 'd698aaf5-6bc9-56ee-8a44-7cac591c90ae'
 from public.organizers o
 where o.slug = 'it-park-uzbekistan'
@@ -684,10 +684,10 @@ insert into public.hackathons (
   registration_url, status, rejection_reason, submitted_by
 )
 select '66ea08dd-c1d7-52b9-8cd6-e92176980559', 'demo-rejected-hackathon-2025', 'Demo: rad etilgan hakaton', o.id,
-  'DEMO YOZUV — rad etilgan holatni koʻrsatish uchun.', 'DEMO-ЗАПИСЬ — для отображения статуса «отклонено».', 'DEMO RECORD — used to show the rejected state on the profile page.',
+  'DEMO YOZUV — rad etilgan holatni ko‘rsatish uchun.', 'DEMO-ЗАПИСЬ — для отображения статуса «отклонено».', 'DEMO RECORD — used to show the rejected state on the profile page.',
   null, 'online', '2025-05-01'::date, '2025-05-02'::date,
   null, '{}'::text[], null, null,
-  null, 'rejected', 'Tadbir haqida ochiq manba topilmadi. Rasmiy havola qoʻshib qayta yuboring.', 'd698aaf5-6bc9-56ee-8a44-7cac591c90ae'
+  null, 'rejected', 'Tadbir haqida ochiq manba topilmadi. Rasmiy havola qo‘shib qayta yuboring.', 'd698aaf5-6bc9-56ee-8a44-7cac591c90ae'
 from public.organizers o
 where o.slug = 'it-park-uzbekistan'
 on conflict (slug) do nothing;

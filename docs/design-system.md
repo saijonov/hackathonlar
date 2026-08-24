@@ -85,9 +85,9 @@ deliberately the same three hues so the palette stays tight.
 
 ## 3. Typography
 
-Two families, both verified for **Latin + Latin Extended + Cyrillic + Cyrillic
-Extended** and, critically, **U+02BB MODIFIER LETTER TURNED COMMA** (the Uzbek
-*tutuq belgisi* in `oʻ` / `gʻ`).
+Two families, both verified by reading the cmap of the shipped woff2 files for
+**Latin + Latin Extended + Cyrillic + Cyrillic Extended** — and, critically, for
+the Uzbek *tutuq belgisi*. That last check changed the answer; see §3.0.
 
 | Role | Family | Token | Notes |
 | --- | --- | --- | --- |
@@ -96,12 +96,36 @@ Extended** and, critically, **U+02BB MODIFIER LETTER TURNED COMMA** (the Uzbek
 
 Both are self-hosted at build time via `next/font/google` (Next downloads the
 files and serves them from our own origin — zero runtime requests to Google).
+Italics are not downloaded; the design system never uses them.
 
 **Rejected candidates and why** (checked live against the Google Fonts CSS2 API):
 Space Grotesk, Sora and Archivo ship **no Cyrillic subset at all** — they would
 break the entire Russian locale. Unbounded *does* have Cyrillic but its very
 wide letterforms wrap badly for long Russian/Uzbek headlines at 375px, and 70%
 of our traffic is mobile.
+
+### 3.0 The tutuq belgisi — a verified decision, not an assumption
+
+Google's CSS declares `U+02BB–02BC` in the `latin` subset of both families, but
+a declared unicode-range is **not** proof the glyph exists. Reading the cmap of
+the woff2 files Next actually downloaded:
+
+| codepoint | Geologica latin | IBM Plex Sans latin |
+| --- | --- | --- |
+| `U+02BB` modifier letter turned comma | **absent** | present |
+| `U+02BC` modifier letter apostrophe | present | present |
+| `U+2018` / `U+2019` | present | present |
+
+Rendered side by side (`.qa/glyph-compare.png`), `U+02BB` and `U+02BC` both
+leave a visible gap in IBM Plex Sans at 400 and 600 — "Bo ʻlajak" instead of
+"Bo‘lajak". `U+2018` is the only mark that sits tight and keeps the correct
+turned-comma shape in **both** faces at **every** weight.
+
+**So all Uzbek copy uses `U+2018` for the tutuq belgisi in `o‘` / `g‘`, and
+`U+2019` for the standalone mark (`e’lon`, `ma’no`).** This is also the
+prevailing convention on the Uzbek web. IBM Plex Sans additionally stays in the
+`--font-display` stack as a general glyph fallback for anything else Geologica
+lacks — it costs nothing, being already loaded for body copy.
 
 ### 3.1 Scale
 

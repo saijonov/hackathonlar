@@ -1,4 +1,5 @@
 import { useLocale, useTranslations } from 'next-intl';
+import { type AppLocale } from '@/i18n/routing';
 import { cn } from '@/lib/utils/cn';
 import { BAND_CLASSES, formatScore, scoreBand, toScore } from '@/lib/score';
 import { Stars } from './Stars';
@@ -88,7 +89,7 @@ export function ScoreMark({
   className,
 }: ScoreMarkProps) {
   const t = useTranslations('score');
-  const locale = useLocale();
+  const locale = useLocale() as AppLocale;
   const styles = SIZES[size];
 
   const value = toScore(score);
