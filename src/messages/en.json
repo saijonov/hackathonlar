@@ -28,7 +28,6 @@
     "charactersLeft": "{count} characters left",
     "minCharacters": "at least {count} characters"
   },
-
   "nav": {
     "home": "Home",
     "hackathons": "Hackathons",
@@ -45,14 +44,12 @@
     "language": "Language",
     "changeLanguage": "Change language"
   },
-
   "format": {
     "offline": "Offline",
     "online": "Online",
     "hybrid": "Hybrid",
     "label": "Format"
   },
-
   "participation": {
     "label": "How did you take part?",
     "participant": "Participant",
@@ -61,7 +58,6 @@
     "mentor": "Mentor",
     "volunteer": "Volunteer"
   },
-
   "score": {
     "outOf": "{score} / 5",
     "overall": "Overall score",
@@ -94,7 +90,6 @@
       "none": "Not rated"
     }
   },
-
   "home": {
     "hero": {
       "eyebrow": "The first hackathon rating platform in Uzbekistan",
@@ -153,7 +148,6 @@
       "button": "Add a hackathon"
     }
   },
-
   "catalog": {
     "eyebrow": "Catalog",
     "title": "Hackathons",
@@ -195,7 +189,6 @@
       "clear": "Clear filters"
     }
   },
-
   "hackathon": {
     "backToCatalog": "Back to catalog",
     "about": "About the hackathon",
@@ -233,7 +226,6 @@
     "otherByOrganizer": "Other hackathons by this organizer",
     "dateTbd": "Date not announced"
   },
-
   "review": {
     "anonymous": "Anonymous participant",
     "yourReview": "Your review",
@@ -295,7 +287,6 @@
       "generic": "The review could not be saved. Try again."
     }
   },
-
   "submit": {
     "eyebrow": "Contribute",
     "title": "Add a hackathon",
@@ -366,7 +357,6 @@
       "generic": "It could not be submitted. Try again."
     }
   },
-
   "organizer": {
     "eyebrow": "Organizer",
     "listTitle": "Organizers",
@@ -383,7 +373,6 @@
     "listEmpty": "No organizers added yet.",
     "about": "About the organizer"
   },
-
   "profile": {
     "eyebrow": "Profile",
     "title": "My profile",
@@ -410,7 +399,6 @@
     "signOut": "Sign out",
     "deleteReview": "Delete review"
   },
-
   "auth": {
     "signIn": "Sign in",
     "signUp": "Sign up",
@@ -460,7 +448,6 @@
       "generic": "Something went wrong. Try again."
     }
   },
-
   "admin": {
     "title": "Admin panel",
     "nav": {
@@ -546,7 +533,6 @@
     "notAuthorized": "You do not have access to this page.",
     "saved": "Saved"
   },
-
   "rules": {
     "eyebrow": "Rules",
     "title": "Review rules",
@@ -584,7 +570,6 @@
     "contactTitle": "Have a question?",
     "contactBody": "Write to us on Telegram."
   },
-
   "about": {
     "eyebrow": "About",
     "title": "Why this platform exists",
@@ -616,7 +601,6 @@
     "contactBody": "Suggestions, bugs, partnerships — write to us on Telegram.",
     "telegram": "Telegram"
   },
-
   "footer": {
     "tagline": "An open rating of Uzbekistan's hackathon scene.",
     "sections": {
@@ -628,7 +612,6 @@
     "madeIn": "Made in Uzbekistan 🇺🇿",
     "rights": "Reviews belong to their authors."
   },
-
   "errors": {
     "notFound": {
       "code": "404",
@@ -648,7 +631,6 @@
       "body": "You do not have permission to view this page."
     }
   },
-
   "meta": {
     "home": {
       "title": "hackathonlar.uz — hackathon ratings in Uzbekistan",
@@ -688,7 +670,6 @@
       "description": "Hackathons organized by {name} and how participants scored them."
     }
   },
-
   "time": {
     "justNow": "just now",
     "minutesAgo": "{count, plural, one {# minute ago} other {# minutes ago}}",
@@ -697,5 +678,27 @@
     "monthsAgo": "{count, plural, one {# month ago} other {# months ago}}",
     "yearsAgo": "{count, plural, one {# year ago} other {# years ago}}",
     "dateRange": "{start} — {end}"
+  },
+  "validation": {
+    "required": "This field is required",
+    "tooShort": "Too short",
+    "tooLong": "Too long",
+    "invalid": "Invalid format",
+    "range": "Must be between 1 and 5",
+    "dateOrder": "The end date cannot be before the start date",
+    "descriptionRequired": "Add a description in at least one language",
+    "cityWithOnline": "Online events do not have a city"
+  },
+  "actionError": {
+    "unauthenticated": "Sign in to continue",
+    "forbidden": "You do not have permission to do that",
+    "validation": "Check the form",
+    "notFound": "Not found",
+    "duplicate": "This already exists",
+    "rateLimited": "Too many attempts. Try again tomorrow.",
+    "notStarted": "This hackathon has not started yet",
+    "ownVote": "You cannot vote on your own review",
+    "alreadyReported": "You have already reported this",
+    "unknown": "Something went wrong. Please try again."
   }
 }

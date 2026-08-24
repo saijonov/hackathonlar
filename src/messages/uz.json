@@ -28,7 +28,6 @@
     "charactersLeft": "{count} ta belgi qoldi",
     "minCharacters": "kamida {count} ta belgi"
   },
-
   "nav": {
     "home": "Bosh sahifa",
     "hackathons": "Hakatonlar",
@@ -45,14 +44,12 @@
     "language": "Til",
     "changeLanguage": "Tilni o‘zgartirish"
   },
-
   "format": {
     "offline": "Oflayn",
     "online": "Onlayn",
     "hybrid": "Gibrid",
     "label": "Format"
   },
-
   "participation": {
     "label": "Qanday qatnashgansiz?",
     "participant": "Ishtirokchi",
@@ -61,7 +58,6 @@
     "mentor": "Mentor",
     "volunteer": "Ko‘ngilli"
   },
-
   "score": {
     "outOf": "{score} / 5",
     "overall": "Umumiy baho",
@@ -94,7 +90,6 @@
       "none": "Baholanmagan"
     }
   },
-
   "home": {
     "hero": {
       "eyebrow": "O‘zbekistondagi birinchi hakaton reyting platformasi",
@@ -153,7 +148,6 @@
       "button": "Hakaton qo‘shish"
     }
   },
-
   "catalog": {
     "eyebrow": "Katalog",
     "title": "Hakatonlar",
@@ -195,7 +189,6 @@
       "clear": "Filtrlarni tozalash"
     }
   },
-
   "hackathon": {
     "backToCatalog": "Katalogga qaytish",
     "about": "Hakaton haqida",
@@ -233,7 +226,6 @@
     "otherByOrganizer": "Shu tashkilotchining boshqa hakatonlari",
     "dateTbd": "Sana e’lon qilinmagan"
   },
-
   "review": {
     "anonymous": "Anonim ishtirokchi",
     "yourReview": "Sizning sharhingiz",
@@ -295,7 +287,6 @@
       "generic": "Sharhni saqlab bo‘lmadi. Qayta urinib ko‘ring."
     }
   },
-
   "submit": {
     "eyebrow": "Hissa qo‘shish",
     "title": "Hakaton qo‘shish",
@@ -366,7 +357,6 @@
       "generic": "Yuborib bo‘lmadi. Qayta urinib ko‘ring."
     }
   },
-
   "organizer": {
     "eyebrow": "Tashkilotchi",
     "listTitle": "Tashkilotchilar",
@@ -383,7 +373,6 @@
     "listEmpty": "Hali tashkilotchilar qo‘shilmagan.",
     "about": "Tashkilotchi haqida"
   },
-
   "profile": {
     "eyebrow": "Profil",
     "title": "Profilim",
@@ -410,7 +399,6 @@
     "signOut": "Chiqish",
     "deleteReview": "Sharhni o‘chirish"
   },
-
   "auth": {
     "signIn": "Kirish",
     "signUp": "Ro‘yxatdan o‘tish",
@@ -460,7 +448,6 @@
       "generic": "Nimadir noto‘g‘ri ketdi. Qayta urinib ko‘ring."
     }
   },
-
   "admin": {
     "title": "Admin panel",
     "nav": {
@@ -546,7 +533,6 @@
     "notAuthorized": "Bu sahifaga kirish huquqingiz yo‘q.",
     "saved": "Saqlandi"
   },
-
   "rules": {
     "eyebrow": "Qoidalar",
     "title": "Sharh qoidalari",
@@ -584,7 +570,6 @@
     "contactTitle": "Savol bormi?",
     "contactBody": "Telegram orqali yozing."
   },
-
   "about": {
     "eyebrow": "Loyiha haqida",
     "title": "Nega bu platforma kerak",
@@ -616,7 +601,6 @@
     "contactBody": "Taklif, xato yoki hamkorlik bo‘yicha Telegram orqali yozing.",
     "telegram": "Telegram"
   },
-
   "footer": {
     "tagline": "O‘zbekiston hakaton sahnasining ochiq reytingi.",
     "sections": {
@@ -628,7 +612,6 @@
     "madeIn": "Made in Uzbekistan 🇺🇿",
     "rights": "Sharhlar mualliflariga tegishli."
   },
-
   "errors": {
     "notFound": {
       "code": "404",
@@ -648,7 +631,6 @@
       "body": "Bu sahifani ko‘rish huquqingiz yo‘q."
     }
   },
-
   "meta": {
     "home": {
       "title": "hackathonlar.uz — O‘zbekiston hakatonlari reytingi",
@@ -688,7 +670,6 @@
       "description": "{name} tashkil qilgan hakatonlar va ishtirokchilarning bahosi."
     }
   },
-
   "time": {
     "justNow": "hozirgina",
     "minutesAgo": "{count, plural, other {# daqiqa oldin}}",
@@ -697,5 +678,27 @@
     "monthsAgo": "{count, plural, other {# oy oldin}}",
     "yearsAgo": "{count, plural, other {# yil oldin}}",
     "dateRange": "{start} — {end}"
+  },
+  "validation": {
+    "required": "Bu maydon to‘ldirilishi shart",
+    "tooShort": "Juda qisqa",
+    "tooLong": "Juda uzun",
+    "invalid": "Noto‘g‘ri format",
+    "range": "Qiymat 1 dan 5 gacha bo‘lishi kerak",
+    "dateOrder": "Tugash sanasi boshlanish sanasidan oldin bo‘la olmaydi",
+    "descriptionRequired": "Kamida bitta tilda tavsif yozing",
+    "cityWithOnline": "Onlayn tadbir uchun shahar ko‘rsatilmaydi"
+  },
+  "actionError": {
+    "unauthenticated": "Buning uchun tizimga kiring",
+    "forbidden": "Sizda bu amal uchun huquq yo‘q",
+    "validation": "Formani tekshiring",
+    "notFound": "Topilmadi",
+    "duplicate": "Bu allaqachon mavjud",
+    "rateLimited": "Juda ko‘p urinish. Ertaga qayta urinib ko‘ring.",
+    "notStarted": "Hakaton hali boshlanmagan",
+    "ownVote": "O‘z sharhingizga ovoz bera olmaysiz",
+    "alreadyReported": "Siz allaqachon shikoyat qilgansiz",
+    "unknown": "Nimadir noto‘g‘ri ketdi. Qayta urinib ko‘ring."
   }
 }

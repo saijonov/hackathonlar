@@ -27,6 +27,12 @@ const nextConfig: NextConfig = {
   eslint: {
     dirs: ['src', 'tests'],
   },
+  // The OG routes read these WOFF files from disk at render time; without this
+  // they are not traced into the serverless bundle and the route 500s in prod.
+  outputFileTracingIncludes: {
+    '/opengraph-image': ['./src/assets/fonts/**'],
+    '/[locale]/hackathons/[slug]/opengraph-image': ['./src/assets/fonts/**'],
+  },
   async headers() {
     return [
       {

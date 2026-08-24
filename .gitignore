@@ -47,3 +47,6 @@ supabase/.env
 # lighthouse
 /lighthouse
 .lighthouseci
+
+# design-QA screenshots
+/.qa

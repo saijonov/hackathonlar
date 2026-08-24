@@ -53,6 +53,9 @@ export function buildMetadata({
   const ogImage = image ?? absoluteUrl('/opengraph-image');
 
   return {
+    // Required on every page, not only the layout: Next resolves relative
+    // OG/twitter image URLs against it and warns loudly during build otherwise.
+    metadataBase: new URL(absoluteUrl()),
     title,
     description,
     alternates: { canonical: url, ...alternatesFor(path) },

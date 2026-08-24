@@ -27,9 +27,11 @@ export const config = {
     /*
      * Everything except:
      *   - /api and /auth      (route handlers; must not be locale-prefixed)
+     *   - /opengraph-image     (the site-wide OG card; a locale prefix would
+     *                           break the URL crawlers already have)
      *   - /_next, /_vercel    (framework internals)
      *   - anything with a dot (static files: /favicon.ico, /brand/logo.svg…)
      */
-    '/((?!api|auth|_next|_vercel|.*\\..*).*)',
+    '/((?!api|auth|opengraph-image|_next|_vercel|.*\\..*).*)',
   ],
 };
