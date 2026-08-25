@@ -39,7 +39,7 @@ export function Pagination({ page, pageCount, className }: PaginationProps) {
   for (let index = start; index <= end; index += 1) pages.push(index);
 
   const linkClass =
-    'grid grid-cols-1 h-11 min-w-11 place-items-center rounded-md border-2 border-ink bg-surface px-3 text-meta font-semibold text-ink-2 transition-colors hover:border-ink hover:text-ink';
+    'grid grid-cols-1 h-11 min-w-11 place-items-center rounded-full border-2 border-line-2 px-3 text-meta font-semibold text-ink-2 transition-colors hover:border-ink hover:text-ink';
 
   return (
     <nav
@@ -66,7 +66,7 @@ export function Pagination({ page, pageCount, className }: PaginationProps) {
               className={cn(
                 linkClass,
                 'tabular-nums',
-                value === page && 'border-ink bg-ink text-paper hover:text-paper',
+                value === page && 'border-lime bg-lime text-lime-ink hover:text-lime-ink',
               )}
             >
               {value}

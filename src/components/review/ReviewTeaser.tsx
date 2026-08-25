@@ -24,8 +24,9 @@ export function ReviewTeaser({ review, className }: ReviewTeaserProps) {
     <article className={cn('h-full', className)}>
       <Link
         href={`/hackathons/${review.hackathonSlug}`}
-        className="card-lift group flex h-full flex-col gap-3 rounded-lg border-2 border-ink bg-surface p-4"
+        className="card-lift group block h-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
       >
+        <div className="panel notch-br notch-size-sm flex h-full flex-col gap-3 p-4">
         <div className="flex items-start justify-between gap-3">
           <p className="min-w-0 text-meta font-medium text-ink-3 transition-colors group-hover:text-accent">
             <span className="line-clamp-2">{review.hackathonName}</span>
@@ -45,6 +46,7 @@ export function ReviewTeaser({ review, className }: ReviewTeaserProps) {
           <span className="min-w-0 truncate">{authorName}</span>
           <span aria-hidden>·</span>
           <TimeAgo date={review.createdAt} className="shrink-0" />
+        </div>
         </div>
       </Link>
     </article>

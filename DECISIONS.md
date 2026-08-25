@@ -5,14 +5,123 @@ with the reasoning and — where it mattered — the measurement that decided it
 
 Ordered roughly by how much they shape the product.
 
-> **Note on §1 and §2.** Both were superseded when the site was restyled to
-> lobstr.io's visual language on the `reddish` branch. They are kept because the
-> reasoning still constrains the current design — §0 explains what changed and
-> which parts of the original argument had to be re-solved rather than dropped.
+> **Note on §0.1, §1 and §2.** The visual language has been rebuilt twice: once
+> to lobstr.io's (§0.1, branch `reddish`) and once to the reference poster's
+> (§0, branch `a-new-style`). The older entries are kept because their
+> *reasoning* still constrains the current design even where their answers no
+> longer apply — §0 says which parts had to be re-solved rather than dropped.
 
 ---
 
-## 0. The visual language is lobstr.io's, measured — but its palette is not shippable as-is
+## 0. A dark canvas with light panels — and a token layer that inverts itself
+
+**Decision:** rebuild the design language from the reference poster — near-black
+canvas, light corner-notched panels, acid lime and violet, very wide uppercase
+display type — and implement the inversion by **redeclaring contextual tokens
+inside a `panel` utility** rather than doubling every component.
+
+The poster was sampled programmatically (Playwright + canvas, regional modal
+colour analysis) rather than eyeballed, which is what made the palette
+measurable: `#1F1F1F` canvas, `#E1E1E1` panel, `#CCEC43` lime, `#8D58FF` violet.
+
+### The architectural problem this design creates
+
+Both previous systems had one context: dark ink on a light page. This one has
+two — the page is dark, the panels on it are light — so `--color-ink` has to mean
+opposite things in the same document. Doubling every utility (`text-ink` /
+`text-panel-ink`) would have touched every component and stayed permanently
+error-prone.
+
+Tailwind v4 compiles `text-ink-2` to `color: var(--color-ink-2)`, so redeclaring
+that variable inside a scope flips every descendant for free:
+
+```css
+@utility panel {
+  --color-ink: #17170f;    /* #f4f3ef on the canvas */
+  --color-good: #136a4f;   /* #0eab5f on the canvas */
+  …
+}
+```
+
+29 files kept using `text-ink-3` and `text-good` unchanged. The trade is that a
+token can now be *wrong for its context* rather than merely wrong, which is a
+subtler failure — so `palette.test.ts` parses both blocks and asserts that every
+contextual token **has** a panel override. Adding one to `@theme` and forgetting
+the override is a test failure, not a silent bug.
+
+This bit immediately and for real: form controls were `bg-surface text-ink`, and
+because `--color-surface` is the *light panel* colour while canvas
+`--color-ink` is near-white, every filter control on the catalog page rendered
+white-on-white. Controls are now transparent, which makes them
+context-independent by construction.
+
+### The palette is not shippable as measured
+
+| Reference colour | Problem |
+| --- | --- |
+| `#CCEC43` lime | 12.28:1 on the canvas ✓ but **1.03:1** as text on a light panel |
+| `#8D58FF` violet | fails AA in **both** contexts (3.90 / 3.23) and white-on-it fails too (4.22) |
+
+- Lime ships unchanged but is **fill-only** — which is how the reference uses it.
+- Violet is re-solved per role by constrained nearest-colour search: `#9569FF`
+  canvas text (19 RGB units from the original), `#6229D9` panel text (74),
+  `#8A51FC` fill under white text (8).
+- The **contextual accent swaps hue**: lime on the canvas, violet inside a panel.
+  Both are the reference's own colours; only the roles trade places. The result
+  is an accent that is always legible with no component branching.
+- A lime fill has 1.03:1 against a light panel, so anything filled lime **must**
+  carry a 2px ink border or its boundary vanishes (WCAG 1.4.11). The test asserts
+  the ratio *stays* below 3:1, so the rule keeps its justification.
+
+The score scale was solved **twice**, once per context, to 5.5:1 on the canvas
+(a minimally-passing colour on near-black reads muddy) and 4.5:1 on panels. Two
+constraints beyond contrast: ≥55 RGB units between bands, and **≥90 units from
+lime** — lime is a yellow-green one hue-step from both "good" and "mid", so
+without it a score chip could read as a brand fill. An early solve pass had to
+be rejected and redone: raw RGB distance let the optimiser cheat through the
+low-luminance blue channel, turning "no reviews" purple and "mediocre" brown, so
+hue windows and an achromatic constraint were added.
+
+### What the tests caught that the eye did not
+
+- `--color-ink-3` on `--color-accent-soft` measured **4.24:1**. The token matrix
+  only covered ink against the three page *grounds*, never against the chip
+  *tints* — Lighthouse found it first. The tint was darkened rather than the one
+  call site patched, so now *any* ink tone is safe on *any* tint and a chip
+  cannot be built wrong. The matrix was extended to cover it.
+- `text-white` on the canvas danger fill: **3.00:1**. Now `text-paper`, which is
+  contextual (5.50 canvas / 5.01 panel).
+- A `<span>` used as a panel wrapper contained `<p>` elements. That is invalid
+  HTML; the browser auto-closes the span and the panel silently collapses. `<a>`
+  has a transparent content model, so the wrapper is a `<div>`. A DOM-nesting
+  check now runs over all 9 routes.
+- Horizontal overflow at three separate widths, each a different cause: the caps
+  hero at 375px (**429px in a 343px box**), a long Russian button label at
+  320px, and the whole desktop header at 1024px (a display-face "Добавить
+  хакатон" measured **221px**). Fixed by lowering the display clamp floors,
+  making `lg` button padding responsive, setting buttons in the *body* face, and
+  moving the desktop header breakpoint from `lg` to `xl`. Now verified at 11
+  widths x 18 routes x 3 locales.
+
+### Costs, stated plainly
+
+Two families instead of one costs roughly **4 Lighthouse perf points** (95–99 →
+91–96, threshold 90). Measured, not assumed: fonts are not render-blocking and
+load in ~30ms locally, so the cost is payload under simulated slow-4G.
+Requesting three static cuts instead of the variable axis was tried and served
+byte-for-byte the same 128KB. The wide display face is the identity here, so the
+cost is accepted rather than designed away.
+
+`clip-path` also constrains the interaction layer permanently: it crops focus
+rings and clips box-shadows. Card links are therefore an unclipped `<a>` around a
+clipped inner panel, buttons are pills rather than notched, and `card-lift` uses
+`drop-shadow` on the wrapper so the shadow traces the notched silhouette.
+
+Documented in full in `docs/design-system.md` §0, §2 and §4.
+
+---
+
+## 0.1 The visual language is lobstr.io's, measured — but its palette is not shippable as-is
 
 **Decision:** reproduce lobstr.io's design language (white ground, `#0A2540`
 navy ink, red accent, 2px navy card outlines, one very heavy type family, a
@@ -67,7 +176,7 @@ Documented in full in `docs/design-system.md` §2.
 
 ---
 
-## 1. The accent is cool, not the suggested "hot warm accent" *(superseded by §0)*
+## 1. The accent is cool, not the suggested "hot warm accent" *(superseded by §0.1, then §0)*
 
 **Decision:** `--color-accent: #046D82`, a deep flag-blue/majolica teal.
 
@@ -87,7 +196,7 @@ white text on the accent. All AA.
 
 ---
 
-## 2. Typography: Geologica + IBM Plex Sans, chosen by reading font binaries *(superseded by §0)*
+## 2. Typography: Geologica + IBM Plex Sans, chosen by reading font binaries *(superseded by §0.1, then §0)*
 
 **Decision:** Geologica (display) + IBM Plex Sans (body).
 

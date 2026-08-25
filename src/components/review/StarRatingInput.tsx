@@ -50,7 +50,7 @@ export function StarRatingInput({
   return (
     <div
       className={cn(
-        'rounded-lg border bg-surface p-3.5 transition-colors sm:p-4',
+        'rounded-md border-2 border-line bg-surface p-3.5 transition-colors sm:p-4',
         error ? 'border-bad' : 'border-line',
       )}
     >

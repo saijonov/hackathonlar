@@ -43,7 +43,7 @@ export default async function HackathonOgImage({ params }: Props) {
           display: 'flex',
           flexDirection: 'column',
           background: OG.paper,
-          fontFamily: 'SourceSans3',
+          fontFamily: 'Unbounded',
         }}
       >
         {/* A slim band of the hackathon's own generated-cover palette, so the

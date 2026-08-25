@@ -46,7 +46,7 @@ export function AdminNav({
           >
             {t(tab.key)}
             {count > 0 && (
-              <span className="grid min-w-5 place-items-center rounded-full bg-bad px-1.5 text-[11px] font-bold tabular-nums text-white">
+              <span className="grid min-w-5 place-items-center rounded-full bg-bad px-1.5 text-[11px] font-bold tabular-nums text-paper">
                 {count}
               </span>
             )}

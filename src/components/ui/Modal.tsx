@@ -96,7 +96,7 @@ export function Modal({
     >
       <div
         className={cn(
-          'mx-auto flex max-h-[100dvh] w-full flex-col overflow-hidden border-2 border-ink bg-surface shadow-pop',
+          'panel mx-auto flex max-h-[100dvh] w-full flex-col overflow-hidden rounded-lg shadow-pop',
           isBottom || isAuto ? 'rounded-t-xl animate-sheet-up' : 'rounded-xl animate-fade-rise',
           isAuto && 'sm:rounded-xl sm:animate-fade-rise',
           SIZES[size],

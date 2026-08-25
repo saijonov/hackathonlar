@@ -6,16 +6,13 @@ interface CardProps extends HTMLAttributes<HTMLDivElement> {
   interactive?: boolean;
 }
 
-/** The one card treatment: white fill, 1px hairline, radius-lg. */
+/**
+ * The one card treatment: a light **panel** on the dark canvas with its
+ * bottom-right corner cut away.
+ *
+ * `panel` flips the whole contextual token set (see globals.css), so children
+ * can keep using `text-ink-2`, `text-good` and friends unchanged.
+ */
 export function Card({ interactive = false, className, ...props }: CardProps) {
-  return (
-    <div
-      className={cn(
-        'rounded-lg border-2 border-ink bg-surface',
-        interactive && 'card-lift',
-        className,
-      )}
-      {...props}
-    />
-  );
+  return <div className={cn('panel notch-br', interactive && 'card-lift', className)} {...props} />;
 }

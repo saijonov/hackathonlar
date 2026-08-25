@@ -41,7 +41,7 @@ export function ReviewCard({ review, hackathonSlug, className }: ReviewCardProps
     <article
       id={`review-${review.id}`}
       data-testid="review-card"
-      className={cn('rounded-lg border-2 border-ink bg-surface', className)}
+      className={cn('panel notch-br', className)}
     >
       <div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-3 p-4 pb-3 sm:p-5 sm:pb-3">
         <div className="flex min-w-0 items-center gap-3">

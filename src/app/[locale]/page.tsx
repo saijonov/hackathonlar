@@ -12,6 +12,7 @@ import { buttonClasses } from '@/components/ui/Button';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import { EmptyState } from '@/components/ui/EmptyState';
 import { Badge } from '@/components/ui/Badge';
+import { Starburst } from '@/components/brand/Starburst';
 import { StatsStrip } from '@/components/home/StatsStrip';
 import { HackathonCard } from '@/components/hackathon/HackathonCard';
 import { ReviewTeaser } from '@/components/review/ReviewTeaser';
@@ -55,7 +56,10 @@ export default async function HomePage({ params }: PageProps) {
               {t('hero.eyebrow')}
             </p>
 
-            <h1 className="mt-5 text-display-1 text-ink">{t('hero.title')}</h1>
+            <div className="mt-5 flex items-start gap-6">
+              <h1 className="display-caps text-display-1 text-ink">{t('hero.title')}</h1>
+              <Starburst size={96} label="01" className="mt-2 hidden shrink-0 lg:block" />
+            </div>
 
             <p className="mt-5 max-w-xl text-body-lg text-ink-2">{t('hero.subtitle')}</p>
 
@@ -203,7 +207,7 @@ export default async function HomePage({ params }: PageProps) {
         <div className="container-page py-14 md:py-16">
           <SectionHeader eyebrow={t('how.eyebrow')} title={t('how.title')} />
 
-          <ol className="mt-8 grid grid-cols-1 gap-px overflow-hidden rounded-lg border-2 border-ink bg-line md:grid-cols-3">
+          <ol className="mt-8 grid grid-cols-1 panel notch-br gap-px overflow-hidden bg-line md:grid-cols-3">
             {(['step1', 'step2', 'step3'] as const).map((step, index) => (
               <li key={step} className="bg-surface p-6">
                 <span
@@ -221,16 +225,13 @@ export default async function HomePage({ params }: PageProps) {
       </section>
 
       {/* ----------------------------------------------------------- CTA band */}
-      <section className="bg-ink">
-        <div className="container-page flex flex-wrap items-center justify-between gap-6 py-12">
+      <section className="container-page py-14 md:py-20">
+        <div className="panel notch-r notch-size-lg flex flex-wrap items-center justify-between gap-6 p-7 sm:p-10">
           <div className="max-w-xl">
-            <h2 className="text-h1 text-paper">{t('cta.title')}</h2>
-            <p className="mt-2 text-body text-paper/70">{t('cta.body')}</p>
+            <h2 className="display-caps text-h1 text-ink">{t('cta.title')}</h2>
+            <p className="mt-2 text-body text-ink-2">{t('cta.body')}</p>
           </div>
-          <Link
-            href="/submit"
-            className={buttonClasses('secondary', 'lg', 'border-paper bg-paper text-ink hover:bg-white hover:border-white')}
-          >
+          <Link href="/submit" className={buttonClasses('primary', 'lg')}>
             <Plus size={18} strokeWidth={2} aria-hidden />
             {t('cta.button')}
           </Link>

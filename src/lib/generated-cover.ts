@@ -38,19 +38,19 @@ export interface GeneratedCover {
 }
 
 /**
- * Palettes use only the brand pair — navy and the accent red — on the three
- * ground tones. The *score* colours are deliberately excluded: on this site
+ * Palettes draw only on the canvas, the light panel and the two accent fills —
+ * lime and violet. The *score* colours are deliberately excluded: on this site
  * those mean "good / mediocre / bad", and a cover must never imply a rating the
- * hackathon has not earned. Note the accent red and the score red are different
- * values for exactly this reason (see DECISIONS.md).
+ * hackathon has not earned. Every pairing below is a fill plus an ink that
+ * clears AA against it (asserted in tests/unit/generated-cover.test.ts).
  */
 const PALETTES: readonly CoverPalette[] = [
-  { background: '#0A2540', foreground: '#DB0000', ink: '#FFFFFF' },
-  { background: '#F7F8FC', foreground: '#0A2540', ink: '#0A2540' },
-  { background: '#DB0000', foreground: '#FFFFFF', ink: '#FFFFFF' },
-  { background: '#FFFFFF', foreground: '#DB0000', ink: '#0A2540' },
-  { background: '#0A2540', foreground: '#FFFFFF', ink: '#FFFFFF' },
-  { background: '#EEEFF5', foreground: '#DB0000', ink: '#0A2540' },
+  { background: '#1F1F1F', foreground: '#CCEC43', ink: '#F4F3EF' },
+  { background: '#CCEC43', foreground: '#1F1F1F', ink: '#17170F' },
+  { background: '#8A51FC', foreground: '#E1E1E1', ink: '#FFFFFF' },
+  { background: '#E1E1E1', foreground: '#8A51FC', ink: '#17170F' },
+  { background: '#1F1F1F', foreground: '#8A51FC', ink: '#F4F3EF' },
+  { background: '#E1E1E1', foreground: '#1F1F1F', ink: '#17170F' },
 ];
 
 /** FNV-1a, 32-bit. Small, fast, stable across runtimes — no crypto needed. */

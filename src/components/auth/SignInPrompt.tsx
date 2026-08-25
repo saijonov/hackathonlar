@@ -15,7 +15,7 @@ export function SignInPrompt({ reason }: { reason?: string }) {
   const { openAuth } = useAuth();
 
   return (
-    <div className="rounded-lg border-2 border-ink bg-surface p-8 text-center">
+    <div className="panel notch-br p-8 text-center">
       <span className="mx-auto grid size-12 place-items-center rounded-full bg-accent-soft text-accent">
         <LogIn size={22} strokeWidth={1.75} aria-hidden />
       </span>

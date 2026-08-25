@@ -3,92 +3,114 @@
 /* ==========================================================================
    hackathonlar.uz — design tokens
    Source of truth: docs/design-system.md. Do not hardcode values in JSX.
-   Concept: "The Scoreboard" — warm paper, near-black ink, one cool accent,
-   numbers as heroes.
+
+   Concept: "Trendbook" — a near-black canvas carrying light, corner-notched
+   panels, acid lime and violet accents, and very wide uppercase display type.
+   Sampled from the reference poster with Playwright (see DECISIONS.md §0).
+
+   TWO CONTEXTS. This is the one thing to understand before editing anything.
+   The page canvas is dark and the panels on it are light, so "ink" means two
+   opposite things depending on where you are. Rather than doubling every
+   utility, the contextual tokens are *redeclared* inside `@utility panel`.
+   Tailwind compiles `text-ink-2` to `color: var(--color-ink-2)`, so every
+   descendant of a panel flips automatically and no component needs to know
+   which context it is in.
+
+   Absolute tokens (never redeclared): --color-lime, --color-lime-ink,
+   --color-violet-fill, --color-violet-ink. These are fills that look the same
+   everywhere, which is what lets a primary button stay one colour site-wide.
    ========================================================================== */
 
 @theme {
-  /* --- surfaces & ink -----------------------------------------------------
-     Sampled from lobstr.io: white ground, a near-white lavender band, and a
-     deep navy that carries every structural element.
+  /* --- canvas: surfaces & ink ---------------------------------------------
+     #1f1f1f is the measured poster ground; the other two are bands below it.
+     --color-surface is *light* — a panel is an inversion, not a tint.
      -------------------------------------------------------------------- */
-  --color-paper: #ffffff;
-  --color-paper-2: #f7f8fc;
-  --color-paper-3: #eeeff5;
-  --color-surface: #ffffff;
+  --color-paper: #1f1f1f;
+  --color-paper-2: #171717;
+  --color-paper-3: #101010;
+  --color-surface: #e1e1e1;
 
-  --color-ink: #0a2540;
-  --color-ink-2: #2f4463;
-  --color-ink-3: #626e81;
+  --color-ink: #f4f3ef;
+  --color-ink-2: #b5b4ae;
+  --color-ink-3: #93928c;
 
-  /* Hairline dividers, and the input/idle border. The bold 2px navy card
-     outline is lobstr's signature and uses --color-ink directly. */
-  --color-line: #e3e6ef;
-  --color-line-2: #c6cddc;
+  --color-line: #343433;
+  --color-line-2: #4e4e4c;
 
-  /* Big decorative numerals (step counters, ranking positions). */
-  --color-numeral: #788298;
+  /* Big decorative numerals (ranks, step counters). AA-large only — see §2.5. */
+  --color-numeral: #6c6c69;
 
-  /* --- accent -------------------------------------------------------------
-     lobstr.io uses pure #FF0000, which measures 4.00:1 on white and fails AA
-     both as text and as white-on-red. #DB0000 is 36/441 away in RGB — the eye
-     reads it as the same red — and measures 5.23:1. See DECISIONS.md.
+  /* --- accent: lime on the canvas -----------------------------------------
+     The reference's #ccec43 measures 12.28:1 on the canvas, so it ships
+     unchanged here. It is *unusable as text on a light panel* (1.03:1), which
+     is why the panel context swaps the accent for violet instead.
      -------------------------------------------------------------------- */
-  --color-accent: #db0000;
-  --color-accent-ink: #ad0000;
-  --color-accent-soft: #ffecec;
+  --color-accent: #ccec43;
+  --color-accent-ink: #e3f78a;
+  /* Darkened from #2b3310: the muted --color-ink-3 measured only 4.24:1 on the
+     lighter olive, which Lighthouse caught on the footer locale switcher. Every
+     tint is now dark enough to carry *any* ink tone, so a chip cannot be built
+     wrong. Enforced by the ink-on-tint matrix in tests/unit/palette.test.ts. */
+  --color-accent-soft: #252c0e;
 
-  /* --- score scale (docs/design-system.md §2.3) ----------------------------
-     Every value is darkened until it clears 4.5:1 on white, on --color-paper-2
-     and on --color-paper-3, so a chip is legible on every surface it lands on.
-
-     --color-bad is deliberately a *deeper* red than --color-accent (73 units
-     apart in RGB, 6.96:1 vs 5.23:1 on white). With a red brand the two would
-     otherwise collide, and "this button is important" would read the same as
-     "this hackathon was bad". Enforced by tests/unit/palette.test.ts.
+  /* --- score scale, canvas variants (docs/design-system.md §2.3) -----------
+     Solved to >= 5.5:1 on all three canvas grounds — higher than the 4.5 bar,
+     because a minimally-passing colour on near-black reads as muddy. Each is
+     also held >= 90 RGB units from the lime accent so a score chip can never
+     be mistaken for a brand fill.
      -------------------------------------------------------------------- */
-  --color-good: #347948;
-  --color-good-soft: #eaf6ef;
-  --color-mid: #8f640e;
-  --color-mid-soft: #fdf4e3;
-  --color-bad: #a82a1f;
-  --color-bad-soft: #fdebe9;
-  --color-none: #626e81;
-  --color-none-soft: #eeeff5;
+  --color-good: #0eab5f;
+  --color-good-soft: #12291e;
+  --color-mid: #e08a00;
+  --color-mid-soft: #2e2209;
+  --color-bad: #ff6132;
+  --color-bad-soft: #33120c;
+  --color-none: #959595;
+  --color-none-soft: #282828;
 
-  /* --- semantic status ----------------------------------------------------- */
-  --color-success: #347948;
-  --color-warning: #8f640e;
-  --color-danger: #a82a1f;
+  /* --- semantic status ---------------------------------------------------- */
+  --color-success: #0eab5f;
+  --color-warning: #e08a00;
+  --color-danger: #ff6132;
+
+  /* --- absolute fills ------------------------------------------------------
+     Identical in both contexts. A lime fill has only 1.03:1 against a light
+     panel, so anything filled lime MUST also carry a 2px ink border or its
+     boundary disappears (WCAG 1.4.11). Asserted in tests/unit/palette.test.ts.
+     -------------------------------------------------------------------- */
+  --color-lime: #ccec43;
+  --color-lime-ink: #17170f;
+  --color-violet-fill: #8a51fc;
+  --color-violet-ink: #ffffff;
 
   /* --- type scale ----------------------------------------------------------
-     lobstr.io runs one family at four weights, with very heavy display
-     headings on tight negative tracking: h1 80px/900/-0.04em, section
-     h2 40px/700/-0.04em, card h2 21px/700/normal.
+     The reference sets its display type very wide, very heavy and all-caps.
+     Unbounded at 800/900 with positive tracking reproduces that; body copy
+     drops to Onest at normal tracking so the page stays readable.
      -------------------------------------------------------------------- */
-  --text-display-1: clamp(2.5rem, 7.5vw, 5rem);
-  --text-display-1--line-height: 1.04;
-  --text-display-1--letter-spacing: -0.04em;
-  --text-display-1--font-weight: 900;
+  --text-display-1: clamp(1.5rem, 6.6vw, 4.5rem);
+  --text-display-1--line-height: 1.02;
+  --text-display-1--letter-spacing: -0.02em;
+  --text-display-1--font-weight: 800;
 
-  --text-display-2: clamp(1.875rem, 4.5vw, 2.5rem);
-  --text-display-2--line-height: 1.1;
-  --text-display-2--letter-spacing: -0.04em;
-  --text-display-2--font-weight: 900;
+  --text-display-2: clamp(1.375rem, 4.4vw, 2.75rem);
+  --text-display-2--line-height: 1.08;
+  --text-display-2--letter-spacing: -0.015em;
+  --text-display-2--font-weight: 800;
 
   --text-h1: clamp(1.5rem, 3vw, 2rem);
-  --text-h1--line-height: 1.15;
-  --text-h1--letter-spacing: -0.03em;
+  --text-h1--line-height: 1.18;
+  --text-h1--letter-spacing: -0.01em;
   --text-h1--font-weight: 700;
 
-  --text-h2: 1.3125rem;
+  --text-h2: 1.25rem;
   --text-h2--line-height: 1.35;
-  --text-h2--letter-spacing: -0.01em;
+  --text-h2--letter-spacing: -0.005em;
   --text-h2--font-weight: 700;
 
   --text-h3: 1.0625rem;
   --text-h3--line-height: 1.4;
-  --text-h3--letter-spacing: -0.005em;
   --text-h3--font-weight: 700;
 
   --text-body-lg: 1.0625rem;
@@ -102,39 +124,47 @@
 
   --text-micro: 0.75rem;
   --text-micro--line-height: 1.2;
-  --text-micro--letter-spacing: 0.06em;
+  --text-micro--letter-spacing: 0.1em;
   --text-micro--font-weight: 700;
 
   /* --- geometry ------------------------------------------------------------
-     lobstr.io radii, by frequency: 12px cards, 8px buttons, 6px small, pills.
+     The reference has almost no rounding on panels — the corner *notch* does
+     the work instead — and fully-round pills for every button.
      -------------------------------------------------------------------- */
-  --radius-xs: 4px;
-  --radius-sm: 6px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
-  --radius-xl: 16px;
-  --radius-2xl: 20px;
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 10px;
+  --radius-2xl: 14px;
 
-  /* Flat surfaces with hard 2px outlines: shadows are for lifted layers only. */
-  --shadow-lift: 0 6px 20px -12px rgb(10 37 64 / 0.30);
-  --shadow-pop: 0 24px 56px -28px rgb(10 37 64 / 0.35);
+  /* Size of the diagonal corner cut. Panels set it per size. */
+  --notch: 26px;
+  --notch-sm: 14px;
+  --notch-lg: 40px;
 
-  --container-page: 75rem;
+  --shadow-lift: 0 10px 30px -14px rgb(0 0 0 / 0.55);
+  --shadow-pop: 0 30px 70px -30px rgb(0 0 0 / 0.7);
+
+  --container-page: 78rem;
 
   /* --- motion ------------------------------------------------------------- */
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+
 /* Font families come from next/font (see src/app/fonts.ts), so they must be
    resolved at reference time rather than baked in.
 
-   lobstr.io runs a single family across the whole site — display and body —
-   varying only weight, so both tokens point at the same face. Keeping two
-   token names means components do not have to change when the pairing does. */
+   Two families this time, unlike the previous single-family system: the
+   reference's display type is far wider and heavier than anything a text face
+   can do, and forcing one family to cover both ends produced either unreadable
+   body copy or a limp headline. */
 @theme inline {
-  --font-display: var(--font-source-sans), 'Source Sans 3', system-ui, sans-serif;
-  --font-sans: var(--font-source-sans), 'Source Sans 3', system-ui, sans-serif;
+  --font-display: var(--font-unbounded), 'Unbounded', system-ui, sans-serif;
+  --font-sans: var(--font-onest), 'Onest', system-ui, sans-serif;
 }
+
 
 /* ==========================================================================
    Base layer
@@ -150,6 +180,9 @@
   html {
     -webkit-text-size-adjust: 100%;
     scroll-behavior: smooth;
+    /* The canvas is dark, so form controls, scrollbars and the URL bar must
+       follow. Without this the UA paints white inputs on a black page. */
+    color-scheme: dark;
   }
 
   body {
@@ -186,14 +219,21 @@
     border-radius: var(--radius-xs);
   }
 
+  /* Selection uses the absolute lime pair so it reads the same on the canvas
+     and inside a light panel. */
   ::selection {
-    background-color: var(--color-accent);
-    color: #fff;
+    background-color: var(--color-lime);
+    color: var(--color-lime-ink);
   }
 
-  /* lobstr.io sets links in the accent red at bold weight. */
   a {
     text-underline-offset: 3px;
+  }
+
+  /* A panel is a light island: its own controls must not inherit the dark
+     canvas's colour-scheme, or the UA paints them black-on-black. */
+  .panel {
+    color-scheme: light;
   }
 
   /* Numbers must align in score columns. */
@@ -246,28 +286,147 @@
   font-size: var(--text-micro);
   line-height: var(--text-micro--line-height);
   letter-spacing: var(--text-micro--letter-spacing);
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
-/* lobstr.io's signature surface: a white card inside a hard 2px navy outline,
-   12px radius, no shadow at rest. Everything card-shaped on the site uses it. */
+/* The reference's display type is all-caps and tracked slightly *open* — the
+   opposite of the tight negative tracking of a normal heavy headline. Applied
+   per component rather than baked into the token, because long Uzbek and
+   Russian headings are markedly harder to read in caps and only the short
+   statement heads can carry it. */
+@utility display-caps {
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  text-wrap: balance;
+  /* Last-resort backstop. Unbounded is extremely wide and these headings are
+     set in caps, so a single long Uzbek or Russian word ("O‘ZBEKISTONDAGI",
+     "МАРКЕТОЛОГИ") can exceed a 343px mobile content box on its own — no
+     amount of clamping helps once one word is wider than the line. This only
+     engages in that case; normal wrapping is untouched. */
+  overflow-wrap: anywhere;
+}
+
+/* ==========================================================================
+   THE PANEL — the light context.
+
+   Everything on this site that is card-shaped is a panel: a light surface
+   sitting on the dark canvas, with one corner cut away. The rule below
+   redeclares every *contextual* token, so a `text-ink-2` or a `text-good`
+   inside a panel resolves against the light palette without the component
+   knowing anything about it.
+
+   Values are solved, not picked: each clears 4.5:1 against all three light
+   grounds (#e1e1e1 panel, #edede9 raised, #d6d6d3 inset). See
+   tests/unit/palette.test.ts, which re-derives all of it from this file.
+   ========================================================================== */
+
+@utility panel {
+  --color-paper: #e1e1e1;
+  --color-paper-2: #d6d6d3;
+  --color-paper-3: #d6d6d3;
+  --color-surface: #edede9;
+
+  --color-ink: #17170f;
+  --color-ink-2: #45443c;
+  --color-ink-3: #5e5d56;
+
+  --color-line: #c3c3bf;
+  --color-line-2: #a8a8a3;
+  --color-numeral: #747369;
+
+  /* Lime is invisible on a light ground, so the accent becomes violet here.
+     Both colours are the reference's own; only the roles swap. */
+  --color-accent: #6229d9;
+  --color-accent-ink: #4a1aa8;
+  --color-accent-soft: #e2d8f9;
+
+  --color-good: #136a4f;
+  --color-good-soft: #d9efe4;
+  --color-mid: #974600;
+  --color-mid-soft: #f6e6cf;
+  --color-bad: #b3242a;
+  --color-bad-soft: #f7dcdc;
+  --color-none: #5d5d5d;
+  --color-none-soft: #eaeaea;
+
+  --color-success: #136a4f;
+  --color-warning: #974600;
+  --color-danger: #b3242a;
+
+  background-color: var(--color-paper);
+  color: var(--color-ink-2);
+}
+
+/* The signature shape: a diagonal cut across one corner. `clip-path` rather
+   than a pseudo-element so the cut is real — the canvas shows through it — and
+   so it survives any background the panel carries.
+
+   Never apply a notch to something focusable: clip-path would crop its focus
+   ring. Buttons are pills for exactly this reason. */
+@utility notch-br {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - var(--notch)),
+    calc(100% - var(--notch)) 100%,
+    0 100%
+  );
+}
+
+@utility notch-tr {
+  clip-path: polygon(
+    0 0,
+    calc(100% - var(--notch)) 0,
+    100% var(--notch),
+    100% 100%,
+    0 100%
+  );
+}
+
+@utility notch-bl {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, var(--notch) 100%, 0 calc(100% - var(--notch)));
+}
+
+/* Hero-scale panels cut both right-hand corners, as the reference does. */
+@utility notch-r {
+  clip-path: polygon(
+    0 0,
+    calc(100% - var(--notch)) 0,
+    100% var(--notch),
+    100% calc(100% - var(--notch)),
+    calc(100% - var(--notch)) 100%,
+    0 100%
+  );
+}
+
+@utility notch-size-sm {
+  --notch: var(--notch-sm);
+}
+
+@utility notch-size-lg {
+  --notch: var(--notch-lg);
+}
+
+/* Kept for the few surfaces that must stay rectangular (tables, sticky bars). */
 @utility card-outline {
   background-color: var(--color-surface);
   border: 2px solid var(--color-ink);
   border-radius: var(--radius-lg);
 }
 
+/* Hover lift for panels. Deliberately a `filter`, not a `box-shadow`: a
+   box-shadow on a clip-path'd element is clipped away with everything else,
+   while a drop-shadow on the unclipped wrapper traces the notched silhouette.
+   Apply this to the *parent* of the notched panel, never to the panel itself. */
 @utility card-lift {
   transition:
-    transform 160ms ease-out,
-    box-shadow 160ms ease-out,
-    border-color 160ms ease-out;
+    transform 180ms var(--ease-out-expo),
+    filter 180ms var(--ease-out-expo);
 
   &:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-lift);
-    border-color: var(--color-accent);
+    transform: translateY(-3px);
+    filter: drop-shadow(0 14px 20px rgb(0 0 0 / 0.5));
   }
 }
 

@@ -29,7 +29,7 @@ export default async function AdminReviewsPage({ params, searchParams }: PagePro
       <div className="flex flex-wrap items-center justify-between gap-3">
         <h2 className="text-h1">{t('title')}</h2>
 
-        <nav className="flex items-center rounded-md border-2 border-ink bg-surface p-0.5">
+        <nav className="flex items-center rounded-full border-2 border-line-2 p-0.5">
           {FILTERS.map((value) => (
             <Link
               key={value}
@@ -37,7 +37,7 @@ export default async function AdminReviewsPage({ params, searchParams }: PagePro
               aria-current={filter === value ? 'page' : undefined}
               className={cn(
                 'grid h-8 min-w-24 place-items-center rounded-sm px-3 text-meta font-semibold transition-colors',
-                filter === value ? 'bg-ink text-paper' : 'text-ink-3 hover:bg-paper-2 hover:text-ink',
+                filter === value ? 'bg-lime text-lime-ink' : 'text-ink-3 hover:text-ink',
               )}
             >
               {t(value === 'all' ? 'filterAll' : value === 'reported' ? 'filterReported' : 'filterHidden')}

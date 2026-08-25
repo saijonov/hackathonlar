@@ -5,30 +5,38 @@ export type ButtonVariant = 'primary' | 'secondary' | 'ghost' | 'danger';
 export type ButtonSize = 'sm' | 'md' | 'lg';
 
 /**
- * lobstr.io's button system, measured from the live site:
- *   primary   solid red fill, white text, 8px radius, weight 700
- *   secondary white fill inside a 2px red outline (their "Create one")
- *   ghost     bare navy text
+ * Every button on this site is a **pill with a 2px border**, taken from the
+ * reference poster. Two things follow from that, and neither is cosmetic:
  *
- * No shadows at rest — this design language separates surfaces with hard
- * outlines, not blur. The only motion is a 1px lift on hover.
+ * 1. The lime primary fill has only 1.03:1 against a light panel. On its own it
+ *    would be an invisible button on half the pages. The border is what carries
+ *    the boundary contrast (WCAG 1.4.11), so `primary` must never lose it.
+ * 2. Pills, not notched corners. A `clip-path` notch crops the focus ring of
+ *    whatever it clips, so the shape language stops at the panel edge and
+ *    interactive elements stay unclipped.
+ *
+ * `border-ink` / `text-ink` resolve against whichever context the button sits
+ * in, so an outline button is legible on the dark canvas and inside a light
+ * panel without a variant for each.
  */
 const VARIANTS: Record<ButtonVariant, string> = {
   primary:
-    'bg-accent text-white border-2 border-accent hover:bg-accent-ink hover:border-accent-ink active:translate-y-px',
+    'bg-lime text-lime-ink border-2 border-ink hover:bg-transparent hover:text-ink active:translate-y-px',
   secondary:
-    'bg-surface text-accent border-2 border-accent hover:bg-accent hover:text-white active:translate-y-px',
+    'bg-transparent text-ink border-2 border-ink hover:bg-ink hover:text-paper active:translate-y-px',
   ghost:
-    'bg-transparent text-ink border-2 border-transparent hover:text-accent hover:bg-accent-soft',
-  danger: 'bg-surface text-bad border-2 border-bad hover:bg-bad hover:text-white',
+    'bg-transparent text-ink-2 border-2 border-transparent hover:text-ink hover:border-line-2',
+  danger: 'bg-transparent text-bad border-2 border-bad hover:bg-bad hover:text-paper',
 };
 
 /** Every size clears the 44px tap-target floor except `sm`, which is for
  *  dense desktop toolbars and admin tables only. */
 const SIZES: Record<ButtonSize, string> = {
-  sm: 'h-9 px-3.5 text-meta gap-1.5',
-  md: 'h-11 px-5 text-meta gap-2',
-  lg: 'h-13 px-7 text-body gap-2.5',
+  sm: 'h-9 px-4 text-micro gap-1.5',
+  md: 'h-11 px-6 text-meta gap-2',
+  // px-8 at 320px overflows a long Russian label ('Добавить хакатон')
+  // against `shrink-0`, so the roomy padding only starts at sm.
+  lg: 'h-13 px-5 sm:px-8 text-body gap-2.5',
 };
 
 export function buttonClasses(
@@ -37,7 +45,10 @@ export function buttonClasses(
   className?: string,
 ) {
   return cn(
-    'inline-flex shrink-0 items-center justify-center rounded-md font-display font-bold',
+    // Body face, not the display face. The reference sets its pill labels in a
+    // plain grotesque, and Unbounded is wide enough that a display-face
+    // 'Добавить хакатон' measured 221px — the header cluster overflowed 1024px.
+    'inline-flex shrink-0 items-center justify-center rounded-full font-sans font-bold',
     'transition-[background-color,border-color,color,transform] duration-150 ease-out',
     'disabled:pointer-events-none disabled:opacity-45',
     VARIANTS[variant],

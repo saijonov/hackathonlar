@@ -161,7 +161,7 @@ export default async function OrganizerPage({ params }: PageProps) {
         {/* ------------------------------------------- Aggregate track record */}
         <section
           aria-label={t('trackRecord')}
-          className="overflow-hidden rounded-lg border-2 border-ink bg-surface"
+          className="panel notch-br overflow-hidden"
         >
           <div className="grid grid-cols-1 gap-px bg-line lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)]">
             <div className="bg-surface p-5 sm:p-6">

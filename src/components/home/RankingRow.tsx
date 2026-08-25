@@ -17,8 +17,9 @@ export function RankingRow({ hackathon, rank }: RankingRowProps) {
   return (
     <Link
       href={`/hackathons/${hackathon.slug}`}
-      className="card-lift group flex items-center gap-4 rounded-lg border-2 border-ink bg-surface p-3.5"
+      className="card-lift group block focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
     >
+      <div className="panel notch-br notch-size-sm flex items-center gap-4 p-3.5">
       <span
         aria-hidden
         className="w-8 shrink-0 text-center font-display text-h1 font-extrabold leading-none tabular-nums text-numeral"
@@ -50,6 +51,7 @@ export function RankingRow({ hackathon, rank }: RankingRowProps) {
         showStars={false}
         className="shrink-0"
       />
+      </div>
     </Link>
   );
 }

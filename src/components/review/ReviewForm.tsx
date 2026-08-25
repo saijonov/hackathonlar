@@ -197,7 +197,7 @@ export function ReviewForm({ hackathonId, hackathonSlug, hackathonName, existing
 
   if (success) {
     return (
-      <div className="rounded-lg border border-good/30 bg-good-soft p-6 text-center">
+      <div className="panel notch-br bg-good-soft p-6 text-center">
         <CheckCircle2 size={32} strokeWidth={1.5} aria-hidden className="mx-auto text-good" />
         <h2 className="mt-3 text-h1 text-ink">{t('form.successTitle')}</h2>
         <p className="mt-1.5 text-body text-ink-2">
@@ -217,7 +217,7 @@ export function ReviewForm({ hackathonId, hackathonSlug, hackathonName, existing
 
   return (
     <form
-      className="grid grid-cols-1 gap-6"
+      className="panel notch-br grid grid-cols-1 gap-6 p-5 sm:p-7"
       noValidate
       onSubmit={(event) => {
         event.preventDefault();

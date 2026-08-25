@@ -47,16 +47,21 @@ export function describedBy(id: string, hasHint: boolean, hasError: boolean) {
 }
 
 /**
- * Measured from lobstr.io's sign-in form: white fill, a single light grey
- * hairline, 6px radius and a 48px control height. Their cards carry the heavy
- * 2px navy outline; their inputs deliberately do not.
+ * Controls are a **transparent box with a 2px border**, never a filled one.
+ *
+ * That is not only stylistic. `--color-surface` is the *light panel* colour, so
+ * on the dark canvas `bg-surface text-ink` would paint near-white text on a
+ * near-white fill — which is exactly the bug this replaced. Staying transparent
+ * makes a control inherit whichever context it is dropped into: light border
+ * and light text on the canvas, dark border and dark text inside a panel, with
+ * no variant for either.
  */
 export const controlClasses = (invalid?: boolean, className?: string) =>
   cn(
-    'w-full rounded-sm border bg-surface px-3.5 text-body text-ink',
-    'placeholder:text-ink-3/70',
+    'w-full rounded-md border-2 bg-transparent px-3.5 text-body text-ink',
+    'placeholder:text-ink-3',
     'transition-colors duration-150',
-    'disabled:cursor-not-allowed disabled:bg-paper-2 disabled:text-ink-3',
+    'disabled:cursor-not-allowed disabled:border-line disabled:text-ink-3',
     invalid ? 'border-bad focus:border-bad' : 'border-line-2 hover:border-ink-3 focus:border-accent',
     className,
   );

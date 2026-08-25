@@ -27,7 +27,7 @@ export function ReportRow({ report }: { report: AdminReport }) {
   };
 
   return (
-    <article className="rounded-lg border-2 border-ink bg-surface p-4">
+    <article className="panel notch-br notch-size-sm p-4">
       {error && <Alert tone="danger" className="mb-3">{error}</Alert>}
 
       <div className="flex flex-wrap items-start justify-between gap-3">

@@ -18,8 +18,9 @@ export function OrganizerCard({ organizer, className }: OrganizerCardProps) {
     <article className={cn('h-full', className)}>
       <Link
         href={`/organizers/${organizer.slug}`}
-        className="card-lift group flex h-full flex-col gap-4 rounded-lg border-2 border-ink bg-surface p-4"
+        className="card-lift group block h-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
       >
+        <div className="panel notch-br flex h-full flex-col gap-4 p-4">
         <div className="flex min-w-0 items-center gap-3">
           <Monogram name={organizer.name} slug={organizer.slug} size={44} />
           <div className="min-w-0">
@@ -38,6 +39,7 @@ export function OrganizerCard({ organizer, className }: OrganizerCardProps) {
             reviewCount={organizer.reviewCount}
             size="sm"
           />
+        </div>
         </div>
       </Link>
     </article>

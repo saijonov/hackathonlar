@@ -72,7 +72,7 @@ export function SiteHeader() {
           <Wordmark size="md" />
         </Link>
 
-        <nav aria-label={t('home')} className="ml-4 hidden items-center gap-1 lg:flex">
+        <nav aria-label={t('home')} className="ml-4 hidden items-center gap-1 xl:flex">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
@@ -94,7 +94,7 @@ export function SiteHeader() {
         <div className="ml-auto flex items-center gap-2">
           <LocaleSwitcher className="hidden sm:flex" />
 
-          <Link href="/submit" className={buttonClasses('secondary', 'sm', 'hidden lg:inline-flex')}>
+          <Link href="/submit" className={buttonClasses('secondary', 'sm', 'hidden xl:inline-flex')}>
             <Plus size={16} strokeWidth={2} aria-hidden />
             {t('submit')}
           </Link>
@@ -119,7 +119,7 @@ export function SiteHeader() {
               {accountOpen && (
                 <div
                   role="menu"
-                  className="animate-fade-rise absolute right-0 top-full z-50 mt-1.5 w-56 overflow-hidden rounded-lg border-2 border-ink bg-surface shadow-pop"
+                  className="animate-fade-rise absolute right-0 top-full z-50 mt-1.5 w-56 overflow-hidden panel notch-br notch-size-sm shadow-pop"
                 >
                   <p className="truncate border-b border-line px-3 py-2.5 text-meta text-ink-3">
                     {profile?.displayName}
@@ -171,7 +171,7 @@ export function SiteHeader() {
             onClick={() => setMenuOpen((value) => !value)}
             aria-expanded={menuOpen}
             aria-controls="mobile-menu"
-            className="grid grid-cols-1 size-11 place-items-center rounded-md text-ink transition-colors hover:bg-paper-2 lg:hidden"
+            className="grid grid-cols-1 size-11 place-items-center rounded-md text-ink transition-colors hover:bg-paper-2 xl:hidden"
           >
             <span className="sr-only">{menuOpen ? t('closeMenu') : t('openMenu')}</span>
             {menuOpen ? <X size={22} aria-hidden /> : <Menu size={22} aria-hidden />}
@@ -182,7 +182,7 @@ export function SiteHeader() {
       {menuOpen && (
         <div
           id="mobile-menu"
-          className="animate-fade-rise border-t border-line bg-surface lg:hidden"
+          className="animate-fade-rise border-t border-line bg-paper-2 xl:hidden"
         >
           <div className="container-page grid grid-cols-1 gap-1 py-3">
             {NAV_LINKS.map((link) => (

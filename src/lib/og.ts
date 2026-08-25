@@ -6,16 +6,18 @@ import { scoreBand, type ScoreBand } from './score';
  * Shared bits for the dynamically generated OpenGraph images (PRD 7.3).
  *
  * `next/font` self-hosts woff2, which Satori cannot read, so the display face
- * is vendored here as two small WOFF subsets (29KB total, server-side only —
- * they are never sent to a browser). Reading them from disk rather than
- * fetching Google at render time means OG generation has no network dependency
- * at all: the build cannot fail because fonts.googleapis.com was slow, and a
- * cold serverless instance does not pay a round trip.
+ * is vendored here as a WOFF (server-side only — it is never sent to a
+ * browser). Reading it from disk rather than fetching Google at render time
+ * means OG generation has no network dependency at all: the build cannot fail
+ * because fonts.googleapis.com was slow, and a cold serverless instance does
+ * not pay a round trip.
  *
- * Both subsets are passed to Satori because a card mixes scripts: hackathon
- * names are Latin, but a Russian organizer name is Cyrillic. Verified glyph
- * coverage: the latin subset carries U+2018/U+2019 (the Uzbek tutuq belgisi),
- * the cyrillic subset carries the Cyrillic block.
+ * Unlike the previous face, Google serves Unbounded as a single unsubsetted
+ * WOFF (159KB) rather than per-script files, so there is one buffer instead of
+ * two. Verified with fontkit before vendoring: it carries Latin, the basic
+ * Cyrillic block U+0410–U+045F, and U+2018/U+2019 for the Uzbek tutuq belgisi.
+ * It does **not** carry the Cyrillic-ext letters (ғ, ө); a sweep of every
+ * message file and the seed data confirmed no display string needs them.
  */
 
 const FONT_DIR = join(process.cwd(), 'src/assets/fonts');
@@ -23,24 +25,24 @@ const FONT_DIR = join(process.cwd(), 'src/assets/fonts');
 export interface OgFont {
   name: string;
   data: ArrayBuffer;
-  weight: 900;
+  weight: 800;
   style: 'normal';
 }
 
 let fontsPromise: Promise<OgFont[]> | undefined;
 
 async function readFonts(): Promise<OgFont[]> {
-  const files = ['SourceSans3-900-latin.woff', 'SourceSans3-900-cyrillic.woff'];
+  const files = ['Unbounded-800.woff'];
   const buffers = await Promise.all(files.map((file) => readFile(join(FONT_DIR, file))));
 
   return buffers.map((buffer) => ({
-    name: 'SourceSans3',
+    name: 'Unbounded',
     // Copy out of the Node Buffer's pooled memory into a standalone ArrayBuffer.
     data: buffer.buffer.slice(
       buffer.byteOffset,
       buffer.byteOffset + buffer.byteLength,
     ) as ArrayBuffer,
-    weight: 900 as const,
+    weight: 800 as const,
     style: 'normal' as const,
   }));
 }
@@ -52,20 +54,27 @@ export async function loadOgFonts(): Promise<OgFont[]> {
 }
 
 /** Palette mirrored from globals.css — Satori has no access to CSS variables. */
+/**
+ * An OG card is always the **dark canvas**, never a panel, so these are the
+ * canvas variants of the tokens — including the canvas score bands, which are
+ * the light ones. Using the panel values here would put dark green on near
+ * black.
+ */
 export const OG = {
-  paper: '#FFFFFF',
-  paper2: '#F7F8FC',
-  surface: '#FFFFFF',
-  ink: '#0A2540',
-  ink2: '#2F4463',
-  ink3: '#626E81',
-  line: '#E3E6EF',
-  accent: '#DB0000',
+  paper: '#1F1F1F',
+  paper2: '#171717',
+  surface: '#E1E1E1',
+  ink: '#F4F3EF',
+  ink2: '#B5B4AE',
+  ink3: '#93928C',
+  line: '#343433',
+  accent: '#CCEC43',
+  violet: '#8A51FC',
   band: {
-    good: { text: '#347948', tint: '#EAF6EF' },
-    mid: { text: '#8F640E', tint: '#FDF4E3' },
-    bad: { text: '#A82A1F', tint: '#FDEBE9' },
-    none: { text: '#626E81', tint: '#EEEFF5' },
+    good: { text: '#0EAB5F', tint: '#12291E' },
+    mid: { text: '#E08A00', tint: '#2E2209' },
+    bad: { text: '#FF6132', tint: '#33120C' },
+    none: { text: '#959595', tint: '#282828' },
   } satisfies Record<ScoreBand, { text: string; tint: string }>,
 } as const;
 

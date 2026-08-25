@@ -47,7 +47,9 @@ export function LocaleSwitcher({ className, variant = 'inline' }: LocaleSwitcher
               )}
             >
               {LOCALE_LABELS[locale]}
-              <span className="eyebrow text-ink-3">{LOCALE_SHORT[locale]}</span>
+              <span className={cn('eyebrow', isActive ? 'text-accent-ink' : 'text-ink-3')}>
+                {LOCALE_SHORT[locale]}
+              </span>
             </Link>
           );
         })}
@@ -59,7 +61,7 @@ export function LocaleSwitcher({ className, variant = 'inline' }: LocaleSwitcher
     <nav
       aria-label={t('changeLanguage')}
       className={cn(
-        'flex items-center rounded-md border-2 border-ink bg-surface p-0.5',
+        'flex items-center rounded-full border-2 border-line-2 p-0.5',
         className,
       )}
     >
@@ -76,7 +78,7 @@ export function LocaleSwitcher({ className, variant = 'inline' }: LocaleSwitcher
             className={cn(
               'eyebrow grid grid-cols-1 h-7 min-w-9 place-items-center rounded-sm px-1.5 transition-colors',
               isActive
-                ? 'bg-ink text-paper'
+                ? 'bg-lime text-lime-ink'
                 : 'text-ink-3 hover:bg-paper-2 hover:text-ink',
             )}
           >

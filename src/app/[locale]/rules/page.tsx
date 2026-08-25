@@ -46,7 +46,7 @@ export default async function RulesPage({ params }: PageProps) {
         <p className="mt-4 text-body-lg leading-relaxed text-ink-2">{t('intro')}</p>
       </header>
 
-      <ol className="mt-10 grid grid-cols-1 gap-px overflow-hidden rounded-lg border-2 border-ink bg-line">
+      <ol className="mt-10 grid grid-cols-1 panel notch-br gap-px overflow-hidden bg-line">
         {SECTIONS.map((section, index) => (
           <li key={section} className="bg-surface p-5 sm:p-6">
             <div className="flex gap-4">

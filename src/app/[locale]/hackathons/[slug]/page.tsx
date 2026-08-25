@@ -293,7 +293,7 @@ export default async function HackathonDetailPage({ params }: PageProps) {
               </div>
             </div>
 
-            <div className="relative aspect-[16/9] w-full overflow-hidden rounded-lg border-2 border-ink lg:aspect-[4/3]">
+            <div className="relative aspect-[16/9] w-full overflow-hidden notch-br lg:aspect-[4/3]">
               <HackathonCover
                 slug={hackathon.slug}
                 name={hackathon.name}

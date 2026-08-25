@@ -60,9 +60,16 @@ const COLORS = [
   'success',
   'warning',
   'danger',
+  'lime',
+  'lime-ink',
+  'violet-fill',
+  'violet-ink',
 ] as const;
 
-const twMerge = extendTailwindMerge({
+/** New class-group ids this theme adds on top of Tailwind's defaults. */
+type ExtraGroups = 'notch' | 'notch-size';
+
+const twMerge = extendTailwindMerge<ExtraGroups>({
   extend: {
     classGroups: {
       'font-size': [{ text: [...FONT_SIZES] }],
@@ -74,6 +81,11 @@ const twMerge = extendTailwindMerge({
       'outline-color': [{ outline: [...COLORS] }],
       shadow: [{ shadow: ['lift', 'pop'] }],
       rounded: [{ rounded: ['xs', 'sm', 'md', 'lg', 'xl', '2xl'] }],
+      // The corner notch is a clip-path, so only one may apply at a time —
+      // without a conflict group, `cn('notch-br', 'notch-r')` would emit both
+      // and the last one in the stylesheet would win unpredictably.
+      notch: ['notch-br', 'notch-tr', 'notch-bl', 'notch-r'],
+      'notch-size': ['notch-size-sm', 'notch-size-lg'],
     },
   },
 });

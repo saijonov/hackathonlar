@@ -17,7 +17,7 @@ const TINTS = [
   'bg-accent-soft text-accent-ink border-accent/20',
   'bg-paper-2 text-ink border-line-2',
   'bg-none-soft text-ink-2 border-line-2',
-  'bg-accent text-white border-accent',
+  'bg-lime text-lime-ink border-lime',
 ];
 
 export function initialsFor(name: string): string {

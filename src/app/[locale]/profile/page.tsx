@@ -80,7 +80,7 @@ export default async function ProfilePage({ params }: PageProps) {
           <ul className="mt-5 grid grid-cols-1 gap-3">
             {reviews.map((review) => (
               <li key={review.id}>
-                <div className="flex flex-wrap items-start justify-between gap-3 rounded-lg border-2 border-ink bg-surface p-4">
+                <div className="flex flex-wrap items-start justify-between gap-3 panel notch-br notch-size-sm p-4">
                   <div className="min-w-0 flex-1">
                     <Link
                       href={`/hackathons/${review.hackathonSlug}`}
@@ -146,7 +146,7 @@ export default async function ProfilePage({ params }: PageProps) {
             {submissions.map((submission) => (
               <li
                 key={submission.id}
-                className="flex flex-wrap items-start justify-between gap-3 rounded-lg border-2 border-ink bg-surface p-4"
+                className="flex flex-wrap items-start justify-between gap-3 panel notch-br notch-size-sm p-4"
               >
                 <div className="min-w-0 flex-1">
                   <p className="text-h3 text-ink">

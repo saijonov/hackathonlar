@@ -97,7 +97,7 @@ export function StatsStrip({ stats, className }: StatsStripProps) {
     <div
       ref={ref}
       className={cn(
-        'grid grid-cols-2 divide-x divide-y divide-line overflow-hidden rounded-lg border-2 border-ink bg-surface sm:grid-cols-4 sm:divide-y-0',
+        'panel notch-br grid grid-cols-2 divide-x divide-y divide-line overflow-hidden bg-surface sm:grid-cols-4 sm:divide-y-0',
         className,
       )}
     >

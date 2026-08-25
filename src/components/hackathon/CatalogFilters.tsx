@@ -211,7 +211,7 @@ export function CatalogFilters({ state, cities, organizers, resultCount }: Catal
       <div className="flex flex-wrap items-center justify-between gap-3">
         <nav
           aria-label={t('title')}
-          className="flex items-center rounded-md border-2 border-ink bg-surface p-0.5"
+          className="flex items-center rounded-full border-2 border-line-2 p-0.5"
         >
           {TABS.map((tab) => (
             <a
@@ -224,7 +224,7 @@ export function CatalogFilters({ state, cities, organizers, resultCount }: Catal
               }}
               className={cn(
                 'grid grid-cols-1 h-9 min-w-[84px] place-items-center rounded-sm px-3 text-meta font-semibold transition-colors',
-                state.tab === tab ? 'bg-ink text-paper' : 'text-ink-3 hover:bg-paper-2 hover:text-ink',
+                state.tab === tab ? 'bg-lime text-lime-ink' : 'text-ink-3 hover:text-ink',
               )}
             >
               {t(`tabs.${tab}`)}
@@ -264,7 +264,7 @@ export function CatalogFilters({ state, cities, organizers, resultCount }: Catal
             onChange={(event) => onSearchChange(event.target.value)}
             placeholder={t('searchPlaceholder')}
             aria-label={t('searchLabel')}
-            className="h-11 w-full rounded-md border border-line-2 bg-surface pl-10 pr-3 text-body text-ink placeholder:text-ink-3/70 hover:border-ink-3 focus:border-accent"
+            className="h-11 w-full rounded-md border-2 border-line-2 bg-transparent pl-10 pr-3 text-body text-ink placeholder:text-ink-3 hover:border-ink-3 focus:border-accent"
           />
         </div>
 
@@ -276,7 +276,7 @@ export function CatalogFilters({ state, cities, organizers, resultCount }: Catal
         >
           <SlidersHorizontal size={17} strokeWidth={1.75} aria-hidden />
           {activeCount > 0 && (
-            <span className="grid grid-cols-1 size-5 place-items-center rounded-full bg-accent text-[11px] font-bold text-white tabular-nums">
+            <span className="grid grid-cols-1 size-5 place-items-center rounded-full bg-lime text-[11px] font-bold text-lime-ink tabular-nums">
               {activeCount}
             </span>
           )}

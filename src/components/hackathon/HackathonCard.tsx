@@ -44,8 +44,9 @@ export function HackathonCard({ hackathon, today, priority = false, className }:
     <article className={cn('h-full', className)}>
       <Link
         href={`/hackathons/${hackathon.slug}`}
-        className="card-lift group flex h-full flex-col overflow-hidden rounded-lg border-2 border-ink bg-surface"
+        className="card-lift group block h-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
       >
+        <div className="panel notch-br flex h-full flex-col overflow-hidden">
         <div className="relative aspect-[16/9] w-full border-b border-line">
           <HackathonCover
             slug={hackathon.slug}
@@ -139,6 +140,7 @@ export function HackathonCard({ hackathon, today, priority = false, className }:
               </div>
             )}
           </div>
+        </div>
         </div>
       </Link>
     </article>

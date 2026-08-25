@@ -20,7 +20,7 @@ export default async function OpengraphImage() {
           justifyContent: 'space-between',
           background: OG.paper,
           padding: 72,
-          fontFamily: 'SourceSans3',
+          fontFamily: 'Unbounded',
         }}
       >
         <div style={{ display: 'flex', alignItems: 'center', gap: 20 }}>

@@ -14,8 +14,8 @@ export default function GlobalError({ reset }: { error: Error; reset: () => void
           minHeight: '100vh',
           display: 'grid',
           placeItems: 'center',
-          background: '#FFFFFF',
-          color: '#0A2540',
+          background: '#1F1F1F',
+          color: '#F4F3EF',
           fontFamily: 'system-ui, sans-serif',
           textAlign: 'center',
           padding: '2rem',
@@ -23,17 +23,19 @@ export default function GlobalError({ reset }: { error: Error; reset: () => void
       >
         <div>
           <h1 style={{ fontSize: '1.75rem', margin: '0 0 0.5rem' }}>Nimadir noto‘g‘ri ketdi</h1>
-          <p style={{ margin: '0 0 1.5rem', color: '#2F4463' }}>
+          <p style={{ margin: '0 0 1.5rem', color: '#B5B4AE' }}>
             Sahifani yuklab bo‘lmadi. Qayta urinib ko‘ring.
           </p>
           <button
             type="button"
             onClick={reset}
             style={{
-              background: '#DB0000',
-              color: '#fff',
+              background: '#CCEC43',
+              /* Lime is a light fill: it takes near-black ink, never white. */
+              color: '#17170F',
               border: 0,
-              borderRadius: 8,
+              borderRadius: 999,
+              fontWeight: 700,
               padding: '0.75rem 1.5rem',
               fontSize: '1rem',
               cursor: 'pointer',

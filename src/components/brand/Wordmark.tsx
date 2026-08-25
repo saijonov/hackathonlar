@@ -14,18 +14,19 @@ const SIZES = {
 } as const;
 
 /**
- * The wordmark, in lobstr.io's treatment: text only, no icon, set entirely in
- * the accent red at the heaviest weight with tight negative tracking — exactly
- * how "lobstr.io" sits in their own header.
+ * Text only, no lockup: set in the display face at 800 and coloured with the
+ * contextual accent, so it is lime on the dark canvas and violet if it ever
+ * lands inside a light panel.
  *
- * The star mark still exists as public/brand/mark.svg and drives the favicon
- * and OG cards, where a square glyph is required.
+ * The starburst seal is the icon half of the identity and lives separately in
+ * `<Starburst>` / public/brand/mark.svg, for the favicon and OG cards where a
+ * square glyph is required.
  */
 export function Wordmark({ className, size = 'md' }: WordmarkProps) {
   return (
     <span
       className={cn(
-        'font-display font-black leading-none tracking-[-0.04em] text-accent',
+        'font-display font-extrabold leading-none tracking-[-0.03em] text-accent',
         SIZES[size],
         className,
       )}
