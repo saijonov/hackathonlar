@@ -43,7 +43,7 @@ export default async function HackathonOgImage({ params }: Props) {
           display: 'flex',
           flexDirection: 'column',
           background: OG.paper,
-          fontFamily: 'Geologica',
+          fontFamily: 'SourceSans3',
         }}
       >
         {/* A slim band of the hackathon's own generated-cover palette, so the
@@ -67,7 +67,7 @@ export default async function HackathonOgImage({ params }: Props) {
                 letterSpacing: 3,
                 textTransform: 'uppercase',
                 color: OG.accent,
-                fontWeight: 800,
+                fontWeight: 900,
               }}
             >
               {hackathon?.organizer?.name
@@ -79,7 +79,7 @@ export default async function HackathonOgImage({ params }: Props) {
                 display: 'flex',
                 marginTop: 18,
                 fontSize: name.length > 44 ? 60 : 74,
-                fontWeight: 800,
+                fontWeight: 900,
                 lineHeight: 1.02,
                 letterSpacing: -2.5,
                 color: OG.ink,
@@ -103,7 +103,7 @@ export default async function HackathonOgImage({ params }: Props) {
                   borderRadius: '0 6px 6px 0',
                 }}
               >
-                <div style={{ display: 'flex', fontSize: 92, fontWeight: 800, color: band.text, lineHeight: 1 }}>
+                <div style={{ display: 'flex', fontSize: 92, fontWeight: 900, color: band.text, lineHeight: 1 }}>
                   {score === null ? '—' : formatDecimal(score, appLocale)}
                 </div>
               </div>
@@ -138,9 +138,8 @@ export default async function HackathonOgImage({ params }: Props) {
                   <path d="M12 2.6l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.03l-5.66 2.98 1.08-6.3L2.85 9.25l6.32-.92z" />
                 </svg>
               </div>
-              <div style={{ display: 'flex', fontSize: 28, fontWeight: 800, letterSpacing: -1 }}>
-                <span style={{ color: OG.ink }}>hackathonlar</span>
-                <span style={{ color: OG.accent }}>.uz</span>
+              <div style={{ display: 'flex', fontSize: 28, fontWeight: 900, letterSpacing: -1 }}>
+                <span style={{ color: OG.accent }}>hackathonlar.uz</span>
               </div>
             </div>
           </div>

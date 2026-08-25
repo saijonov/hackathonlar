@@ -16,7 +16,7 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(function Select
       <select
         ref={ref}
         aria-invalid={invalid || undefined}
-        className={cn(controlClasses(invalid, 'h-11 appearance-none pr-9'), className)}
+        className={cn(controlClasses(invalid, 'h-12 appearance-none pr-9'), className)}
         {...props}
       >
         {children}

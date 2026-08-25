@@ -13,7 +13,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
     <input
       ref={ref}
       aria-invalid={invalid || undefined}
-      className={controlClasses(invalid, `h-11 ${className ?? ''}`)}
+      className={controlClasses(invalid, `h-12 ${className ?? ''}`)}
       {...props}
     />
   );

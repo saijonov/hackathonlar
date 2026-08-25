@@ -59,7 +59,7 @@ export function LocaleSwitcher({ className, variant = 'inline' }: LocaleSwitcher
     <nav
       aria-label={t('changeLanguage')}
       className={cn(
-        'flex items-center rounded-md border border-line bg-surface p-0.5',
+        'flex items-center rounded-md border-2 border-ink bg-surface p-0.5',
         className,
       )}
     >

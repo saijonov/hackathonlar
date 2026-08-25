@@ -96,7 +96,7 @@ export default async function OrganizerPage({ params }: PageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <section className="border-b border-line bg-surface">
+      <section className="border-b border-line bg-paper-2">
         <div className="container-page py-8 md:py-12">
           <div className="flex flex-wrap items-start gap-5">
             <Monogram name={organizer.name} slug={organizer.slug} size={72} />
@@ -161,7 +161,7 @@ export default async function OrganizerPage({ params }: PageProps) {
         {/* ------------------------------------------- Aggregate track record */}
         <section
           aria-label={t('trackRecord')}
-          className="overflow-hidden rounded-lg border border-line bg-surface"
+          className="overflow-hidden rounded-lg border-2 border-ink bg-surface"
         >
           <div className="grid grid-cols-1 gap-px bg-line lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)]">
             <div className="bg-surface p-5 sm:p-6">

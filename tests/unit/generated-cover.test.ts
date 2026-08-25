@@ -77,7 +77,7 @@ describe('generateCover', () => {
   it('uses only palette colours, never a score colour', () => {
     // Green/amber/red mean "good/mediocre/bad" on this site; a cover must never
     // imply a rating the hackathon has not earned.
-    const scoreColours = ['#14683F', '#8A5A05', '#A82219'];
+    const scoreColours = ['#347948', '#8F640E', '#A82A1F'];
     for (let index = 0; index < 100; index += 1) {
       const { palette } = generateCover(`slug-${index}`);
       for (const colour of [palette.background, palette.foreground, palette.ink]) {

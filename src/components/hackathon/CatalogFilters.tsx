@@ -211,7 +211,7 @@ export function CatalogFilters({ state, cities, organizers, resultCount }: Catal
       <div className="flex flex-wrap items-center justify-between gap-3">
         <nav
           aria-label={t('title')}
-          className="flex items-center rounded-md border border-line bg-surface p-0.5"
+          className="flex items-center rounded-md border-2 border-ink bg-surface p-0.5"
         >
           {TABS.map((tab) => (
             <a

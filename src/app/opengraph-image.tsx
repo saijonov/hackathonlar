@@ -20,7 +20,7 @@ export default async function OpengraphImage() {
           justifyContent: 'space-between',
           background: OG.paper,
           padding: 72,
-          fontFamily: 'Geologica',
+          fontFamily: 'SourceSans3',
         }}
       >
         <div style={{ display: 'flex', alignItems: 'center', gap: 20 }}>
@@ -28,7 +28,7 @@ export default async function OpengraphImage() {
             style={{
               width: 64,
               height: 64,
-              borderRadius: 14,
+              borderRadius: 12,
               background: OG.accent,
               display: 'flex',
               alignItems: 'center',
@@ -39,9 +39,8 @@ export default async function OpengraphImage() {
               <path d="M12 2.6l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.03l-5.66 2.98 1.08-6.3L2.85 9.25l6.32-.92z" />
             </svg>
           </div>
-          <div style={{ display: 'flex', fontSize: 40, fontWeight: 800, letterSpacing: -1.6 }}>
-            <span style={{ color: OG.ink }}>hackathonlar</span>
-            <span style={{ color: OG.accent }}>.uz</span>
+          <div style={{ display: 'flex', fontSize: 40, fontWeight: 900, letterSpacing: -1.6 }}>
+            <span style={{ color: OG.accent }}>hackathonlar.uz</span>
           </div>
         </div>
 
@@ -49,7 +48,7 @@ export default async function OpengraphImage() {
           <div
             style={{
               fontSize: 76,
-              fontWeight: 800,
+              fontWeight: 900,
               lineHeight: 1.02,
               letterSpacing: -3,
               color: OG.ink,

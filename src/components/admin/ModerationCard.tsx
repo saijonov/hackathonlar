@@ -51,7 +51,7 @@ export function ModerationCard({ hackathon, organizers }: ModerationCardProps) {
   };
 
   return (
-    <article className="rounded-lg border border-line bg-surface p-4">
+    <article className="rounded-lg border-2 border-ink bg-surface p-4">
       {error && <Alert tone="danger" className="mb-3">{error}</Alert>}
 
       <div className="flex flex-wrap items-start justify-between gap-3">

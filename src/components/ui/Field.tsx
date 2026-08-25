@@ -46,9 +46,14 @@ export function describedBy(id: string, hasHint: boolean, hasError: boolean) {
   return ids.length ? ids.join(' ') : undefined;
 }
 
+/**
+ * Measured from lobstr.io's sign-in form: white fill, a single light grey
+ * hairline, 6px radius and a 48px control height. Their cards carry the heavy
+ * 2px navy outline; their inputs deliberately do not.
+ */
 export const controlClasses = (invalid?: boolean, className?: string) =>
   cn(
-    'w-full rounded-md border bg-surface px-3 text-body text-ink',
+    'w-full rounded-sm border bg-surface px-3.5 text-body text-ink',
     'placeholder:text-ink-3/70',
     'transition-colors duration-150',
     'disabled:cursor-not-allowed disabled:bg-paper-2 disabled:text-ink-3',

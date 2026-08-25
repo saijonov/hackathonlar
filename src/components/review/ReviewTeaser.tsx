@@ -24,7 +24,7 @@ export function ReviewTeaser({ review, className }: ReviewTeaserProps) {
     <article className={cn('h-full', className)}>
       <Link
         href={`/hackathons/${review.hackathonSlug}`}
-        className="card-lift group flex h-full flex-col gap-3 rounded-lg border border-line bg-surface p-4"
+        className="card-lift group flex h-full flex-col gap-3 rounded-lg border-2 border-ink bg-surface p-4"
       >
         <div className="flex items-start justify-between gap-3">
           <p className="min-w-0 text-meta font-medium text-ink-3 transition-colors group-hover:text-accent">

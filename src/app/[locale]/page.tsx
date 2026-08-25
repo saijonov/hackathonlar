@@ -60,7 +60,7 @@ export default async function HomePage({ params }: PageProps) {
             <p className="mt-5 max-w-xl text-body-lg text-ink-2">{t('hero.subtitle')}</p>
 
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="/hackathons" className={buttonClasses('print', 'lg')}>
+              <Link href="/hackathons" className={buttonClasses('primary', 'lg')}>
                 {t('hero.ctaPrimary')}
                 <ArrowRight size={18} strokeWidth={2} aria-hidden />
               </Link>
@@ -76,7 +76,7 @@ export default async function HomePage({ params }: PageProps) {
       </section>
 
       {/* ----------------------------------------------------------- Upcoming */}
-      <section className="border-b border-line bg-surface">
+      <section className="border-b border-line bg-paper-2">
         <div className="container-page py-14 md:py-16">
           <SectionHeader
             eyebrow={t('upcoming.eyebrow')}
@@ -171,7 +171,7 @@ export default async function HomePage({ params }: PageProps) {
       )}
 
       {/* ------------------------------------------------------ Recent reviews */}
-      <section className="border-b border-line bg-surface">
+      <section className="border-b border-line bg-paper-2">
         <div className="container-page py-14 md:py-16">
           <SectionHeader eyebrow={t('recent.eyebrow')} title={t('recent.title')} />
 
@@ -203,7 +203,7 @@ export default async function HomePage({ params }: PageProps) {
         <div className="container-page py-14 md:py-16">
           <SectionHeader eyebrow={t('how.eyebrow')} title={t('how.title')} />
 
-          <ol className="mt-8 grid grid-cols-1 gap-px overflow-hidden rounded-lg border border-line bg-line md:grid-cols-3">
+          <ol className="mt-8 grid grid-cols-1 gap-px overflow-hidden rounded-lg border-2 border-ink bg-line md:grid-cols-3">
             {(['step1', 'step2', 'step3'] as const).map((step, index) => (
               <li key={step} className="bg-surface p-6">
                 <span

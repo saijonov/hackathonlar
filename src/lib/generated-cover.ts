@@ -38,17 +38,19 @@ export interface GeneratedCover {
 }
 
 /**
- * Palettes are drawn only from the neutral + accent end of the design system.
- * Score colours (green/amber/red) are deliberately excluded: on this site those
- * three hues mean "good / mediocre / bad", and a cover must never imply a
- * rating the hackathon has not earned.
+ * Palettes use only the brand pair — navy and the accent red — on the three
+ * ground tones. The *score* colours are deliberately excluded: on this site
+ * those mean "good / mediocre / bad", and a cover must never imply a rating the
+ * hackathon has not earned. Note the accent red and the score red are different
+ * values for exactly this reason (see DECISIONS.md).
  */
 const PALETTES: readonly CoverPalette[] = [
-  { background: '#E1EEF2', foreground: '#046D82', ink: '#16130F' },
-  { background: '#EFEADD', foreground: '#16130F', ink: '#16130F' },
-  { background: '#046D82', foreground: '#F5F1E8', ink: '#FFFFFF' },
-  { background: '#F5F1E8', foreground: '#03505F', ink: '#16130F' },
-  { background: '#16130F', foreground: '#046D82', ink: '#F5F1E8' },
+  { background: '#0A2540', foreground: '#DB0000', ink: '#FFFFFF' },
+  { background: '#F7F8FC', foreground: '#0A2540', ink: '#0A2540' },
+  { background: '#DB0000', foreground: '#FFFFFF', ink: '#FFFFFF' },
+  { background: '#FFFFFF', foreground: '#DB0000', ink: '#0A2540' },
+  { background: '#0A2540', foreground: '#FFFFFF', ink: '#FFFFFF' },
+  { background: '#EEEFF5', foreground: '#DB0000', ink: '#0A2540' },
 ];
 
 /** FNV-1a, 32-bit. Small, fast, stable across runtimes — no crypto needed. */

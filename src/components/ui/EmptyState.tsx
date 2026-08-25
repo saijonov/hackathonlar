@@ -22,7 +22,7 @@ export function EmptyState({ title, body, action, className, compact = false }: 
     <div
       data-testid="empty-state"
       className={cn(
-        'relative overflow-hidden rounded-lg border border-dashed border-line-2 bg-paper-2/60 text-center',
+        'relative overflow-hidden rounded-lg border-2 border-dashed border-line-2 bg-paper-2/60 text-center',
         compact ? 'px-5 py-8' : 'px-6 py-14',
         className,
       )}

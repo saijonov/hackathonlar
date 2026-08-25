@@ -38,6 +38,7 @@ const FONT_SIZES = [
 const COLORS = [
   'paper',
   'paper-2',
+  'paper-3',
   'surface',
   'ink',
   'ink-2',
@@ -71,7 +72,7 @@ const twMerge = extendTailwindMerge({
       'ring-color': [{ ring: [...COLORS] }],
       'divide-color': [{ divide: [...COLORS] }],
       'outline-color': [{ outline: [...COLORS] }],
-      shadow: [{ shadow: ['lift', 'pop', 'print'] }],
+      shadow: [{ shadow: ['lift', 'pop'] }],
       rounded: [{ rounded: ['xs', 'sm', 'md', 'lg', 'xl', '2xl'] }],
     },
   },

@@ -80,7 +80,7 @@ export function ProfileForm({ profile, email }: ProfileFormProps) {
 
   return (
     <form
-      className="grid grid-cols-1 gap-4 rounded-lg border border-line bg-surface p-5"
+      className="grid grid-cols-1 gap-4 rounded-lg border-2 border-ink bg-surface p-5"
       onSubmit={(event) => {
         event.preventDefault();
         if (!isPending) save();

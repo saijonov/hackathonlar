@@ -38,7 +38,7 @@ aggregate score across everything they have ever run.
 | Database + Auth | Supabase (Postgres, RLS, Google OAuth + email/password with 6-digit OTP) |
 | i18n | `next-intl`, locale-prefixed routes: `/uz` (default), `/ru`, `/en` |
 | Icons | `lucide-react` only |
-| Fonts | Geologica + IBM Plex Sans, self-hosted through `next/font` |
+| Fonts | Source Sans 3 (400–900), self-hosted through `next/font` |
 | Testing | Vitest (unit) + Playwright (e2e, security, responsive) |
 | Analytics | `@vercel/analytics` |
 

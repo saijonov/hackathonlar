@@ -61,7 +61,7 @@ export default async function AboutPage({ params }: PageProps) {
 
       <section className="mt-12">
         <h2 className="border-b border-line pb-3 text-h1">{t('principles.title')}</h2>
-        <ol className="mt-5 grid grid-cols-1 gap-px overflow-hidden rounded-lg border border-line bg-line md:grid-cols-3">
+        <ol className="mt-5 grid grid-cols-1 gap-px overflow-hidden rounded-lg border-2 border-ink bg-line md:grid-cols-3">
           {PRINCIPLES.map((principle, index) => (
             <li key={principle} className="bg-surface p-5">
               <span
@@ -79,7 +79,7 @@ export default async function AboutPage({ params }: PageProps) {
         </ol>
       </section>
 
-      <section className="mt-12 flex flex-wrap items-center justify-between gap-5 rounded-lg border border-line bg-surface p-6">
+      <section className="mt-12 flex flex-wrap items-center justify-between gap-5 rounded-lg border-2 border-ink bg-surface p-6">
         <div className="max-w-md">
           <h2 className="text-h1">{t('contactTitle')}</h2>
           <p className="mt-2 text-body text-ink-2">{t('contactBody')}</p>

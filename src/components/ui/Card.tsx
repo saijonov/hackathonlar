@@ -11,7 +11,7 @@ export function Card({ interactive = false, className, ...props }: CardProps) {
   return (
     <div
       className={cn(
-        'rounded-lg border border-line bg-surface',
+        'rounded-lg border-2 border-ink bg-surface',
         interactive && 'card-lift',
         className,
       )}

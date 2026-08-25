@@ -8,92 +8,116 @@
    ========================================================================== */
 
 @theme {
-  /* --- surfaces & ink ---------------------------------------------------- */
-  --color-paper: #f5f1e8;
-  --color-paper-2: #efeadd;
+  /* --- surfaces & ink -----------------------------------------------------
+     Sampled from lobstr.io: white ground, a near-white lavender band, and a
+     deep navy that carries every structural element.
+     -------------------------------------------------------------------- */
+  --color-paper: #ffffff;
+  --color-paper-2: #f7f8fc;
+  --color-paper-3: #eeeff5;
   --color-surface: #ffffff;
 
-  --color-ink: #16130f;
-  --color-ink-2: #4a443b;
-  --color-ink-3: #6b6357;
+  --color-ink: #0a2540;
+  --color-ink-2: #2f4463;
+  --color-ink-3: #626e81;
 
-  --color-line: #e2dacd;
-  --color-line-2: #cfc5af;
-  /* Large decorative numerals (step counters, ranking positions). line-2 was
-     used here and measured 1.71:1 — below the 3:1 large-text minimum. */
-  --color-numeral: #9a8c6e;
+  /* Hairline dividers, and the input/idle border. The bold 2px navy card
+     outline is lobstr's signature and uses --color-ink directly. */
+  --color-line: #e3e6ef;
+  --color-line-2: #c6cddc;
 
-  /* --- accent: "Registon blue" ------------------------------------------- */
-  --color-accent: #046d82;
-  --color-accent-ink: #03505f;
-  --color-accent-soft: #e1eef2;
+  /* Big decorative numerals (step counters, ranking positions). */
+  --color-numeral: #788298;
 
-  /* --- score scale (see docs/design-system.md §2.3) ----------------------- */
-  --color-good: #14683f;
-  --color-good-soft: #dfede4;
-  --color-mid: #8a5a05;
-  --color-mid-soft: #f6e8cc;
-  --color-bad: #a82219;
-  --color-bad-soft: #f7e0dd;
-  --color-none: #6b6357;
-  --color-none-soft: #ebe5d7;
+  /* --- accent -------------------------------------------------------------
+     lobstr.io uses pure #FF0000, which measures 4.00:1 on white and fails AA
+     both as text and as white-on-red. #DB0000 is 36/441 away in RGB — the eye
+     reads it as the same red — and measures 5.23:1. See DECISIONS.md.
+     -------------------------------------------------------------------- */
+  --color-accent: #db0000;
+  --color-accent-ink: #ad0000;
+  --color-accent-soft: #ffecec;
 
-  /* --- semantic status (deliberately the same three hues) ----------------- */
-  --color-success: #14683f;
-  --color-warning: #8a5a05;
-  --color-danger: #a82219;
+  /* --- score scale (docs/design-system.md §2.3) ----------------------------
+     Every value is darkened until it clears 4.5:1 on white, on --color-paper-2
+     and on --color-paper-3, so a chip is legible on every surface it lands on.
 
-  /* --- type scale --------------------------------------------------------- */
-  --text-display-1: clamp(2.5rem, 7.5vw, 4.25rem);
-  --text-display-1--line-height: 0.95;
-  --text-display-1--letter-spacing: -0.035em;
-  --text-display-1--font-weight: 800;
+     --color-bad is deliberately a *deeper* red than --color-accent (73 units
+     apart in RGB, 6.96:1 vs 5.23:1 on white). With a red brand the two would
+     otherwise collide, and "this button is important" would read the same as
+     "this hackathon was bad". Enforced by tests/unit/palette.test.ts.
+     -------------------------------------------------------------------- */
+  --color-good: #347948;
+  --color-good-soft: #eaf6ef;
+  --color-mid: #8f640e;
+  --color-mid-soft: #fdf4e3;
+  --color-bad: #a82a1f;
+  --color-bad-soft: #fdebe9;
+  --color-none: #626e81;
+  --color-none-soft: #eeeff5;
 
-  --text-display-2: clamp(1.875rem, 4.5vw, 2.75rem);
-  --text-display-2--line-height: 1.02;
-  --text-display-2--letter-spacing: -0.025em;
-  --text-display-2--font-weight: 800;
+  /* --- semantic status ----------------------------------------------------- */
+  --color-success: #347948;
+  --color-warning: #8f640e;
+  --color-danger: #a82a1f;
+
+  /* --- type scale ----------------------------------------------------------
+     lobstr.io runs one family at four weights, with very heavy display
+     headings on tight negative tracking: h1 80px/900/-0.04em, section
+     h2 40px/700/-0.04em, card h2 21px/700/normal.
+     -------------------------------------------------------------------- */
+  --text-display-1: clamp(2.5rem, 7.5vw, 5rem);
+  --text-display-1--line-height: 1.04;
+  --text-display-1--letter-spacing: -0.04em;
+  --text-display-1--font-weight: 900;
+
+  --text-display-2: clamp(1.875rem, 4.5vw, 2.5rem);
+  --text-display-2--line-height: 1.1;
+  --text-display-2--letter-spacing: -0.04em;
+  --text-display-2--font-weight: 900;
 
   --text-h1: clamp(1.5rem, 3vw, 2rem);
-  --text-h1--line-height: 1.1;
-  --text-h1--letter-spacing: -0.02em;
+  --text-h1--line-height: 1.15;
+  --text-h1--letter-spacing: -0.03em;
   --text-h1--font-weight: 700;
 
-  --text-h2: 1.375rem;
-  --text-h2--line-height: 1.15;
-  --text-h2--letter-spacing: -0.015em;
+  --text-h2: 1.3125rem;
+  --text-h2--line-height: 1.35;
+  --text-h2--letter-spacing: -0.01em;
   --text-h2--font-weight: 700;
 
   --text-h3: 1.0625rem;
-  --text-h3--line-height: 1.25;
-  --text-h3--letter-spacing: -0.01em;
-  --text-h3--font-weight: 600;
+  --text-h3--line-height: 1.4;
+  --text-h3--letter-spacing: -0.005em;
+  --text-h3--font-weight: 700;
 
   --text-body-lg: 1.0625rem;
-  --text-body-lg--line-height: 1.65;
+  --text-body-lg--line-height: 1.7;
 
-  --text-body: 0.9375rem;
+  --text-body: 1rem;
   --text-body--line-height: 1.65;
 
-  --text-meta: 0.8125rem;
-  --text-meta--line-height: 1.45;
+  --text-meta: 0.875rem;
+  --text-meta--line-height: 1.5;
 
-  --text-micro: 0.6875rem;
+  --text-micro: 0.75rem;
   --text-micro--line-height: 1.2;
-  --text-micro--letter-spacing: 0.09em;
-  --text-micro--font-weight: 600;
+  --text-micro--letter-spacing: 0.06em;
+  --text-micro--font-weight: 700;
 
-  /* --- geometry ----------------------------------------------------------- */
-  --radius-xs: 2px;
-  --radius-sm: 4px;
+  /* --- geometry ------------------------------------------------------------
+     lobstr.io radii, by frequency: 12px cards, 8px buttons, 6px small, pills.
+     -------------------------------------------------------------------- */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
   --radius-md: 8px;
   --radius-lg: 12px;
   --radius-xl: 16px;
   --radius-2xl: 20px;
 
-  --shadow-lift: 0 1px 0 rgb(22 19 15 / 0.03), 0 6px 16px -10px rgb(22 19 15 / 0.18);
-  --shadow-pop: 0 20px 48px -24px rgb(22 19 15 / 0.28);
-  --shadow-print: 3px 3px 0 0 var(--color-ink);
+  /* Flat surfaces with hard 2px outlines: shadows are for lifted layers only. */
+  --shadow-lift: 0 6px 20px -12px rgb(10 37 64 / 0.30);
+  --shadow-pop: 0 24px 56px -28px rgb(10 37 64 / 0.35);
 
   --container-page: 75rem;
 
@@ -104,23 +128,12 @@
 /* Font families come from next/font (see src/app/fonts.ts), so they must be
    resolved at reference time rather than baked in.
 
-   IBM Plex Sans sits in the DISPLAY stack as a glyph fallback. Verified by
-   reading the cmap of the actual self-hosted woff2 files:
-
-       codepoint            Geologica latin   IBM Plex Sans latin
-       U+02BB turned comma        absent            present
-       U+02BC apostrophe          present           present
-       U+2018 / U+2019            present           present
-
-   Uzbek copy therefore uses U+2018 for the tutuq belgisi in oʼ/gʼ and U+2019
-   for the standalone mark: rendered side by side (.qa/glyph-compare.png) those
-   are the only marks that sit tight and keep the correct turned-comma shape in
-   BOTH faces at every weight, whereas U+02BB and U+02BC leave a visible gap in
-   Plex. Keeping Plex in this stack still costs zero extra bytes — it is already
-   downloaded for body copy — and covers any other glyph Geologica lacks. */
+   lobstr.io runs a single family across the whole site — display and body —
+   varying only weight, so both tokens point at the same face. Keeping two
+   token names means components do not have to change when the pairing does. */
 @theme inline {
-  --font-display: var(--font-geologica), var(--font-plex-sans), system-ui, sans-serif;
-  --font-sans: var(--font-plex-sans), 'IBM Plex Sans', system-ui, sans-serif;
+  --font-display: var(--font-source-sans), 'Source Sans 3', system-ui, sans-serif;
+  --font-sans: var(--font-source-sans), 'Source Sans 3', system-ui, sans-serif;
 }
 
 /* ==========================================================================
@@ -178,6 +191,11 @@
     color: #fff;
   }
 
+  /* lobstr.io sets links in the accent red at bold weight. */
+  a {
+    text-underline-offset: 3px;
+  }
+
   /* Numbers must align in score columns. */
   .tnum,
   th,
@@ -232,6 +250,14 @@
   text-transform: uppercase;
 }
 
+/* lobstr.io's signature surface: a white card inside a hard 2px navy outline,
+   12px radius, no shadow at rest. Everything card-shaped on the site uses it. */
+@utility card-outline {
+  background-color: var(--color-surface);
+  border: 2px solid var(--color-ink);
+  border-radius: var(--radius-lg);
+}
+
 @utility card-lift {
   transition:
     transform 160ms ease-out,
@@ -241,7 +267,7 @@
   &:hover {
     transform: translateY(-2px);
     box-shadow: var(--shadow-lift);
-    border-color: var(--color-line-2);
+    border-color: var(--color-accent);
   }
 }
 

@@ -419,7 +419,7 @@ export function SubmitForm({ organizers }: SubmitFormProps) {
                   <button
                     type="button"
                     onClick={() => setOrganizerId(organizer.id)}
-                    className="flex w-full items-center gap-2.5 rounded-md border border-line bg-surface p-2.5 text-left transition-colors hover:border-accent hover:bg-accent-soft"
+                    className="flex w-full items-center gap-2.5 rounded-md border-2 border-ink bg-surface p-2.5 text-left transition-colors hover:border-accent hover:bg-accent-soft"
                   >
                     <Monogram name={organizer.name} slug={organizer.slug} size={28} />
                     <span className="min-w-0 truncate text-body text-ink">{organizer.name}</span>

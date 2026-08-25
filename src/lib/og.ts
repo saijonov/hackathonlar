@@ -23,24 +23,24 @@ const FONT_DIR = join(process.cwd(), 'src/assets/fonts');
 export interface OgFont {
   name: string;
   data: ArrayBuffer;
-  weight: 800;
+  weight: 900;
   style: 'normal';
 }
 
 let fontsPromise: Promise<OgFont[]> | undefined;
 
 async function readFonts(): Promise<OgFont[]> {
-  const files = ['Geologica-800-latin.woff', 'Geologica-800-cyrillic.woff'];
+  const files = ['SourceSans3-900-latin.woff', 'SourceSans3-900-cyrillic.woff'];
   const buffers = await Promise.all(files.map((file) => readFile(join(FONT_DIR, file))));
 
   return buffers.map((buffer) => ({
-    name: 'Geologica',
+    name: 'SourceSans3',
     // Copy out of the Node Buffer's pooled memory into a standalone ArrayBuffer.
     data: buffer.buffer.slice(
       buffer.byteOffset,
       buffer.byteOffset + buffer.byteLength,
     ) as ArrayBuffer,
-    weight: 800 as const,
+    weight: 900 as const,
     style: 'normal' as const,
   }));
 }
@@ -53,19 +53,19 @@ export async function loadOgFonts(): Promise<OgFont[]> {
 
 /** Palette mirrored from globals.css — Satori has no access to CSS variables. */
 export const OG = {
-  paper: '#F5F1E8',
-  paper2: '#EFEADD',
+  paper: '#FFFFFF',
+  paper2: '#F7F8FC',
   surface: '#FFFFFF',
-  ink: '#16130F',
-  ink2: '#4A443B',
-  ink3: '#7C7466',
-  line: '#E2DACD',
-  accent: '#046D82',
+  ink: '#0A2540',
+  ink2: '#2F4463',
+  ink3: '#626E81',
+  line: '#E3E6EF',
+  accent: '#DB0000',
   band: {
-    good: { text: '#14683F', tint: '#DFEDE4' },
-    mid: { text: '#8A5A05', tint: '#F6E8CC' },
-    bad: { text: '#A82219', tint: '#F7E0DD' },
-    none: { text: '#7C7466', tint: '#EBE5D7' },
+    good: { text: '#347948', tint: '#EAF6EF' },
+    mid: { text: '#8F640E', tint: '#FDF4E3' },
+    bad: { text: '#A82A1F', tint: '#FDEBE9' },
+    none: { text: '#626E81', tint: '#EEEFF5' },
   } satisfies Record<ScoreBand, { text: string; tint: string }>,
 } as const;
 

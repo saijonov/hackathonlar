@@ -37,7 +37,7 @@ export function AdminOrganizersManager({ organizers }: { organizers: OrganizerRe
       ) : (
         <ul className="mt-5 grid grid-cols-1 gap-2">
           {organizers.map((organizer) => (
-            <li key={organizer.id} className="rounded-lg border border-line bg-surface">
+            <li key={organizer.id} className="rounded-lg border-2 border-ink bg-surface">
               <div className="flex flex-wrap items-center justify-between gap-3 p-3">
                 <div className="flex min-w-0 flex-1 items-center gap-2.5">
                   <Monogram name={organizer.name} slug={organizer.slug} size={32} />

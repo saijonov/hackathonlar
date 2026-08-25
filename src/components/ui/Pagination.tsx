@@ -39,7 +39,7 @@ export function Pagination({ page, pageCount, className }: PaginationProps) {
   for (let index = start; index <= end; index += 1) pages.push(index);
 
   const linkClass =
-    'grid grid-cols-1 h-11 min-w-11 place-items-center rounded-md border border-line bg-surface px-3 text-meta font-semibold text-ink-2 transition-colors hover:border-ink hover:text-ink';
+    'grid grid-cols-1 h-11 min-w-11 place-items-center rounded-md border-2 border-ink bg-surface px-3 text-meta font-semibold text-ink-2 transition-colors hover:border-ink hover:text-ink';
 
   return (
     <nav

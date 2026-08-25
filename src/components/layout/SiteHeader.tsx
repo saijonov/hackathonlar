@@ -69,8 +69,7 @@ export function SiteHeader() {
           className="inline-flex min-h-11 shrink-0 items-center rounded-sm"
           aria-label="hackathonlar.uz"
         >
-          <Wordmark size="md" className="hidden sm:inline-flex" />
-          <Wordmark size="md" markOnly className="sm:hidden" />
+          <Wordmark size="md" />
         </Link>
 
         <nav aria-label={t('home')} className="ml-4 hidden items-center gap-1 lg:flex">
@@ -120,7 +119,7 @@ export function SiteHeader() {
               {accountOpen && (
                 <div
                   role="menu"
-                  className="animate-fade-rise absolute right-0 top-full z-50 mt-1.5 w-56 overflow-hidden rounded-lg border border-line bg-surface shadow-pop"
+                  className="animate-fade-rise absolute right-0 top-full z-50 mt-1.5 w-56 overflow-hidden rounded-lg border-2 border-ink bg-surface shadow-pop"
                 >
                   <p className="truncate border-b border-line px-3 py-2.5 text-meta text-ink-3">
                     {profile?.displayName}

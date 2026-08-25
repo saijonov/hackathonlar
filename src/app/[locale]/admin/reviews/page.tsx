@@ -29,7 +29,7 @@ export default async function AdminReviewsPage({ params, searchParams }: PagePro
       <div className="flex flex-wrap items-center justify-between gap-3">
         <h2 className="text-h1">{t('title')}</h2>
 
-        <nav className="flex items-center rounded-md border border-line bg-surface p-0.5">
+        <nav className="flex items-center rounded-md border-2 border-ink bg-surface p-0.5">
           {FILTERS.map((value) => (
             <Link
               key={value}

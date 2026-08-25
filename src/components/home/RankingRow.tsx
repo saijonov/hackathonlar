@@ -17,7 +17,7 @@ export function RankingRow({ hackathon, rank }: RankingRowProps) {
   return (
     <Link
       href={`/hackathons/${hackathon.slug}`}
-      className="card-lift group flex items-center gap-4 rounded-lg border border-line bg-surface p-3.5"
+      className="card-lift group flex items-center gap-4 rounded-lg border-2 border-ink bg-surface p-3.5"
     >
       <span
         aria-hidden

@@ -14,8 +14,8 @@ export default function GlobalError({ reset }: { error: Error; reset: () => void
           minHeight: '100vh',
           display: 'grid',
           placeItems: 'center',
-          background: '#F5F1E8',
-          color: '#16130F',
+          background: '#FFFFFF',
+          color: '#0A2540',
           fontFamily: 'system-ui, sans-serif',
           textAlign: 'center',
           padding: '2rem',
@@ -23,14 +23,14 @@ export default function GlobalError({ reset }: { error: Error; reset: () => void
       >
         <div>
           <h1 style={{ fontSize: '1.75rem', margin: '0 0 0.5rem' }}>Nimadir noto‘g‘ri ketdi</h1>
-          <p style={{ margin: '0 0 1.5rem', color: '#4A443B' }}>
+          <p style={{ margin: '0 0 1.5rem', color: '#2F4463' }}>
             Sahifani yuklab bo‘lmadi. Qayta urinib ko‘ring.
           </p>
           <button
             type="button"
             onClick={reset}
             style={{
-              background: '#046D82',
+              background: '#DB0000',
               color: '#fff',
               border: 0,
               borderRadius: 8,

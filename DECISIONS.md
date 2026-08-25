@@ -5,9 +5,69 @@ with the reasoning and — where it mattered — the measurement that decided it
 
 Ordered roughly by how much they shape the product.
 
+> **Note on §1 and §2.** Both were superseded when the site was restyled to
+> lobstr.io's visual language on the `reddish` branch. They are kept because the
+> reasoning still constrains the current design — §0 explains what changed and
+> which parts of the original argument had to be re-solved rather than dropped.
+
 ---
 
-## 1. The accent is cool, not the suggested "hot warm accent"
+## 0. The visual language is lobstr.io's, measured — but its palette is not shippable as-is
+
+**Decision:** reproduce lobstr.io's design language (white ground, `#0A2540`
+navy ink, red accent, 2px navy card outlines, one very heavy type family, a
+6/8/12 radius ladder) — but re-solve every colour that fails WCAG AA instead of
+copying the hex.
+
+lobstr.io's computed styles were extracted programmatically with Playwright
+rather than eyeballed from screenshots, which is what made the failures
+measurable in the first place. Three of their colours do not clear AA:
+
+| lobstr colour | Role | Contrast on white | Verdict |
+| --- | --- | --- | --- |
+| `#FF0000` | brand red | **4.00:1** | fails as link text *and* as white-on-red |
+| `#50B96F` | green | **2.47:1** | fails |
+| `#B5BACA` | slate | **1.94:1** | fails |
+
+`#FF0000` was the consequential one: nearly every CTA here is a solid red button
+with white text, so shipping it would have put an AA failure on every page of
+the site. Each was solved to the nearest value on the same hue that clears the
+bar — `#DB0000` (5.23:1, only 36 RGB units from `#FF0000`), `#347948`,
+`#626E81`. Side by side the reds read as the same brand colour.
+
+**The second-order problem the restyle created.** The original palette put the
+accent (teal) a long way from the score scale on purpose — see §1. Moving the
+accent to red destroyed that separation: brand red and "bad score" red became
+51 RGB units apart, close enough that at chip size a *submit* button and a
+2.3-star verdict read as the same signal. So `--color-bad` was pushed deeper to
+`#A82A1F` — 73 units from the accent, and lower luminance so the brand colour is
+always the one that comes forward. §1's argument survived the restyle; only its
+answer changed.
+
+**Typography collapsed from two families to one.** lobstr runs a single
+humanist grotesque at four weights, and that is a large part of why their pages
+read as one voice; §2's two-family split works against that. Both Geologica and
+IBM Plex Sans were replaced by **Source Sans 3** (400–900), which carries
+`latin`, `latin-ext` *and* `cyrillic` — the coverage requirement from §2 is what
+made a single-family stack viable at all. It also has a real `U+02BB`, which
+Geologica lacked; the glyph audit was re-run against the new binaries and the
+Uzbek `U+2018` convention deliberately kept anyway (`docs/design-system.md`
+§3.0).
+
+`tests/unit/palette.test.ts` re-derives all of this from `globals.css` on every
+run — every ink/ground pair, every score-on-tint pair, the accent in both
+directions, and the minimum RGB distance between the two reds. It also caught a
+real defect the eye did not: `--color-numeral` at `#828EA8` measured 2.87:1 on
+the darkest ground, under even the AA-large bar, and was re-solved to `#788298`.
+
+Lighthouse then confirms the whole thing against rendered pixels:
+**accessibility 100 on all nine audited routes.**
+
+Documented in full in `docs/design-system.md` §2.
+
+---
+
+## 1. The accent is cool, not the suggested "hot warm accent" *(superseded by §0)*
 
 **Decision:** `--color-accent: #046D82`, a deep flag-blue/majolica teal.
 
@@ -27,7 +87,7 @@ white text on the accent. All AA.
 
 ---
 
-## 2. Typography: Geologica + IBM Plex Sans, chosen by reading font binaries
+## 2. Typography: Geologica + IBM Plex Sans, chosen by reading font binaries *(superseded by §0)*
 
 **Decision:** Geologica (display) + IBM Plex Sans (body).
 
